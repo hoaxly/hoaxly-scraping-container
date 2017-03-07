@@ -151,20 +151,16 @@ fi
 
 echo -e "${green_bg} Step 2 ${NC}${green} Compiling root Config Files & composer install ...${NC}"
 
-# Shouldnt be required anymore
-# SETUP ONCE DURING _fin initing a cloned_ PROJECT
-#if ! [ -s ${DOCROOT_PATH}/index.php ]; then
-#	echo -e "${green_bg} Step 2b ${NC}${green} Drupal not found, downloading ...${NC}"
-	#which is the correct way? the fin command says it cant autoload and cant run drupal-scaffold script	
-#	fin exec composer "drupal-scaffold"
-#	composer drupal-scaffold
-#fi
-
+# TODO: find a more generic way to execute commands in container or create a prepared image.
+docker exec -ti hoaxly_scrapyd_1 apt-get update
+docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
+docker exec -ti hoaxly_scrapyd_1 pip install "ScrapyElasticSearch"
+docker exec -ti hoaxly_scrapyd_1 pip install -r /hoaxly/spiders/dirbot/requirements.txt
 
 echo -en "${green_bg} ... DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}:9200${NC} in your browser to verify the setup."
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 echo -e "Or login directly here:"
-fin dr uli
+
 
 
 #-------------------------- END: Execution --------------------------------
