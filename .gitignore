@@ -19,10 +19,4 @@ vendor
 dumps
 private
 console
-composer.lock
 
-# for a new project, you want to remove these
-web
-composer.json
-.gitlab-ci.yml
-README.md
