@@ -157,9 +157,9 @@ docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev lib
 docker exec -ti hoaxly_scrapyd_1 pip install "ScrapyElasticSearch"
 docker exec -ti hoaxly_scrapyd_1 pip install -r /hoaxly/spiders/dirbot/requirements.txt
 
-echo -en "${green_bg} ... DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
-echo -e "Or login directly here:"
+echo -en "${green}Everything Done! ${NC} "
+echo -e "Open ${yellow}http://http://localhost:5601${NC} in your browser to verify the setup."
+echo -e "And see README.md for scraping instructions."
 
 
 
