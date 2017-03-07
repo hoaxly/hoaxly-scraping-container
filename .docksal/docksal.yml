@@ -1,0 +1,77 @@
+# Docker and Docker Compose based environment for Drupal.
+# See https://github.com/docksal/docksal for more information and documentation.
+
+# This is a shared configuration file that is intended to be stored in the project repo.
+# For local overrides:
+# - create .docksal/docksal-local.yml file and put local docker-compose configuration overrides there
+# - add .docksal/docksal-local.yml to .gitignore
+
+# Docksal stiches several docker-compose configuration files together.
+# Run "fin config" to see which files are involved and the resulting configration.
+
+version: "2.1"
+
+services:
+
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.2.2
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    labels:
+      - io.docksal.virtual-host=${VIRTUAL_HOST}
+    #      - io.docksal.project-root=${PROJECT_ROOT}
+  kibana:
+    image: docker.elastic.co/kibana/kibana:5.2.2
+    ports:
+    - "5601:5601"
+    links:
+    - elastic
+    environment:
+    - ELASTICSEARCH_URL=http://elastic:9200
+#
+#  # Web node
+#  web:
+#    hostname: web
+#    image: docksal/web:1.0-apache2.2
+#    volumes:
+#      # Project root volume
+#      - project_root:/var/www:ro
+#    labels:
+#      - io.docksal.virtual-host=${VIRTUAL_HOST}
+#      - io.docksal.project-root=${PROJECT_ROOT}
+#    environment:
+#      - VIRTUAL_HOST=${VIRTUAL_HOST}
+#      - APACHE_DOCUMENTROOT=/var/www/web
+#    depends_on:
+#      - cli
+#
+#  # DB node
+#  db:
+#    hostname: db
+#    image: docksal/db:1.0-mysql-5.5
+#    ports:
+#      - ${MYSQL_PORT}
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+#      - MYSQL_USER=${MYSQL_USER}
+#      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+#      - MYSQL_DATABASE=${MYSQL_DATABASE}
+#
+#  # CLI node
+#  # Used for all console commands and tools.
+#  cli:
+#    hostname: cli
+#    image: docksal/cli:1.0-php7
+#    volumes:
+#      # Project root volume
+#      - project_root:/var/www:rw
+#      # Host home volume (for SSH keys and other credentials).
+#      - host_home:/.home:ro
+#      # Shared ssh-agent socket
+#      - docksal_ssh_agent:/.ssh-agent:ro
+#    environment:
+#      - XDEBUG_ENABLED=1
+#      # For console debuging (eg. drush commands)
+#      - XDEBUG_CONFIG=idekey=PHPSTORM remote_host=192.168.10.1
+#      - PHP_IDE_CONFIG=serverName=phb.docksal

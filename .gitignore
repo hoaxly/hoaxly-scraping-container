@@ -1,0 +1,28 @@
+# Ignore binaries.
+/bin
+
+.idea/
+web/sites/*/development.services.yml
+web/sites/*/settings.php
+web/sites/*/settings.local.php
+web/sites/*/files
+web/sites/*/services.yml
+web/sites/*/drushrc.php
+web/themes/ao-canvas/css
+web/themes/ao-canvas/node_modules
+web/themes/ao-canvas/sc5_styleguide
+web/modules/contrib
+web/modules/custom/ao_editor
+web/modules/custom/ao_layout
+web/core
+vendor
+dumps
+private
+console
+composer.lock
+
+# for a new project, you want to remove these
+web
+composer.json
+.gitlab-ci.yml
+README.md
