@@ -155,10 +155,8 @@ echo -e "${green_bg} Step 2 ${NC}${green} Compiling root Config Files & composer
 docker exec -ti hoaxly_scrapyd_1 apt-get update
 docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
 docker exec -ti hoaxly_scrapyd_1 pip install "ScrapyElasticSearch"
-docker exec -ti hoaxly_scrapyd_1 pip install -r /hoaxly/spiders/dirbot/requirements.txt
-
 echo -en "${green}Everything Done! ${NC} "
-echo -e "Open ${yellow}http://http://localhost:5601${NC} in your browser to verify the setup."
+echo -e "Open ${yellow}http://hoaxly.docksal:9001${NC} in your browser to verify the setup."
 echo -e "And see README.md for scraping instructions."
 
 

@@ -1,19 +1,20 @@
 # Hoaxly development setup
 
-This container contains:
 
-- Elasticsearch 5.2.2 (user: elastic, pass: changeme)
-- Kibana for debugging (runs on http://localhost:5601, credentials from above)
-- Scrapyd, with ScrapyElasticSearch and (with demo scraper for orf.at)
 
-## Start a crawl of orf.at
+## use portia
+http://hoaxly.docksal:9001
+
+### Start a crawl with portia
 ```
-fin bash scrapyd
-cd /hoaxly/spiders/dirbot/
-scrapy crawl orf --output=- --output-format=json
+docker exec  hoaxly_portia_1 portiacrawl add /app/slybot/bin/portiacrawl <PROJECT_PATH> [SPIDER] [OPTIONS]
 ```
 
-## Show all content of index in kibana dev tools:
+## use kibana
+http://hoaxly.docksal:5601
+
+
+### Show all content of index in kibana dev tools:
 ```
 GET /hoaxly/_search?size=1000
 ```
