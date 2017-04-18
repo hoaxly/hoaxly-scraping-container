@@ -1,0 +1,2 @@
+ScrapyElasticSearch==0.8.9
+extruct==v0.3.0a2

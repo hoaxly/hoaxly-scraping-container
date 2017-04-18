@@ -17,6 +17,7 @@ services:
     ports:
       - "9200:9200"
       - "9300:9300"
+
   kibana:
     image: kibana
     ports:
@@ -25,6 +26,7 @@ services:
       - elastic
     environment:
       - ELASTICSEARCH_URL=http://hoaxly.docksal:9200
+
   scrapyd:
     image: vimagick/scrapyd
     ports:
@@ -33,9 +35,13 @@ services:
       - elastic
     volumes:
       - project_root:/hoaxly
+
   portia:
-    image: scrapinghub/portia
+    build:
+      context: ${PWD}/portia
+    image: acolono/portia:bleeding
     ports:
       - "9001:9001"
     volumes:
-      - project_root:/app/slyd/data:rw
+     # - ./portia/data:/app/slyd/data
+      - ${PWD}/portia_projects:/app/data/projects:rw
