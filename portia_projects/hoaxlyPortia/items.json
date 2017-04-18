@@ -31,7 +31,7 @@
             }, 
             "923b-49d5-8d2b": {
                 "id": "923b-49d5-8d2b", 
-                "name": "factoidTag", 
+                "name": "factoidTags", 
                 "required": false, 
                 "type": "url", 
                 "vary": false
@@ -69,6 +69,48 @@
                 "name": "itemReviewed", 
                 "required": false, 
                 "type": "url", 
+                "vary": false
+            }, 
+            "dff0-4c77-8a86": {
+                "id": "dff0-4c77-8a86", 
+                "name": "factoidAuthors", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "2782-4c16-afa1": {
+                "id": "2782-4c16-afa1", 
+                "name": "factoidPersons", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "323e-4c3d-94dc": {
+                "id": "323e-4c3d-94dc", 
+                "name": "factoidTitle", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "da6f-4915-8094": {
+                "id": "da6f-4915-8094", 
+                "name": "textRating", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "62e7-4e94-8978": {
+                "id": "62e7-4e94-8978", 
+                "name": "starRating", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "46e1-4ce5-a9f5": {
+                "id": "46e1-4ce5-a9f5", 
+                "name": "reviewedItemTitle", 
+                "required": false, 
+                "type": "text", 
                 "vary": false
             }
         }, 

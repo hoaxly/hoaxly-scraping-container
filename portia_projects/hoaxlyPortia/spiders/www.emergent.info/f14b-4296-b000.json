@@ -12,28 +12,13 @@
                         "#portia-content": "#dummy"
                     }, 
                     "container_id": null, 
-                    "id": "34ee-4d95-8d31#parent", 
+                    "id": "34ee-4d95-8d31", 
                     "item_container": true, 
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
                     "selector": ".page", 
-                    "siblings": 0, 
-                    "tagid": null, 
-                    "text-content": "#portia-content"
-                }, 
-                {
-                    "annotations": {
-                        "#portia-content": "#dummy"
-                    }, 
-                    "container_id": "34ee-4d95-8d31#parent", 
-                    "id": "34ee-4d95-8d31", 
-                    "item_container": true, 
-                    "repeated": true, 
-                    "required": [], 
-                    "schema_id": "7949-4e6e-a53a", 
-                    "selector": ".article-list-title", 
-                    "siblings": 0, 
+                    "siblings": 1, 
                     "tagid": null, 
                     "text-content": "#portia-content"
                 }, 
@@ -51,20 +36,20 @@
                         }
                     }, 
                     "id": "e159-41a7-b639", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
-                    "selection_mode": "auto", 
+                    "repeated": false, 
+                    "selection_mode": "css", 
                     "selector": ".meta > div:nth-child(2) > .shares-value", 
                     "tagid": null, 
-                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" meta \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" shares-value \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".truthiness-true > .truthiness-value"
+                        ".truthiness-value"
                     ], 
                     "container_id": "34ee-4d95-8d31", 
                     "data": {
@@ -76,16 +61,16 @@
                         }
                     }, 
                     "id": "4ace-44d9-93e1", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
-                    "selection_mode": "auto", 
-                    "selector": ".truthiness-true > .truthiness-value", 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".truthiness-value", 
                     "tagid": null, 
-                    "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" truthiness-true \")]/*[contains(concat(\" \", @class, \" \"), \" truthiness-value \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" truthiness-value \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -102,16 +87,43 @@
                         }
                     }, 
                     "id": "75f1-4bc2-9001", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": true, 
                     "required": [], 
-                    "selection_mode": "auto", 
-                    "selector": ".article-list-title > a", 
+                    "repeated": true, 
+                    "selection_mode": "css", 
+                    "selector": ".articles > li:nth-child(9n+1) > .article > .article-content > .article-list-title > a", 
                     "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" articles \")]/li[position() mod 9 = 1]/*[contains(concat(\" \", @class, \" \"), \" article \")]/*[contains(concat(\" \", @class, \" \"), \" article-content \")]/*[contains(concat(\" \", @class, \" \"), \" article-list-title \")]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        "p.article-content", 
+                        "p:nth-child(5)", 
+                        "p:nth-child(6)"
+                    ], 
+                    "container_id": "34ee-4d95-8d31", 
+                    "data": {
+                        "54f4-4cea-9b1b": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "ced4-4fcd-bfd5", 
                     "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-list-title \")]/a"
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".page > .page-header > .container > .section > .section-header > p", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" page \")]/*[contains(concat(\" \", @class, \" \"), \" page-header \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" section \")]/*[contains(concat(\" \", @class, \" \"), \" section-header \")]/p"
                 }
             ]
         }
@@ -119,5 +131,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "www.emergent.info", 
     "url": "http://www.emergent.info/Italian-fisherman-massive-catfish", 
-    "version": "0.13.0b35"
+    "version": "0.13.0b36"
 }

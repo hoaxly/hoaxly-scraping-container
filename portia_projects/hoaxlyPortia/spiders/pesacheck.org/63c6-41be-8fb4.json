@@ -18,34 +18,9 @@
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
                     "selector": ".u-sizeViewHeightMin100", 
-                    "siblings": 0, 
+                    "siblings": 1, 
                     "tagid": null, 
                     "text-content": "#portia-content"
-                }, 
-                {
-                    "accept_selectors": [
-                        "#a042"
-                    ], 
-                    "container_id": "ca64-40a6-a2cb", 
-                    "data": {
-                        "1a6c-498a-88c7": {
-                            "attribute": "content", 
-                            "extractors": {}, 
-                            "field": "a458-4806-9323", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "492d-4ac6-9c5c", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "repeated": false, 
-                    "required": [], 
-                    "selection_mode": "auto", 
-                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(1) > .graf", 
-                    "tagid": null, 
-                    "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" graf \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -61,20 +36,20 @@
                         }
                     }, 
                     "id": "74f5-40fb-b3e3", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
+                    "repeated": false, 
                     "selection_mode": "auto", 
                     "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3)", 
                     "tagid": null, 
-                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]"
                 }, 
                 {
                     "accept_selectors": [
-                        "time"
+                        ".container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .js-testPostMetaInlineSupplemental > time"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {
@@ -86,16 +61,97 @@
                         }
                     }, 
                     "id": "9553-4939-888f", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
-                    "selection_mode": "auto", 
-                    "selector": ".u-sizeViewHeightMin100 > .container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .js-testPostMetaInlineSupplemental > time", 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .js-testPostMetaInlineSupplemental > time", 
                     "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaHeader \")]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaLockup \")]/*[contains(concat(\" \", @class, \" \"), \" u-flex1 \")]/*[contains(concat(\" \", @class, \" \"), \" js-testPostMetaInlineSupplemental \")]/time"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".tags > li:nth-child(1) > .link", 
+                        ".tags > li:nth-child(2) > .link"
+                    ], 
+                    "container_id": "ca64-40a6-a2cb", 
+                    "data": {
+                        "ad65-4001-b269": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "4d4b-4e29-a5b9", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "c54c-4aa4-a6f7", 
                     "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaHeader \")]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaLockup \")]/*[contains(concat(\" \", @class, \" \"), \" u-flex1 \")]/*[contains(concat(\" \", @class, \" \"), \" js-testPostMetaInlineSupplemental \")]/time"
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".u-sizeViewHeightMin100 > .u-paddingTop10 > div:nth-child(1) > div:nth-child(2) > .col > .u-paddingBottom10 > .tags > li > .link", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" u-paddingTop10 \")]/div[1]/div[2]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" u-paddingBottom10 \")]/*[contains(concat(\" \", @class, \" \"), \" tags \")]/li/*[contains(concat(\" \", @class, \" \"), \" link \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#b440 > .markup--anchor", 
+                        "#db11 > .markup--anchor"
+                    ], 
+                    "container_id": "ca64-40a6-a2cb", 
+                    "data": {
+                        "3da1-458e-a2e1": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "a837-469d-a613", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "4712-4e56-8ace", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(2) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(5) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(8) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(10) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(11) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(13) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(14) > a:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(18) > a:nth-child(1)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[2]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[5]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[8]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[10]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[11]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[13]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[14]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]/p[18]/a[1]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#\\39 9c5 > a:nth-child(4) > .markup--strong", 
+                        "#\\39 9c5 > a:nth-child(6) > .markup--strong", 
+                        "#\\32 b5b > a:nth-child(4) > .markup--strong", 
+                        "#\\39 9c5 > strong:nth-child(2)", 
+                        ".js-cardUser > .u-verticalAlignMiddle > .u-fontSize18 > .link"
+                    ], 
+                    "container_id": "ca64-40a6-a2cb", 
+                    "data": {
+                        "a72d-421e-9e82": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "dff0-4c77-8a86", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "e17e-433f-ba71", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--last > .section-content > .section-inner > p:nth-child(2) > strong:nth-child(2), .u-sizeViewHeightMin100 > .postArticle-content > .section--last > .section-content > .section-inner > .graf--p > strong:nth-child(1),.u-sizeViewHeightMin100 > .postArticle-content > .section--last > .section-content > .section-inner > .graf--p > a > strong:nth-child(1), .u-sizeViewHeightMin100 > .u-paddingTop10 > .js-postAttributionFooterContainer > .row > div:nth-child(1) > .u-block > .u-verticalAlignMiddle > .u-fontSize18 > .link", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--last \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/*[contains(concat(\" \", @class, \" \"), \" section-inner \")]/p[2]/strong[2] | //*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--last \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/*[contains(concat(\" \", @class, \" \"), \" section-inner \")]/*[contains(concat(\" \", @class, \" \"), \" graf--p \")]//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--last \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/*[contains(concat(\" \", @class, \" \"), \" section-inner \")]/*[contains(concat(\" \", @class, \" \"), \" graf--p \")]/a/strong[1] | //*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" u-paddingTop10 \")]/*[contains(concat(\" \", @class, \" \"), \" js-postAttributionFooterContainer \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" u-block \")]/*[contains(concat(\" \", @class, \" \"), \" u-verticalAlignMiddle \")]/*[contains(concat(\" \", @class, \" \"), \" u-fontSize18 \")]/*[contains(concat(\" \", @class, \" \"), \" link \")]"
                 }
             ]
         }
@@ -103,5 +159,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "pesacheck.org", 
     "url": "https://pesacheck.org/is-the-zika-virus-present-in-tanzania-54d79ec7be94", 
-    "version": "0.13.0b35"
+    "version": "0.13.0b36"
 }

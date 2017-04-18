@@ -2,5 +2,13 @@
     "f537-4cfc-9346": {
         "id": "f537-4cfc-9346", 
         "type_extractor": "url"
+    }, 
+    "eabe-4969-83f9": {
+        "id": "eabe-4969-83f9", 
+        "type_extractor": "text"
+    }, 
+    "f8e1-4e6c-b9af": {
+        "id": "f8e1-4e6c-b9af", 
+        "type_extractor": "image"
     }
 }

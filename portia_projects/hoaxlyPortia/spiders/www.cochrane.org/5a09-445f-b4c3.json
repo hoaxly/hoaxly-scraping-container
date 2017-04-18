@@ -1,7 +1,7 @@
 {
     "extractors": {}, 
-    "id": "0b17-44bd-a670", 
-    "name": "Analysis of US scientists officially declare th", 
+    "id": "5a09-445f-b4c3", 
+    "name": "Steroids for the treatment of influenza Cochran", 
     "page_id": "", 
     "page_type": "item", 
     "plugins": {
@@ -12,150 +12,146 @@
                         "#portia-content": "#dummy"
                     }, 
                     "container_id": null, 
-                    "id": "fdc8-4b8a-99da", 
+                    "id": "8d92-461d-b76b", 
                     "item_container": true, 
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
-                    "selector": ".post-5196 > span", 
-                    "siblings": 1, 
+                    "selector": "html", 
+                    "siblings": 0, 
                     "tagid": null, 
                     "text-content": "#portia-content"
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-title"
+                        "#page-title"
                     ], 
-                    "container_id": "fdc8-4b8a-99da", 
+                    "container_id": "8d92-461d-b76b", 
                     "data": {
-                        "597a-48c3-8db0": {
+                        "0c76-4924-bb32": {
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "a458-4806-9323", 
                             "required": false
                         }
                     }, 
-                    "id": "d780-4a91-b095", 
+                    "id": "85e7-4a0f-996e", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "css", 
-                    "selector": ".entry-title", 
+                    "selection_mode": "auto", 
+                    "selector": "#page-title", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                    "xpath": "//*[@id=\"page-title\"]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-content"
+                        ".date-display-single"
                     ], 
-                    "container_id": "fdc8-4b8a-99da", 
+                    "container_id": "8d92-461d-b76b", 
                     "data": {
-                        "953c-4330-8b87": {
-                            "attribute": "content", 
-                            "extractors": {}, 
-                            "field": "d065-406f-8a45", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "542d-4456-a372", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "css", 
-                    "selector": ".entry-content", 
-                    "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
-                }, 
-                {
-                    "accept_selectors": [
-                        "article > span > header > p > a:nth-child(1)"
-                    ], 
-                    "container_id": "fdc8-4b8a-99da", 
-                    "data": {
-                        "a165-46e2-addd": {
-                            "attribute": "content", 
-                            "extractors": [
-                                "f537-4cfc-9346", 
-                                "eabe-4969-83f9"
-                            ], 
-                            "field": "827d-49e6-a401", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "fe09-475b-8524", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "css", 
-                    "selector": "article > span > header > p > a:nth-child(1)", 
-                    "tagid": null, 
-                    "xpath": "//article/span/header/p/a[1]"
-                }, 
-                {
-                    "accept_selectors": [
-                        "article > span > header > p > .updated"
-                    ], 
-                    "container_id": "fdc8-4b8a-99da", 
-                    "data": {
-                        "3b78-4ad7-9484": {
+                        "610e-4eeb-9608": {
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "1414-4984-8caa", 
                             "required": false
                         }
                     }, 
-                    "id": "33ec-4963-97ac", 
+                    "id": "6cab-4573-8930", 
+                    "text-content": "text-content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".date-display-single", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date-display-single \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".field-name-field-authors > .field-items"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "7934-4b0e-86ac": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "dff0-4c77-8a86", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "c24c-40a7-b439", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "css", 
-                    "selector": "article > span > header > p > .updated", 
+                    "selection_mode": "auto", 
+                    "selector": ".field-name-field-authors > .field-items", 
                     "tagid": null, 
-                    "xpath": "//article/span/header/p/*[contains(concat(\" \", @class, \" \"), \" updated \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" field-name-field-authors \")]/*[contains(concat(\" \", @class, \" \"), \" field-items \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-content > p:nth-child(1) > a:nth-child(3)", 
-                        ".entry-content > p:nth-child(1) > a:nth-child(4)"
+                        "#content-inner"
                     ], 
-                    "container_id": "fdc8-4b8a-99da", 
+                    "container_id": "8d92-461d-b76b", 
                     "data": {
-                        "283f-45dd-8eca": {
-                            "attribute": "href", 
+                        "b81e-40e7-a1e6": {
+                            "attribute": "content", 
                             "extractors": {}, 
-                            "field": "4d4b-4e29-a5b9", 
+                            "field": "d065-406f-8a45", 
                             "required": false
                         }
                     }, 
-                    "id": "1c2a-455c-9d46", 
+                    "id": "9210-47c9-99a7", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
-                    "repeated": true, 
+                    "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".post-5196 > span > .entry-content > p:nth-child(1) > a", 
+                    "selector": "#content-inner", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-5196 \")]/span/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[1]/a"
+                    "xpath": "//*[@id=\"content-inner\"]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "title"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "006e-4485-b173": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "323e-4c3d-94dc", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2989-4196-bb53", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "title", 
+                    "tagid": null, 
+                    "xpath": "//title"
                 }
             ]
         }
     }, 
     "scrapes": "7949-4e6e-a53a", 
-    "spider": "climatefeedback.org", 
-    "url": "http://climatefeedback.org/evaluation/scientists-officially-declare-2016-hottest-year-record-chris-mooney-the-washington-post/", 
+    "spider": "www.cochrane.org", 
+    "url": "http://www.cochrane.org/CD010406/ARI_steroids-treatment-influenza", 
     "version": "0.13.0b36"
 }
