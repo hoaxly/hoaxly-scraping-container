@@ -1,0 +1,107 @@
+{
+    "extractors": {}, 
+    "id": "0b17-44bd-a670", 
+    "name": "Analysis of US scientists officially declare th", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "fdc8-4b8a-99da", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".post-5196 > span", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-title"
+                    ], 
+                    "container_id": "fdc8-4b8a-99da", 
+                    "data": {
+                        "597a-48c3-8db0": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "d780-4a91-b095", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "repeated": false, 
+                    "required": [], 
+                    "selection_mode": "css", 
+                    "selector": ".entry-title", 
+                    "tagid": null, 
+                    "text-content": "content", 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content"
+                    ], 
+                    "container_id": "fdc8-4b8a-99da", 
+                    "data": {
+                        "953c-4330-8b87": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "542d-4456-a372", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "repeated": false, 
+                    "required": [], 
+                    "selection_mode": "css", 
+                    "selector": ".entry-content", 
+                    "tagid": null, 
+                    "text-content": "content", 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".post-5196 > span > header > p > a:nth-child(1)"
+                    ], 
+                    "container_id": "fdc8-4b8a-99da", 
+                    "data": {
+                        "a165-46e2-addd": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "827d-49e6-a401", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "fe09-475b-8524", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "repeated": false, 
+                    "required": [], 
+                    "selection_mode": "auto", 
+                    "selector": ".post-5196 > span > header > p > a:nth-child(1)", 
+                    "tagid": null, 
+                    "text-content": "content", 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-5196 \")]/span/header/p/a[1]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "climatefeedback.org", 
+    "url": "http://climatefeedback.org/evaluation/scientists-officially-declare-2016-hottest-year-record-chris-mooney-the-washington-post/", 
+    "version": "0.13.0b35"
+}

@@ -1,0 +1,77 @@
+{
+    "7949-4e6e-a53a": {
+        "fields": {
+            "a458-4806-9323": {
+                "id": "a458-4806-9323", 
+                "name": "factoidHeadline", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "1414-4984-8caa": {
+                "id": "1414-4984-8caa", 
+                "name": "factoidPubdate", 
+                "required": false, 
+                "type": "date", 
+                "vary": false
+            }, 
+            "4d4b-4e29-a5b9": {
+                "id": "4d4b-4e29-a5b9", 
+                "name": "factoidCategory", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "d065-406f-8a45": {
+                "id": "d065-406f-8a45", 
+                "name": "factoidContent", 
+                "required": false, 
+                "type": "safe html", 
+                "vary": false
+            }, 
+            "923b-49d5-8d2b": {
+                "id": "923b-49d5-8d2b", 
+                "name": "factoidTag", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "e60e-4334-8b3a": {
+                "id": "e60e-4334-8b3a", 
+                "name": "claimSourcesCount", 
+                "required": false, 
+                "type": "number", 
+                "vary": false
+            }, 
+            "a837-469d-a613": {
+                "id": "a837-469d-a613", 
+                "name": "claimSourcesUrls", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "48ce-4080-9a47": {
+                "id": "48ce-4080-9a47", 
+                "name": "claimReviewed", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "610c-402e-ba4d": {
+                "id": "610c-402e-ba4d", 
+                "name": "factoidRating", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "827d-49e6-a401": {
+                "id": "827d-49e6-a401", 
+                "name": "itemReviewed", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }
+        }, 
+        "name": "factoidPortiaSchema"
+    }
+}

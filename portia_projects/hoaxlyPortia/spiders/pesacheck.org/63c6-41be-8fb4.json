@@ -1,0 +1,107 @@
+{
+    "extractors": {}, 
+    "id": "63c6-41be-8fb4", 
+    "name": "Is the Zika Virus present in Tanzania Pesa Chec", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "ca64-40a6-a2cb", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".u-sizeViewHeightMin100", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#a042"
+                    ], 
+                    "container_id": "ca64-40a6-a2cb", 
+                    "data": {
+                        "1a6c-498a-88c7": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "492d-4ac6-9c5c", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "repeated": false, 
+                    "required": [], 
+                    "selection_mode": "auto", 
+                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(1) > .graf", 
+                    "tagid": null, 
+                    "text-content": "content", 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" graf \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".section-inner:nth-child(3)"
+                    ], 
+                    "container_id": "ca64-40a6-a2cb", 
+                    "data": {
+                        "fd57-462c-bf5d": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "74f5-40fb-b3e3", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "repeated": false, 
+                    "required": [], 
+                    "selection_mode": "auto", 
+                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3)", 
+                    "tagid": null, 
+                    "text-content": "content", 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "time"
+                    ], 
+                    "container_id": "ca64-40a6-a2cb", 
+                    "data": {
+                        "f810-41d2-bb86": {
+                            "attribute": "datetime", 
+                            "extractors": {}, 
+                            "field": "1414-4984-8caa", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9553-4939-888f", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "repeated": false, 
+                    "required": [], 
+                    "selection_mode": "auto", 
+                    "selector": ".u-sizeViewHeightMin100 > .container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .js-testPostMetaInlineSupplemental > time", 
+                    "tagid": null, 
+                    "text-content": "content", 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaHeader \")]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaLockup \")]/*[contains(concat(\" \", @class, \" \"), \" u-flex1 \")]/*[contains(concat(\" \", @class, \" \"), \" js-testPostMetaInlineSupplemental \")]/time"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "pesacheck.org", 
+    "url": "https://pesacheck.org/is-the-zika-virus-present-in-tanzania-54d79ec7be94", 
+    "version": "0.13.0b35"
+}
