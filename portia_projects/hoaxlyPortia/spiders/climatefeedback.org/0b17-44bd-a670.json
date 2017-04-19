@@ -17,7 +17,7 @@
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
-                    "selector": ".post-5196 > span", 
+                    "selector": ".content", 
                     "siblings": 1, 
                     "tagid": null, 
                     "text-content": "#portia-content"
@@ -147,9 +147,38 @@
                     "required": [], 
                     "repeated": true, 
                     "selection_mode": "auto", 
-                    "selector": ".post-5196 > span > .entry-content > p:nth-child(1) > a", 
+                    "selector": ".content > .main > .post-5196 > span > .entry-content > p:nth-child(1) > a", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-5196 \")]/span/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[1]/a"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" content \")]/*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-5196 \")]/span/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[1]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".content > .sidebar > .widget-5 > .textwidget > .row"
+                    ], 
+                    "container_id": "fdc8-4b8a-99da", 
+                    "data": {
+                        "dc27-4bfb-bc9b": {
+                            "attribute": "content", 
+                            "extractors": [
+                                "f8e1-4e6c-b9af", 
+                                "f537-4cfc-9346", 
+                                "eabe-4969-83f9"
+                            ], 
+                            "field": "fee9-49bb-9284", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "3e31-42a7-8b23", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".content > .sidebar > .widget-5 > .textwidget > .row", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" content \")]/*[contains(concat(\" \", @class, \" \"), \" sidebar \")]/*[contains(concat(\" \", @class, \" \"), \" widget-5 \")]/*[contains(concat(\" \", @class, \" \"), \" textwidget \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]"
                 }
             ]
         }

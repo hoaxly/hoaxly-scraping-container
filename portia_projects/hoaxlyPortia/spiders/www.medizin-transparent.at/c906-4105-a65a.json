@@ -24,7 +24,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        ".meta-custom"
+                        "article > .meta-custom"
                     ], 
                     "container_id": "490b-4faf-b6f2", 
                     "data": {
@@ -42,14 +42,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#post-6236 > .meta-custom", 
+                    "selection_mode": "css", 
+                    "selector": "article > .meta-custom", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"post-6236\"]/*[contains(concat(\" \", @class, \" \"), \" meta-custom \")]"
+                    "xpath": "//article/*[contains(concat(\" \", @class, \" \"), \" meta-custom \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        "h1:nth-child(2)"
+                        "article > h1"
                     ], 
                     "container_id": "490b-4faf-b6f2", 
                     "data": {
@@ -67,10 +67,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#post-6236 > h1", 
+                    "selection_mode": "css", 
+                    "selector": "article > h1", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"post-6236\"]/h1"
+                    "xpath": "//article/h1"
                 }, 
                 {
                     "accept_selectors": [
@@ -149,34 +149,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        "p:nth-child(46) > a:nth-child(4)", 
-                        "p:nth-child(45) > a:nth-child(4)", 
-                        "p:nth-child(38) > a"
-                    ], 
-                    "container_id": "490b-4faf-b6f2", 
-                    "data": {
-                        "64f0-463e-9fdc": {
-                            "attribute": "href", 
-                            "extractors": {}, 
-                            "field": "a837-469d-a613", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "04b3-4e48-98c4", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": true, 
-                    "selection_mode": "auto", 
-                    "selector": "#post-6236 > .article__content > p:nth-child(7) > a,#post-6236 > .article__content > p:nth-child(9) > a,#post-6236 > .article__content > p:nth-child(11) > a,#post-6236 > .article__content > p:nth-child(13) > a,#post-6236 > .article__content > p:nth-child(14) > a,#post-6236 > .article__content > p:nth-child(16) > a,#post-6236 > .article__content > p:nth-child(17) > a,#post-6236 > .article__content > p:nth-child(22) > a,#post-6236 > .article__content > p:nth-child(23) > a,#post-6236 > .article__content > p:nth-child(31) > a,#post-6236 > .article__content > p:nth-child(32) > a,#post-6236 > .article__content > p:nth-child(33) > a,#post-6236 > .article__content > p:nth-child(35) > a,#post-6236 > .article__content > p:nth-child(36) > a,#post-6236 > .article__content > p:nth-child(37) > a,#post-6236 > .article__content > p:nth-child(38) > a,#post-6236 > .article__content > p:nth-child(39) > a,#post-6236 > .article__content > p:nth-child(40) > a,#post-6236 > .article__content > p:nth-child(42) > a,#post-6236 > .article__content > p:nth-child(43) > a,#post-6236 > .article__content > p:nth-child(44) > a,#post-6236 > .article__content > p:nth-child(45) > a,#post-6236 > .article__content > p:nth-child(46) > a", 
-                    "tagid": null, 
-                    "xpath": "//*[@id=\"post-6236\"]/*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[7]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[9]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[11]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[13]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[14]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[16]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[17]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[22]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[23]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[31]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[32]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[33]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[35]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[36]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[37]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[38]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[39]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[40]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[42]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[43]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[44]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[45]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[46]/a"
-                }, 
-                {
-                    "accept_selectors": [
-                        "td:nth-child(3) > a, td:nth-child(3) > tbody > a"
+                        ".article__content > .table_rating > tr:nth-child(2) > td:nth-child(3) > a,#post-6236 > .article__content > .table_rating > tbody > tr:nth-child(2) > td:nth-child(3) > a"
                     ], 
                     "container_id": "490b-4faf-b6f2", 
                     "data": {
@@ -194,10 +167,60 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#post-6236 > .article__content > .table_rating > tr:nth-child(2) > td:nth-child(3) > a,#post-6236 > .article__content > .table_rating > tbody > tr:nth-child(2) > td:nth-child(3) > a", 
+                    "selection_mode": "css", 
+                    "selector": ".article__content > .table_rating > tr:nth-child(2) > td:nth-child(3) > a,#post-6236 > .article__content > .table_rating > tbody > tr:nth-child(2) > td:nth-child(3) > a", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"post-6236\"]/*[contains(concat(\" \", @class, \" \"), \" article__content \")]/*[contains(concat(\" \", @class, \" \"), \" table_rating \")]/tr[2]/td[3]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/*[contains(concat(\" \", @class, \" \"), \" table_rating \")]/tbody/tr[2]/td[3]/a"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/*[contains(concat(\" \", @class, \" \"), \" table_rating \")]/tr[2]/td[3]//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/*[contains(concat(\" \", @class, \" \"), \" table_rating \")]/tbody/tr[2]/td[3]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#post-6236 > .article__content > p:nth-child(22) > a:nth-child(1)"
+                    ], 
+                    "container_id": "490b-4faf-b6f2", 
+                    "data": {
+                        "9887-4fdb-9cd2": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "dff0-4c77-8a86", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "14c1-4071-aa67", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": "#post-6236 > .article__content > p:nth-child(22) > a:nth-child(1)", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"post-6236\"]/*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[22]/a[1]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "p:nth-child(22) > a:nth-child(2)"
+                    ], 
+                    "container_id": "490b-4faf-b6f2", 
+                    "data": {
+                        "1671-4cd3-929d": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "fee9-49bb-9284", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "a333-4dcc-8b4c", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#post-6236 > .article__content > p:nth-child(22) > a:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"post-6236\"]/*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[22]/a[2]"
                 }
             ]
         }

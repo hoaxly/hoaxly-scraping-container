@@ -1,0 +1,132 @@
+{
+    "extractors": {}, 
+    "id": "87c9-42a6-962a", 
+    "name": "Review Reporters Without Borders is a fraud", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "685f-489d-b5ae", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": "html", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".title > a"
+                    ], 
+                    "container_id": "685f-489d-b5ae", 
+                    "data": {
+                        "38ac-4b37-9c02": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "f19f-4630-91c7", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".title > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" title \")]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".postAuthor > a"
+                    ], 
+                    "container_id": "685f-489d-b5ae", 
+                    "data": {
+                        "c847-49f0-8233": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "dff0-4c77-8a86", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "08d8-4a8f-8ee9", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".postAuthor > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" postAuthor \")]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        "section > div:nth-child(1) > .span8"
+                    ], 
+                    "container_id": "685f-489d-b5ae", 
+                    "data": {
+                        "fbf8-4f4b-93e1": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "31c1-440e-b337", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "section > div:nth-child(1) > .span8", 
+                    "tagid": null, 
+                    "xpath": "//section/div[1]/*[contains(concat(\" \", @class, \" \"), \" span8 \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "title"
+                    ], 
+                    "container_id": "685f-489d-b5ae", 
+                    "data": {
+                        "1ad7-4485-aa98": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "323e-4c3d-94dc", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9c40-44b2-a5b4", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "title", 
+                    "tagid": null, 
+                    "xpath": "//title"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "factchecking.mk", 
+    "url": "http://factchecking.mk/review-reporters-without-borders-is-a-fraud/", 
+    "version": "0.13.0b36"
+}

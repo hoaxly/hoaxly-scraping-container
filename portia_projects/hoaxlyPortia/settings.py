@@ -4,9 +4,9 @@ import os
 SPIDER_MANAGER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 ITEM_PIPELINES = {
-    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 10,
-    'slybot.dupefilter.DupeFilterPipeline': 100,
-}
+    'slybot.dupefilter.DupeFilterPipeline': 1,
+    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 100,
+    }
 
 
 ELASTICSEARCH_SERVERS = ['http://hoaxly.docksal:9200']

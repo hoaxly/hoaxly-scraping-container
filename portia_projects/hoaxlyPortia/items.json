@@ -112,6 +112,13 @@
                 "required": false, 
                 "type": "text", 
                 "vary": false
+            }, 
+            "fee9-49bb-9284": {
+                "id": "fee9-49bb-9284", 
+                "name": "factoidReviewers", 
+                "required": false, 
+                "type": "safe html", 
+                "vary": false
             }
         }, 
         "name": "factoidPortiaSchema"
