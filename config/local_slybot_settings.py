@@ -4,7 +4,7 @@ ITEM_PIPELINES = {
     }
 
 
-ELASTICSEARCH_SERVERS = ['http://hoaxly.docksal:9200']
+ELASTICSEARCH_SERVERS = ['http://elastic:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'

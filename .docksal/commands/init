@@ -75,7 +75,7 @@ init_settings ()
 {
 
 	# Copy from settings templates
-	copy_settings_file "${PROJECT_ROOT}/config/local_slybot_settings.py" "${PROJECT_ROOT}/portia/slyd/slybot/slybot"
+	copy_settings_file "${PROJECT_ROOT}/config/local_slybot_settings.py" "${PROJECT_ROOT}//portia/slyd/slybot/slybot/local_slybot_settings.py"
 
 }
 
@@ -118,9 +118,9 @@ site_install ()
 	chmod 755 "${SITEDIR_PATH}"
 }
 install_requirements () {
-    docker exec -ti hoaxly_scrapyd_1 apt-get update
-    docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
-    docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
+    #docker exec -ti hoaxly_scrapyd_1 apt-get update
+    #docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
+    #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
     docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
 
 }
