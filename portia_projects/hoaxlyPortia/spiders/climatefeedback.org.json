@@ -1,0 +1,17 @@
+{
+    "allowed_domains": [], 
+    "exclude_patterns": [], 
+    "follow_patterns": [], 
+    "id": "climatefeedback.org", 
+    "js_disable_patterns": [], 
+    "js_enable_patterns": [], 
+    "js_enabled": false, 
+    "links_to_follow": "none", 
+    "respect_nofollow": false, 
+    "start_urls": [
+        {
+            "url": "http://climatefeedback.org/evaluation/scientists-officially-declare-2016-hottest-year-record-chris-mooney-the-washington-post/", 
+            "type": "url"
+        }
+    ]
+}

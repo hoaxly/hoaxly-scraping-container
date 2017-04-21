@@ -1,0 +1,82 @@
+{
+    "extractors": {}, 
+    "id": "6964-4295-926a", 
+    "name": "Quality standards for apples - European Commissi", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "afb2-43a2-b905", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": "#post-1071", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        "h2"
+                    ], 
+                    "container_id": "afb2-43a2-b905", 
+                    "data": {
+                        "eb7c-4ad5-bbac": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "1e1a-42f5-9bfd", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#post-1071 > h2", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"post-1071\"]/h2"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry"
+                    ], 
+                    "container_id": "afb2-43a2-b905", 
+                    "data": {
+                        "aab9-4a57-b7cd": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6061-4d05-a455", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#post-1071 > .entry", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"post-1071\"]/*[contains(concat(\" \", @class, \" \"), \" entry \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "blogs.ec.europa.eu", 
+    "url": "http://blogs.ec.europa.eu/ECintheUK/quality-standards-for-apples/", 
+    "version": "0.13.0b36"
+}

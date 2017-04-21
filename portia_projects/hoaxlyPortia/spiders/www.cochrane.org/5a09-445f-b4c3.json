@@ -1,0 +1,157 @@
+{
+    "extractors": {}, 
+    "id": "5a09-445f-b4c3", 
+    "name": "Steroids for the treatment of influenza Cochran", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "8d92-461d-b76b", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": "html", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#page-title"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "0c76-4924-bb32": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "85e7-4a0f-996e", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#page-title", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"page-title\"]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".date-display-single"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "610e-4eeb-9608": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "1414-4984-8caa", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6cab-4573-8930", 
+                    "text-content": "text-content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".date-display-single", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date-display-single \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".field-name-field-authors > .field-items"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "7934-4b0e-86ac": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "dff0-4c77-8a86", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "c24c-40a7-b439", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".field-name-field-authors > .field-items", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" field-name-field-authors \")]/*[contains(concat(\" \", @class, \" \"), \" field-items \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#content-inner"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "b81e-40e7-a1e6": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9210-47c9-99a7", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#content-inner", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"content-inner\"]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "title"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "006e-4485-b173": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "323e-4c3d-94dc", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2989-4196-bb53", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "title", 
+                    "tagid": null, 
+                    "xpath": "//title"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "www.cochrane.org", 
+    "url": "http://www.cochrane.org/CD010406/ARI_steroids-treatment-influenza", 
+    "version": "0.13.0b36"
+}

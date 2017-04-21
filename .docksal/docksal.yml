@@ -25,13 +25,13 @@ services:
     depends_on:
       - elastic
     environment:
-      - ELASTICSEARCH_URL=http://hoaxly.docksal:9200
+      - ELASTICSEARCH_URL=http://elastic:9200
 
   scrapyd:
     image: vimagick/scrapyd
     ports:
       - "6800:6800"
-    links:
+    depends_on:
       - elastic
     volumes:
       - project_root:/hoaxly
@@ -45,3 +45,4 @@ services:
     volumes:
      # - ./portia/data:/app/slyd/data
       - ${PWD}/portia_projects:/app/data/projects:rw
+      - ${PWD}/portia/slyd/slybot/slybot:/app/slyd/slybot/slybot

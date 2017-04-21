@@ -1,0 +1,17 @@
+{
+    "allowed_domains": [], 
+    "exclude_patterns": [], 
+    "follow_patterns": [], 
+    "id": "www.cochrane.org", 
+    "js_disable_patterns": [], 
+    "js_enable_patterns": [], 
+    "js_enabled": false, 
+    "links_to_follow": "none", 
+    "respect_nofollow": false, 
+    "start_urls": [
+        {
+            "url": "http://www.cochrane.org/CD010406/ARI_steroids-treatment-influenza", 
+            "type": "url"
+        }
+    ]
+}

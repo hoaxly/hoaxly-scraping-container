@@ -1,0 +1,17 @@
+{
+    "allowed_domains": [], 
+    "exclude_patterns": [], 
+    "follow_patterns": [], 
+    "id": "blogs.ec.europa.eu", 
+    "js_disable_patterns": [], 
+    "js_enable_patterns": [], 
+    "js_enabled": false, 
+    "links_to_follow": "none", 
+    "respect_nofollow": false, 
+    "start_urls": [
+        {
+            "url": "http://blogs.ec.europa.eu/ECintheUK/quality-standards-for-apples/", 
+            "type": "url"
+        }
+    ]
+}
