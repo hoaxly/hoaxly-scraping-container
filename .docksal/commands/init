@@ -121,7 +121,7 @@ install_requirements () {
     docker exec -ti hoaxly_scrapyd_1 apt-get update
     docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
     docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
-    docker exec -ti hoaxly_portia_1 pip install -r "/hoaxly/config/requirements.txt"
+    docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
 
 }
 #-------------------------- END: Functions --------------------------------
