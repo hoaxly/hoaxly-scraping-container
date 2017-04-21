@@ -19,7 +19,7 @@ http://hoaxly.docksal:9001
 ```
 docker exec hoaxly_portia_1  <PROJECT_PATH> [SPIDER] [OPTIONS]
 
-docker exec hoaxly_portia_1 portiacrawl data/portia_projects/HoaxlyPortia
+docker exec hoaxly_portia_1 portiacrawl /app/data/projects/hoaxlyPortia
 ```
 
 ## use kibana
