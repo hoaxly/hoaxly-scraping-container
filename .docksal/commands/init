@@ -75,16 +75,8 @@ init_settings ()
 {
 
 	# Copy from settings templates
-	copy_settings_file "${PROJECT_ROOT}/config/default/default.settings.local.php" "${SITEDIR_PATH}/settings.local.php"
-	copy_settings_file "${PROJECT_ROOT}/config/default/default.settings.php" "${SITEDIR_PATH}/settings.php"
-	copy_settings_file "${PROJECT_ROOT}/config/default/development.services.yml" "${SITEDIR_PATH}/development.services.yml"
+	copy_settings_file "${PROJECT_ROOT}/config/local_slybot_settings.py" "${PROJECT_ROOT}//portia/slyd/slybot/slybot/local_slybot_settings.py"
 
-	# SETUP ONCE DURING _fin initing a cloned_ PROJECT
-	# These are being 'compiled'
-	if [[ -f ${SITEDIR_PATH}/drushrc.php ]]; then
-		rm ${SITEDIR_PATH}/drushrc.php
-	fi
-	envsubst '${VIRTUAL_HOST}' < ${PROJECT_ROOT}/config/default/drushrc.php >> ${SITEDIR_PATH}/drushrc.php
 }
 
 compile_configs ()
@@ -126,10 +118,10 @@ site_install ()
 	chmod 755 "${SITEDIR_PATH}"
 }
 install_requirements () {
-    docker exec -ti hoaxly_scrapyd_1 apt-get update
-    docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
-    docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
-#    docker exec -ti hoaxly_portia_1 pip install -r "/hoaxly/config/requirements.txt"
+    #docker exec -ti hoaxly_scrapyd_1 apt-get update
+    #docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
+    #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
+    docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
 
 }
 #-------------------------- END: Functions --------------------------------
@@ -160,6 +152,7 @@ echo -e "${green_bg} Step 2 ${NC}${green} Compiling root Config Files & composer
 # TODO: find a more generic way to execute commands in container or create a prepared image.
 
 install_requirements
+init_settings
 
 echo -en "${green}Everything Done! ${NC} "
 echo -e "Open ${yellow}http://hoaxly.docksal:9001${NC} in your browser to verify the setup."
