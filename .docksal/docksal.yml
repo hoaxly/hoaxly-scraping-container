@@ -45,3 +45,4 @@ services:
     volumes:
      # - ./portia/data:/app/slyd/data
       - ${PWD}/portia_projects:/app/data/projects:rw
+      - ${PWD}/portia/slyd/slybot/slybot:/app/slyd/slybot/slybot
