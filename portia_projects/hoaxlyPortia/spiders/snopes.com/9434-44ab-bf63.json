@@ -1,0 +1,107 @@
+{
+    "extractors": {}, 
+    "id": "9434-44ab-bf63", 
+    "name": "Can a Fetus Send Its Own Stem Cells to Repair It", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "3dbd-48a5-87c3", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".body-content", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-title"
+                    ], 
+                    "container_id": "3dbd-48a5-87c3", 
+                    "data": {
+                        "15a5-4547-8563": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0cde-44b3-b56b", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".body-content > .post-67016 > header > .article-title", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".breadcrumb-nav > a:nth-child(2)"
+                    ], 
+                    "container_id": "3dbd-48a5-87c3", 
+                    "data": {
+                        "9234-44f7-ae16": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "4d4b-4e29-a5b9", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2579-4a5a-8833", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".body-content > .breadcrumb-nav > a:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" breadcrumb-nav \")]/a[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content"
+                    ], 
+                    "container_id": "3dbd-48a5-87c3", 
+                    "data": {
+                        "7232-49f2-b0d2": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0bc2-4b01-b577", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".body-content > .post-67016 > .entry-content", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "snopes.com", 
+    "url": "http://www.snopes.com/fetus-can-send-stem-cells-repair-mothers-damaged-organs/", 
+    "version": "0.13.0b36"
+}
