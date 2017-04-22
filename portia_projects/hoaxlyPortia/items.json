@@ -103,7 +103,7 @@
                 "id": "62e7-4e94-8978", 
                 "name": "starRating", 
                 "required": false, 
-                "type": "text", 
+                "type": "number", 
                 "vary": false
             }, 
             "46e1-4ce5-a9f5": {
