@@ -6,7 +6,8 @@ using the newest dev in docker requires us to build it ourselves.
 
 from projectroot run
 
-    build_portia
+    fin build_portia
+    fin build_pythonlibs
 
 then you can run 
 
