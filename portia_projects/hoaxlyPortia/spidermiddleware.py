@@ -2,21 +2,21 @@
 Spider middleware for enriching item with scraped metadata
 
 """
+
 from __future__ import absolute_import
-import pkgutil, inspect
 
 from extruct.w3cmicrodata import MicrodataExtractor
 from scrapy.http import Request
-from scrapy import log
-import os.path
-import pprint
+
 
 class MicrodataExtruction(object):
+    """This class extracts microdata."""
 
     def process_spider_output(self, response, result, spider):
-        items = []
-        for x in result:
+        """implements https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output"""
+
+        for item in result:
             mde = MicrodataExtractor()
             data = mde.extract(response.body)
-            x['metadata'] = data
-            yield x
+            item['metadata'] = data
+            yield item

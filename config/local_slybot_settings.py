@@ -1,3 +1,7 @@
+"""
+Custom settings for hoaxlyPortia
+
+"""
 import sys
 sys.path.append('/app/data/projects/hoaxlyPortia')
 
