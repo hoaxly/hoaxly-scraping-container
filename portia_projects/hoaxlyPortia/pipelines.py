@@ -6,6 +6,4 @@ class TypePipeline(object):
             item['type'] = item.pop('_type')
             return item
         else:
-            raise DropItem("Missing price in %s" % item)
-
-
+            raise DropItem("couldnt rename type column for %s" % item)
