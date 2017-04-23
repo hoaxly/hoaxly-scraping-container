@@ -1,0 +1,57 @@
+{
+    "extractors": {}, 
+    "id": "0c07-49af-9abc", 
+    "name": "Personalausweis kopieren Verboten - mimikama", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "1693-4bfc-969e", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".td-post-title", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-title"
+                    ], 
+                    "container_id": "1693-4bfc-969e", 
+                    "data": {
+                        "8904-4cc0-97c1": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "4d3a-46e9-bd5c", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".td-post-title > .entry-title", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" td-post-title \")]/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "www.mimikama.at", 
+    "url": "http://www.mimikama.at/allgemein/personalausweis-kopieren-verboten/", 
+    "version": "0.13.0b36"
+}

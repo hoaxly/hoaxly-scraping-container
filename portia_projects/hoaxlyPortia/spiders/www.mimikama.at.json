@@ -2,7 +2,7 @@
     "allowed_domains": [], 
     "exclude_patterns": [], 
     "follow_patterns": [], 
-    "id": "snopes.com", 
+    "id": "www.mimikama.at", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
@@ -10,7 +10,7 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "http://www.snopes.com/fetus-can-send-stem-cells-repair-mothers-damaged-organs/", 
+            "url": "http://www.mimikama.at/allgemein/personalausweis-kopieren-verboten/", 
             "type": "url"
         }
     ]
