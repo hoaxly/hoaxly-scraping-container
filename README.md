@@ -26,10 +26,5 @@ docker exec hoaxly_portia_1 portiacrawl /app/data/projects/hoaxlyPortia
 ## use kibana
 http://hoaxly.docksal:5601
 
-### Create Index
-
-POST hoaxly
-### Show all content of index in kibana dev tools:
-```
-GET /hoaxly/_search?size=1000
-```
+default index: hoaxly
+(uncheck contains timedata)
