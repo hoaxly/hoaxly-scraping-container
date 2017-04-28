@@ -17,7 +17,7 @@
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
-                    "selector": "#post-6236", 
+                    "selector": ".article__content", 
                     "siblings": 1, 
                     "tagid": null, 
                     "text-content": "#portia-content"
@@ -218,9 +218,86 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": "#post-6236 > .article__content > p:nth-child(22) > a:nth-child(2)", 
+                    "selector": ".article__content > p:nth-child(22) > a:nth-child(2)", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"post-6236\"]/*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[22]/a[2]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[22]/a[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article__content > p:nth-child(2)"
+                    ], 
+                    "container_id": "490b-4faf-b6f2", 
+                    "data": {
+                        "79c2-4441-b18a": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "48ce-4080-9a47", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "e6cd-4d32-8738", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article__content > p:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "tr:nth-child(3) > td:nth-child(2), tr:nth-child(3) > tbody > td:nth-child(2)"
+                    ], 
+                    "container_id": "490b-4faf-b6f2", 
+                    "data": {
+                        "3c7f-40b9-9986": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "c060-4eab-bc7a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "3537-45fc-935a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article__content > .table_rating > tr:nth-child(3) > td:nth-child(2),.article__content > .table_rating > tbody > tr:nth-child(3) > td:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/*[contains(concat(\" \", @class, \" \"), \" table_rating \")]/tr[3]//*[contains(concat(\" \", @class, \" \"), \" table_rating \")]/tbody/tr[3]/td[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article__content > p:nth-child(7) > a:nth-child(1)", 
+                        ".article__content > p:nth-child(7) > a:nth-child(2)", 
+                        "p:nth-child(9) > a:nth-child(1)"
+                    ], 
+                    "container_id": "490b-4faf-b6f2", 
+                    "data": {
+                        "6350-4548-b2d4": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "a837-469d-a613", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "cd1a-4773-b653", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article__content > p:nth-child(7) > a,.article__content > p:nth-child(9) > a,.article__content > p:nth-child(11) > a,.article__content > p:nth-child(13) > a,.article__content > p:nth-child(14) > a,.article__content > p:nth-child(16) > a,.article__content > p:nth-child(17) > a,.article__content > p:nth-child(22) > a,.article__content > p:nth-child(23) > a,.article__content > p:nth-child(31) > a,.article__content > p:nth-child(32) > a,.article__content > p:nth-child(33) > a,.article__content > p:nth-child(35) > a,.article__content > p:nth-child(36) > a,.article__content > p:nth-child(37) > a,.article__content > p:nth-child(38) > a,.article__content > p:nth-child(39) > a,.article__content > p:nth-child(40) > a,.article__content > p:nth-child(42) > a,.article__content > p:nth-child(43) > a,.article__content > p:nth-child(44) > a,.article__content > p:nth-child(45) > a,.article__content > p:nth-child(46) > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article__content \")]/p[7]//p[9]//p[11]//p[13]//p[14]//p[16]//p[17]//p[22]//p[23]//p[31]//p[32]//p[33]//p[35]//p[36]//p[37]//p[38]//p[39]//p[40]//p[42]//p[43]//p[44]//p[45]//p[46]/a"
                 }
             ]
         }
@@ -228,5 +305,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "www.medizin-transparent.at", 
     "url": "http://www.medizin-transparent.at/jod-im-salz", 
-    "version": "0.13.0b36"
+    "version": "0.13.0b37"
 }

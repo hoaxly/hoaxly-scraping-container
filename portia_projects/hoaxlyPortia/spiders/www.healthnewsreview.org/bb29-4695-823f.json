@@ -301,6 +301,31 @@
                     "selector": ".item-content-full > div", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/div"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".source-logo"
+                    ], 
+                    "container_id": "8286-4429-8a14", 
+                    "data": {
+                        "dcb6-4dc6-84f9": {
+                            "attribute": "src", 
+                            "extractors": {}, 
+                            "field": "a837-469d-a613", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "176f-48d8-a63a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".source-logo", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" source-logo \")]"
                 }
             ]
         }
@@ -308,5 +333,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "www.healthnewsreview.org", 
     "url": "http://www.healthnewsreview.org/review/nbcs-look-at-kangaroo-care-20-years-later-no-mention-of-important-research-limitations/", 
-    "version": "0.13.0b36"
+    "version": "0.13.0b37"
 }

@@ -1,0 +1,132 @@
+{
+    "extractors": {}, 
+    "id": "d6ab-4b22-84cc", 
+    "name": "Jimmy Johns Gourmet Hunts", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "226d-4b6f-80d2", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".post-5223:nth-child(3)", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-title"
+                    ], 
+                    "container_id": "226d-4b6f-80d2", 
+                    "data": {
+                        "e181-4cd8-abb9": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "7c70-4abf-b2e7", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-5223:nth-child(3) > header > .article-title", 
+                    "tagid": null, 
+                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-description"
+                    ], 
+                    "container_id": "226d-4b6f-80d2", 
+                    "data": {
+                        "529e-4c6b-823b": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "9765-4862-b97d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "dce6-4e37-b730", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-5223:nth-child(3) > header > .article-description", 
+                    "tagid": null, 
+                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content > p:nth-child(2)"
+                    ], 
+                    "container_id": "226d-4b6f-80d2", 
+                    "data": {
+                        "3a67-4281-8c1f": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "48ce-4080-9a47", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "79cf-463a-899d", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-5223:nth-child(3) > .entry-content > p:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content"
+                    ], 
+                    "container_id": "226d-4b6f-80d2", 
+                    "data": {
+                        "dcab-45cb-86d7": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9609-4089-a529", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-5223:nth-child(3) > .entry-content", 
+                    "tagid": null, 
+                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "snopes.com", 
+    "url": "http://www.snopes.com/jimmy-john-liautaud-hunting-photos/", 
+    "version": "0.13.0b37"
+}
