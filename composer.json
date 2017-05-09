@@ -1,0 +1,176 @@
+{
+    "name": "acolono/hoaxly-www",
+    "description": "hoaxly web",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "acolono.com",
+            "role": "company"
+        }
+    ],
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "ao_editor": {
+            "type": "package",
+            "package": {
+                "name": "ao/ao_editor",
+                "version": "master",
+                "type": "ao-module",
+                "source": {
+                    "url": "git@git.acolono.net:ao-research-and-development/ao_editor.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "ao_layout": {
+            "type": "package",
+            "package": {
+                "name": "ao/ao_layout",
+                "version": "master",
+                "type": "ao-module",
+                "source": {
+                    "url": "git@git.acolono.net:ao-research-and-development/ao_layout.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    },
+    "require": {
+        "composer/installers": "^1.0.20",
+        "davidbarratt/custom-installer": "1.0.*@dev",
+        "drupal-composer/drupal-scaffold": "^2.0.1",
+        "wikimedia/composer-merge-plugin": "~1.3",
+        "cweagans/composer-patches": "~1.0",
+        "ao/ao_layout": "master",
+        "ao/ao_editor": "master",
+        "drupal/core": "^8.3",
+        "drush/drush": "~8.0",
+        "drupal/console": "1.*",
+        "drupal/address": "1.x",
+        "drupal/admin_toolbar": "1.x",
+        "drupal/auto_entitylabel": "2.0.0-beta1",
+        "drupal/advanced_text_formatter": "1.x",
+        "drupal/block_class": "1.x",
+        "drupal/config_split": "1.*",
+        "drupal/crop": "1.x",
+        "drupal/core_views_facets": "1.0.0-alpha5",
+        "drupal/ctools": "3.x",
+        "drupal/dynamic_entity_reference": "2.0.0-alpha1",
+        "drupal/eck": "1.x",
+        "drupal/embed": "1.x",
+        "drupal/entity_embed": "1.x",
+        "drupal/entity_reference_revisions": "1.x",
+        "drupal/environment_indicator": "3.x",
+        "drupal/eu_cookie_compliance": "1.x",
+        "drupal/extlink": "1.x",
+        "drupal/facets": "1.0-alpha9",
+        "drupal/field_group": "1.x",
+        "drupal/file_entity": "2.x",
+        "drupal/google_analytics": "2.x",
+        "drupal/inline_entity_form": "1.x",
+        "drupal/message": "1.0.0-alpha6",
+        "drupal/mailchimp": "^1.2",
+        "drupal/maxlength": "^1.0@beta",
+        "drupal/metatag": "1.x",
+        "drupal/migrate_tools": "3.x",
+        "drupal/paragraphs": "^1.0",
+        "drupal/pathauto": "1.x",
+        "drupal/redirect": "1.x",
+        "drupal/rules": "3.0.0-alpha2",
+        "drupal/scheduler": "^1.0@alpha",
+        "drupal/search_api": "~1.0.0-rc4",
+        "drupal/search_api_solr": "~1.0-beta2",
+        "drupal/spamspan": "1.x",
+        "drupal/title": "2.x",
+        "drupal/token": "1.x",
+        "drupal/url_embed": "1.x",
+        "drupal/viewsreference": "^1.0@alpha",
+        "drupal/webform": "^5.0@beta",
+        "drupal/webform_mailchimp": "^5.0",
+        "drupal/page_manager": "1.x-dev",
+        "drupal/mandrill": "^1.0",
+        "drupal/config_filter": "1.x-dev"
+    },
+    "require-dev": {
+        "behat/mink": "~1.7",
+        "behat/mink-goutte-driver": "~1.2",
+        "jcalderonzumba/gastonjs": "~1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "mikey179/vfsStream": "~1.2",
+        "phpunit/phpunit": "~4.8",
+        "symfony/css-selector": "~2.8",
+        "drupal/devel": "1.0.0-beta1",
+        "drupal/twig_xdebug": "1.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/modules/custom{$name}": [
+                "type:drupal-module-custom"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "patches": {
+            "drupal/core": {
+                "Fix default-text-formats bug": "https://www.drupal.org/files/issues/1278886-51-default-text-formats.patch"
+            }
+        },
+        "custom-installer": {
+            "web/modules/custom/{$name}": ["type:ao-module"],
+            "web/themes/custom/{$name}": ["type:ao-theme"]
+        }
+    }
+}
