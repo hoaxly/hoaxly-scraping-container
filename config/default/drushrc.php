@@ -1,2 +1,2 @@
 <?php
-$options['l'] = 'http://phb.docksal';
+$options['l'] = 'http://hoaxly.docksal';
