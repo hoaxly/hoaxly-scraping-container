@@ -43,3 +43,69 @@ services:
     volumes:
       - ${PWD}/portia_projects:/app/data/projects:rw
       - ${PWD}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
+
+  # Web node
+  web:
+    hostname: web
+    image: docksal/web:1.0-apache2.2
+    volumes:
+      # Project root volume
+      - project_root:/var/www:ro
+    labels:
+      - io.docksal.virtual-host=${VIRTUAL_HOST}
+      - io.docksal.project-root=${PROJECT_ROOT}
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - APACHE_DOCUMENTROOT=/var/www/web
+    depends_on:
+      - cli
+
+  # PMA node
+  pma:
+    hostname: pma
+    image: phpmyadmin/phpmyadmin:latest
+    labels:
+          - io.docksal.virtual-host=pma-hoaxly.docksal
+    depends_on:
+      - db
+
+  # DB node
+  db:
+    hostname: db
+    image: docksal/db:1.0-mysql-5.5
+    ports:
+      - ${MYSQL_PORT}
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+
+  # CLI node
+  # Used for all console commands and tools.
+  cli:
+    hostname: cli
+    image: docksal/cli:1.1-php7
+    volumes:
+      # Project root volume
+      - project_root:/var/www:rw
+      # Host home volume (for SSH keys and other credentials).
+      - host_home:/.home:ro
+      # Shared ssh-agent socket
+      - docksal_ssh_agent:/.ssh-agent:ro
+    environment:
+      - XDEBUG_ENABLED=1
+      # For console debuging (eg. drush commands)
+      - XDEBUG_CONFIG=idekey=PHPSTORM remote_host=192.168.10.1
+      - PHP_IDE_CONFIG=serverName=hoaxly.docksal
+  clinodebug:
+      hostname: clinodebug
+      image: docksal/cli:1.0-php7
+      volumes:
+        # Project root volume
+        - project_root:/var/www:rw
+        # Host home volume (for SSH keys and other credentials).
+        - host_home:/.home:ro
+        # Shared ssh-agent socket
+        - docksal_ssh_agent:/.ssh-agent:ro
+

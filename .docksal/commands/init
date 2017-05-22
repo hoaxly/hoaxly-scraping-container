@@ -116,6 +116,17 @@ install_requirements () {
     docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
 
 }
+
+# Initialize local settings files
+init_settings ()
+{
+	# Copy from settings templates
+	copy_settings_file "config/default/default.settings.local.php" "${SITEDIR_PATH}/settings.local.php"
+	copy_settings_file "config/default/default.settings.php" "${SITEDIR_PATH}/settings.php"
+	copy_settings_file "config/default/development.services.yml" "${SITEDIR_PATH}/development.services.yml"
+	copy_settings_file "config/default/drushrc.php" "${SITEDIR_PATH}/drushrc.php"
+}
+
 #-------------------------- END: Functions --------------------------------
 
 #-------------------------- Execution --------------------------------
@@ -125,18 +136,51 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
+#Use this command once if you setup a initial commit for a new Repository.
+#It will download Drupal Scaffolding Files.
+#composer drupal-scaffold
+
 #echo-green "Setting file/folder permissions..."
 #file_permissions
 
-cd ${PROJECT_ROOT}
+echo -e "${green_bg} Step 1 ${NC}${green} Initializing local project configuration...${NC}"
+init_settings
 
 if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services ...${NC}"
+	echo -e "${green_bg} Step 2 ${NC}${green} Recreating services...${NC}"
 	fin reset -f
 else
-	echo -e "${green_bg} Step 1 ${NC}${green} Creating services ...${NC}"
+	echo -e "${green_bg} Step 2 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
+fin exec "composer install"
+echo "Waiting 10s for MySQL to start...";
+sleep 10
+
+echo -e "${green_bg} Step 3 ${NC}${green} Installing site...${NC}"
+time site_install
+
+if is_windows; then
+	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
+	echo-green "192.168.64.100  ${VIRTUAL_HOST}"
+	echo
+fi
+
+cd ${PROJECT_ROOT}
+fin exec "cd && sudo drupal self-update -y"
+//fin drupal config:override system.site uuid ${SITE_UUID}
+cd ${DOCROOT_PATH}
+fin drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
+fin drush pmu shortcut -y
+fin drush en shortcut -y
+fin drush en config_split -y
+fin drush cr
+
+echo -en "${green_bg} DONE! ${NC} "
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
+echo -e "Or login directly here:"
+
+fin drush uli
 
 
 echo -e "${green_bg} Step 2 ${NC}${green} Compiling root Config Files & composer install ...${NC}"
