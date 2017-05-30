@@ -136,46 +136,20 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
-#Use this command once if you setup a initial commit for a new Repository.
-#It will download Drupal Scaffolding Files.
-#composer drupal-scaffold
-#fin exec "composer install"
-
-#echo-green "Setting file/folder permissions..."
-#file_permissions
-
-echo -e "${green_bg} Step 1 ${NC}${green} Initializing local project configuration...${NC}"
-
-#init_settings
 
 if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 2 ${NC}${green} Recreating services...${NC}"
+	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
 	fin reset -f
 else
-	echo -e "${green_bg} Step 2 ${NC}${green} Creating services...${NC}"
+	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
-echo "Waiting 10s for MySQL to start...";
-sleep 10
-
-echo -e "${green_bg} Step 3 ${NC}${green} Installing site...${NC}"
-#time site_install
 
 if is_windows; then
 	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
 	echo-green "192.168.64.100  ${VIRTUAL_HOST}"
 	echo
 fi
-
-cd ${DOCROOT_PATH}
-
-#fin drush cr
-
-echo -en "${green_bg} DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
-echo -e "Or login directly here:"
-
-#fin drush uli
 
 
 echo -e "${green_bg} Step 2 ${NC}${green} installing python requirements ...${NC}"
@@ -184,8 +158,9 @@ echo -e "${green_bg} Step 2 ${NC}${green} installing python requirements ...${NC
 
 install_python_requirements
 
-echo -en "${green}Everything Done! ${NC} "
-echo -e "Open ${yellow}http://hoaxly.docksal:9001${NC} in your browser to verify the setup."
+
+echo -en "${green_bg} DONE! ${NC} "
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 echo -e "And see README.md for scraping instructions."
 
 
