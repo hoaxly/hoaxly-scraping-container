@@ -17,7 +17,7 @@
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
-                    "selector": ".post-5223:nth-child(3)", 
+                    "selector": ".post:nth-child(3)",
                     "siblings": 0, 
                     "tagid": null, 
                     "text-content": "#portia-content"
