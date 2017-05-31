@@ -24,7 +24,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        ".article-title"
+                        ".post > header > .article-title"
                     ], 
                     "container_id": "226d-4b6f-80d2", 
                     "data": {
@@ -42,14 +42,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".post-5223:nth-child(3) > header > .article-title", 
+                    "selection_mode": "css", 
+                    "selector": ".post > header > .article-title", 
                     "tagid": null, 
-                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".article-description"
+                        ".post > header > .article-description"
                     ], 
                     "container_id": "226d-4b6f-80d2", 
                     "data": {
@@ -67,14 +67,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".post-5223:nth-child(3) > header > .article-description", 
+                    "selection_mode": "css", 
+                    "selector": ".post > header > .article-description", 
                     "tagid": null, 
-                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-content > p:nth-child(2)"
+                        ".post > .entry-content > p:nth-child(2)"
                     ], 
                     "container_id": "226d-4b6f-80d2", 
                     "data": {
@@ -92,14 +92,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".post-5223:nth-child(3) > .entry-content > p:nth-child(2)", 
+                    "selection_mode": "css", 
+                    "selector": ".post > .entry-content > p:nth-child(2)", 
                     "tagid": null, 
-                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-content"
+                        ".post:nth-child(3) > .entry-content"
                     ], 
                     "container_id": "226d-4b6f-80d2", 
                     "data": {
@@ -117,10 +117,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".post-5223:nth-child(3) > .entry-content", 
+                    "selection_mode": "css", 
+                    "selector": ".post:nth-child(3) > .entry-content", 
                     "tagid": null, 
-                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post-5223 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }
             ]
         }
@@ -128,5 +128,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "snopes.com", 
     "url": "http://www.snopes.com/jimmy-john-liautaud-hunting-photos/", 
-    "version": "0.13.0b37"
+    "version": "0.13.0b36"
 }

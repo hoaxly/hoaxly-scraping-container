@@ -67,7 +67,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".date-display-single", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date-display-single \")]"
@@ -92,7 +92,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".field-name-field-authors > .field-items", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" field-name-field-authors \")]/*[contains(concat(\" \", @class, \" \"), \" field-items \")]"
@@ -117,7 +117,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": "title", 
                     "tagid": null, 
                     "xpath": "//title"
@@ -142,14 +142,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".field-name-field-entity > .field-items", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" field-name-field-entity \")]/*[contains(concat(\" \", @class, \" \"), \" field-items \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".node-26416"
+                        ".node"
                     ], 
                     "container_id": "8d92-461d-b76b", 
                     "data": {
@@ -167,10 +167,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".node-26416", 
+                    "selection_mode": "css", 
+                    "selector": ".node", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" node-26416 \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" node \")]"
                 }
             ]
         }
@@ -178,5 +178,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "www.cochrane.org", 
     "url": "http://www.cochrane.org/CD010406/ARI_steroids-treatment-influenza", 
-    "version": "0.13.0b37"
+    "version": "0.13.0b36"
 }

@@ -67,7 +67,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "css", 
+                    "selection_mode": "xpath", 
                     "selector": ".truthiness-value", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" truthiness-value \")]"
@@ -100,9 +100,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        "p.article-content", 
-                        "p:nth-child(5)", 
-                        "p:nth-child(6)"
+                        ".page > .page-header > .container > .section > .section-header > p"
                     ], 
                     "container_id": "34ee-4d95-8d31", 
                     "data": {
@@ -120,7 +118,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": true, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".page > .page-header > .container > .section > .section-header > p", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" page \")]/*[contains(concat(\" \", @class, \" \"), \" page-header \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" section \")]/*[contains(concat(\" \", @class, \" \"), \" section-header \")]/p"

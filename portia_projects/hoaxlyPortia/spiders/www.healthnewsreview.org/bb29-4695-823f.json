@@ -42,7 +42,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": "title", 
                     "tagid": null, 
                     "xpath": "//title"
@@ -67,7 +67,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": "h1", 
                     "tagid": null, 
                     "xpath": "//h1"
@@ -96,7 +96,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": true, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".reviewers > ul > li", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" reviewers \")]/ul/li"
@@ -121,7 +121,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".date", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date \")]"
@@ -146,7 +146,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".story-link", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" story-link \")]"
@@ -171,7 +171,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".categories-wrap > .categories > a", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" categories-wrap \")]/*[contains(concat(\" \", @class, \" \"), \" categories \")]/a"
@@ -196,7 +196,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".tags-wrap > .categories > a", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" tags-wrap \")]/*[contains(concat(\" \", @class, \" \"), \" categories \")]/a"
@@ -221,7 +221,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".total", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" total \")]"
@@ -246,7 +246,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".rating > img", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" rating \")]/img"
@@ -271,15 +271,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".source-content > h3", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" source-content \")]/h3"
                 }, 
                 {
                     "accept_selectors": [
-                        ".criteria:nth-child(4)", 
-                        ".summary"
+                        ".item-content-full > div"
                     ], 
                     "container_id": "8286-4429-8a14", 
                     "data": {
@@ -297,7 +296,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": true, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".item-content-full > div", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/div"
@@ -322,7 +321,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".source-logo", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" source-logo \")]"
@@ -333,5 +332,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "www.healthnewsreview.org", 
     "url": "http://www.healthnewsreview.org/review/nbcs-look-at-kangaroo-care-20-years-later-no-mention-of-important-research-limitations/", 
-    "version": "0.13.0b37"
+    "version": "0.13.0b36"
 }

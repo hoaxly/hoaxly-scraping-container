@@ -1,15 +1,24 @@
-# Hoaxly development setup
+# Hoaxly development environment
 
 this repo contains:
 
-- a docksal setup - _basically a docker-compose.yml file and an init script_
-- portia spiders - _portia spiders are basically scrapy spiders with bells on._
-- some configuration - _the file at config/local_slybot_settings.py will be mounted in the portia container allowing us to configure it. it is loaded by_ https://github.com/scrapinghub/portia/blob/master/slybot/slybot/settings.py
-- custom spider middleware. - _portia_projects/hoaxlyPortia/spidermiddleware.py registering classes defined in this file in our configuration allows interacting with the data before pipelines kick in_
+- a docksal setup - _basically a docker-compose.yml file and an init script.
+- portia spiders - _portia spiders are basically scrapy spiders with bells on.
+- some configuration - _the file at config/local_slybot_settings.py will be mounted in the portia container allowing us to configure it. it is loaded by https://github.com/scrapinghub/portia/blob/master/slybot/slybot/settings.py
+- custom spider middleware. - portia_projects/hoaxlyPortia/spidermiddleware.py registering classes defined in this file in our configuration allows interacting with the data before pipelines kick in_
+
+
+## Requirements
+
+docker-2.3.0 docker-compose-1.13.0
+
+
+## Setup 
 
 from projectroot run
 
-    fin init
+    ☻ % docker-compose -f docksal.yml pull --parallel
+    ☻ % fin init
 
 this will spin up your containers defined in .docksal/docksal.yml
 
@@ -44,6 +53,8 @@ http://hoaxly.docksal:5601
 default index: hoaxly
 (uncheck contains timedata)
 
+## basic php frontend for elasticsearch
+  search.hoaxly.docksal
 
 ## Custom Middleware
 Spider middleware for enriching item with scraped metadata
