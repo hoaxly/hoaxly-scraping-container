@@ -42,10 +42,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#post-1071 > h2", 
+                    "selection_mode": "css", 
+                    "selector": "h2", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"post-1071\"]/h2"
+                    "xpath": "//h2"
                 }, 
                 {
                     "accept_selectors": [
@@ -67,10 +67,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#post-1071 > .entry", 
+                    "selection_mode": "css", 
+                    "selector": ".entry", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"post-1071\"]/*[contains(concat(\" \", @class, \" \"), \" entry \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry \")]"
                 }
             ]
         }

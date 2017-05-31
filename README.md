@@ -55,3 +55,10 @@ default index: hoaxly
 
 ## basic php frontend for elasticsearch
   search.hoaxly.docksal
+
+## Custom Middleware
+Spider middleware for enriching item with scraped metadata
+
+    portia_projects/hoaxlyPortia/spidermiddleware.py
+    
+https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output

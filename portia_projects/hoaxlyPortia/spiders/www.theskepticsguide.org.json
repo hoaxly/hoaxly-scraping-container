@@ -2,7 +2,7 @@
     "allowed_domains": [], 
     "exclude_patterns": [], 
     "follow_patterns": [], 
-    "id": "pesacheck.org", 
+    "id": "www.theskepticsguide.org", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
@@ -10,7 +10,7 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://pesacheck.org/is-the-zika-virus-present-in-tanzania-54d79ec7be94", 
+            "url": "https://www.theskepticsguide.org/podcast/sgu/615", 
             "type": "url"
         }
     ]

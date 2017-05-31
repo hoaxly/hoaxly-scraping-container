@@ -1,7 +1,7 @@
 {
     "extractors": {}, 
-    "id": "f14b-4296-b000", 
-    "name": "Emergent", 
+    "id": "d6ab-4b22-84cc", 
+    "name": "Jimmy Johns Gourmet Hunts", 
     "page_id": "", 
     "page_type": "item", 
     "plugins": {
@@ -12,30 +12,30 @@
                         "#portia-content": "#dummy"
                     }, 
                     "container_id": null, 
-                    "id": "34ee-4d95-8d31", 
+                    "id": "226d-4b6f-80d2", 
                     "item_container": true, 
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
-                    "selector": ".page", 
-                    "siblings": 1, 
+                    "selector": ".post:nth-child(3)",
+                    "siblings": 0, 
                     "tagid": null, 
                     "text-content": "#portia-content"
                 }, 
                 {
                     "accept_selectors": [
-                        ".meta > div:nth-child(2) > .shares-value"
+                        ".post > header > .article-title"
                     ], 
-                    "container_id": "34ee-4d95-8d31", 
+                    "container_id": "226d-4b6f-80d2", 
                     "data": {
-                        "92c7-4bbb-b03f": {
+                        "e181-4cd8-abb9": {
                             "attribute": "content", 
                             "extractors": {}, 
-                            "field": "e60e-4334-8b3a", 
+                            "field": "a458-4806-9323", 
                             "required": false
                         }
                     }, 
-                    "id": "e159-41a7-b639", 
+                    "id": "7c70-4abf-b2e7", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
@@ -43,91 +43,90 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "css", 
-                    "selector": ".meta > div:nth-child(2) > .shares-value", 
+                    "selector": ".post > header > .article-title", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" meta \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" shares-value \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".truthiness-value"
+                        ".post > header > .article-description"
                     ], 
-                    "container_id": "34ee-4d95-8d31", 
+                    "container_id": "226d-4b6f-80d2", 
                     "data": {
-                        "2c37-4dc2-bdef": {
+                        "529e-4c6b-823b": {
                             "attribute": "content", 
                             "extractors": {}, 
-                            "field": "610c-402e-ba4d", 
+                            "field": "9765-4862-b97d", 
                             "required": false
                         }
                     }, 
-                    "id": "4ace-44d9-93e1", 
+                    "id": "dce6-4e37-b730", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "xpath", 
-                    "selector": ".truthiness-value", 
+                    "selection_mode": "css", 
+                    "selector": ".post > header > .article-description", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" truthiness-value \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        "li:nth-child(10) > .article > .article-content > .article-list-title > a", 
-                        "article:nth-child(2) > .article-content > .article-list-title > a"
+                        ".post > .entry-content > p:nth-child(2)"
                     ], 
-                    "container_id": "34ee-4d95-8d31", 
+                    "container_id": "226d-4b6f-80d2", 
                     "data": {
-                        "5f4a-43ad-ac09": {
-                            "attribute": "href", 
+                        "3a67-4281-8c1f": {
+                            "attribute": "content", 
                             "extractors": {}, 
-                            "field": "a837-469d-a613", 
+                            "field": "48ce-4080-9a47", 
                             "required": false
                         }
                     }, 
-                    "id": "75f1-4bc2-9001", 
+                    "id": "79cf-463a-899d", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
-                    "repeated": true, 
+                    "repeated": false, 
                     "selection_mode": "css", 
-                    "selector": ".articles > li:nth-child(9n+1) > .article > .article-content > .article-list-title > a", 
+                    "selector": ".post > .entry-content > p:nth-child(2)", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" articles \")]/li[position() mod 9 = 1]/*[contains(concat(\" \", @class, \" \"), \" article \")]/*[contains(concat(\" \", @class, \" \"), \" article-content \")]/*[contains(concat(\" \", @class, \" \"), \" article-list-title \")]/a"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".page > .page-header > .container > .section > .section-header > p"
+                        ".post:nth-child(3) > .entry-content"
                     ], 
-                    "container_id": "34ee-4d95-8d31", 
+                    "container_id": "226d-4b6f-80d2", 
                     "data": {
-                        "54f4-4cea-9b1b": {
+                        "dcab-45cb-86d7": {
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "d065-406f-8a45", 
                             "required": false
                         }
                     }, 
-                    "id": "ced4-4fcd-bfd5", 
+                    "id": "9609-4089-a529", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
-                    "repeated": true, 
+                    "repeated": false, 
                     "selection_mode": "css", 
-                    "selector": ".page > .page-header > .container > .section > .section-header > p", 
+                    "selector": ".post:nth-child(3) > .entry-content", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" page \")]/*[contains(concat(\" \", @class, \" \"), \" page-header \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" section \")]/*[contains(concat(\" \", @class, \" \"), \" section-header \")]/p"
+                    "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }
             ]
         }
     }, 
     "scrapes": "7949-4e6e-a53a", 
-    "spider": "www.emergent.info", 
-    "url": "http://www.emergent.info/Italian-fisherman-massive-catfish", 
+    "spider": "snopes.com", 
+    "url": "http://www.snopes.com/jimmy-john-liautaud-hunting-photos/", 
     "version": "0.13.0b36"
 }

@@ -24,7 +24,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        ".section-inner:nth-child(3)"
+                        ".postArticle-content > .section--first > .section-content > div:nth-child(3)"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {
@@ -42,14 +42,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3)", 
+                    "selection_mode": "css", 
+                    "selector": ".postArticle-content > .section--first > .section-content > div:nth-child(3)", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[3]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .js-testPostMetaInlineSupplemental > time"
+                        "time"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {
@@ -68,14 +68,13 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "css", 
-                    "selector": ".container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .js-testPostMetaInlineSupplemental > time", 
+                    "selector": "time", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaHeader \")]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaLockup \")]/*[contains(concat(\" \", @class, \" \"), \" u-flex1 \")]/*[contains(concat(\" \", @class, \" \"), \" js-testPostMetaInlineSupplemental \")]/time"
+                    "xpath": "//time"
                 }, 
                 {
                     "accept_selectors": [
-                        ".tags > li:nth-child(1) > .link", 
-                        ".tags > li:nth-child(2) > .link"
+                        ".u-paddingTop10 > div:nth-child(1) > div:nth-child(2) > .col > .u-paddingBottom10 > .tags > li > .link"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {
@@ -93,14 +92,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": true, 
-                    "selection_mode": "auto", 
-                    "selector": ".u-sizeViewHeightMin100 > .u-paddingTop10 > div:nth-child(1) > div:nth-child(2) > .col > .u-paddingBottom10 > .tags > li > .link", 
+                    "selection_mode": "css", 
+                    "selector": ".u-paddingTop10 > div:nth-child(1) > div:nth-child(2) > .col > .u-paddingBottom10 > .tags > li > .link", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" u-paddingTop10 \")]/div[1]/div[2]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" u-paddingBottom10 \")]/*[contains(concat(\" \", @class, \" \"), \" tags \")]/li/*[contains(concat(\" \", @class, \" \"), \" link \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-paddingTop10 \")]/div[1]/div[2]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" u-paddingBottom10 \")]/*[contains(concat(\" \", @class, \" \"), \" tags \")]/li/*[contains(concat(\" \", @class, \" \"), \" link \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        "#a042"
+                        ".postArticle-content > .section--first > .section-content > div:nth-child(1) > .graf"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {
@@ -118,14 +117,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(1) > .graf", 
+                    "selection_mode": "css", 
+                    "selector": ".postArticle-content > .section--first > .section-content > div:nth-child(1) > .graf", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" graf \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" postArticle-content \")]/*[contains(concat(\" \", @class, \" \"), \" section--first \")]/*[contains(concat(\" \", @class, \" \"), \" section-content \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" graf \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        "div.u-overflowHidden > .link--darken"
+                        ".postMetaHeader > .col > .postMetaLockup > .u-flex1 > .link--darken"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {
@@ -144,16 +143,13 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".u-sizeViewHeightMin100 > .container > .postMetaHeader > .col > .postMetaLockup > .u-flex1 > .link--darken", 
+                    "selector": ".postMetaHeader > .col > .postMetaLockup > .u-flex1 > .link--darken", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" u-sizeViewHeightMin100 \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaHeader \")]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaLockup \")]/*[contains(concat(\" \", @class, \" \"), \" u-flex1 \")]/*[contains(concat(\" \", @class, \" \"), \" link--darken \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" postMetaHeader \")]/*[contains(concat(\" \", @class, \" \"), \" col \")]/*[contains(concat(\" \", @class, \" \"), \" postMetaLockup \")]/*[contains(concat(\" \", @class, \" \"), \" u-flex1 \")]/*[contains(concat(\" \", @class, \" \"), \" link--darken \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        "#\\38 43e > .markup--anchor", 
-                        "#db11 > .markup--anchor", 
-                        "#\\30 680 > a:nth-child(2)", 
-                        ".markup--pullquote-anchor"
+                        ".u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(1) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(2) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(5) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(7) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(8) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(10) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(11) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(13) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(14) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(17) > .markup--anchor,.u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > p:nth-child(18) > .markup--anchor, .u-sizeViewHeightMin100 > .postArticle-content > .section--first > .section-content > div:nth-child(3) > .graf--pullquote > .markup--anchor"
                     ], 
                     "container_id": "ca64-40a6-a2cb", 
                     "data": {

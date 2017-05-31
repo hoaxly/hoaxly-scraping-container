@@ -12,12 +12,27 @@
                         "#portia-content": "#dummy"
                     }, 
                     "container_id": null, 
-                    "id": "fb00-4eec-b787", 
+                    "id": "fb00-4eec-b787#parent", 
                     "item_container": true, 
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
                     "selector": ".post-40691", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": "fb00-4eec-b787#parent", 
+                    "id": "fb00-4eec-b787", 
+                    "item_container": true, 
+                    "repeated": true, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".post-content > p:nth-child(2), .post-content > p:nth-child(5), .post-content > p:nth-child(6), .post-content > p:nth-child(7), .post-content > p:nth-child(8), .post-content > p:nth-child(11), .post-content > p:nth-child(12), .post-content > p:nth-child(13)", 
                     "siblings": 0, 
                     "tagid": null, 
                     "text-content": "#portia-content"
@@ -36,16 +51,16 @@
                         }
                     }, 
                     "id": "1a84-4a31-ac8a", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
+                    "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".post-40691 > .post-title > .entry-title", 
+                    "selector": ".entry-title", 
                     "tagid": null, 
-                    "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-40691 \")]/*[contains(concat(\" \", @class, \" \"), \" post-title \")]/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -61,16 +76,16 @@
                         }
                     }, 
                     "id": "437c-4f9d-bcdf", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
+                    "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".post-40691 > .entry-meta > .post-date", 
+                    "selector": ".date", 
                     "tagid": null, 
-                    "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-40691 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-meta \")]/*[contains(concat(\" \", @class, \" \"), \" post-date \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -86,16 +101,16 @@
                         }
                     }, 
                     "id": "81f3-498a-9c5b", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
+                    "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".post-40691 > .entry-meta > .post-category > a", 
+                    "selector": "span.post-category > a", 
                     "tagid": null, 
-                    "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-40691 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-meta \")]/*[contains(concat(\" \", @class, \" \"), \" post-category \")]/a"
+                    "xpath": "//span[contains(concat(\" \", @class, \" \"), \" post-category \")]/a"
                 }, 
                 {
                     "accept_selectors": [
@@ -111,16 +126,16 @@
                         }
                     }, 
                     "id": "689a-42bb-b067", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
+                    "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".post-40691 > .post-content", 
+                    "selector": ".post-content", 
                     "tagid": null, 
-                    "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-40691 \")]/*[contains(concat(\" \", @class, \" \"), \" post-content \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-content \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -136,16 +151,67 @@
                         }
                     }, 
                     "id": "c9b0-4d0c-b527", 
+                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "repeated": false, 
                     "required": [], 
+                    "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".post-40691 > .tag-list > ul > li > a", 
+                    "selector": ".tag-list > ul > li > a", 
                     "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" tag-list \")]/ul/li/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".post-content > p:nth-child(1)"
+                    ], 
+                    "container_id": "fb00-4eec-b787", 
+                    "data": {
+                        "c587-45db-97db": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "48ce-4080-9a47", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "3094-47e6-b941", 
                     "text-content": "content", 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-40691 \")]/*[contains(concat(\" \", @class, \" \"), \" tag-list \")]/ul/li/a"
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-content > p:nth-child(1)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-content \")]/p[1]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".post-content > p:nth-child(2) > a", 
+                        "p:nth-child(5) > a"
+                    ], 
+                    "container_id": "fb00-4eec-b787", 
+                    "data": {
+                        "2589-4575-bb77": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "a837-469d-a613", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6078-4041-85bf", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-content > p:nth-child(2) > a:nth-child(1),.post-content > p:nth-child(5) > a:nth-child(1),.post-content > p:nth-child(6) > a:nth-child(1),.post-content > p:nth-child(7) > a:nth-child(1),.post-content > p:nth-child(8) > a:nth-child(1),.post-content > p:nth-child(11) > a:nth-child(1),.post-content > p:nth-child(12) > a:nth-child(1),.post-content > p:nth-child(13) > a:nth-child(1)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-content \")]/p[2]//p[5]//p[6]//p[7]//p[8]//p[11]//p[12]//p[13]/a[1]"
                 }
             ]
         }
@@ -153,5 +219,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "www.stopfake.org", 
     "url": "http://www.stopfake.org/en/fake-europe-accuses-ukraine-of-increasing-radioactivity/", 
-    "version": "0.13.0b35"
+    "version": "0.13.0b37"
 }

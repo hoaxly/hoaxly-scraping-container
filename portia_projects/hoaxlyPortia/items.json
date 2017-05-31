@@ -119,6 +119,20 @@
                 "required": false, 
                 "type": "safe html", 
                 "vary": false
+            }, 
+            "c060-4eab-bc7a": {
+                "id": "c060-4eab-bc7a", 
+                "name": "reviewSummary", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "9765-4862-b97d": {
+                "id": "9765-4862-b97d", 
+                "name": "factoidDescription", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
             }
         }, 
         "name": "factoidPortiaSchema"
