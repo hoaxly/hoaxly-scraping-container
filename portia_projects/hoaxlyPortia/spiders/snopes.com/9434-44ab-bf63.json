@@ -43,9 +43,9 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > header > .article-title", 
+                    "selector": ".body-content > .post > header > .article-title", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -93,13 +93,13 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > .entry-content", 
+                    "selector": ".body-content > .post > .entry-content", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".body-content > .post-67016 > .entry-content > p:nth-child(2)"
+                        ".body-content > .post > .entry-content > p:nth-child(2)"
                     ], 
                     "container_id": "3dbd-48a5-87c3", 
                     "data": {
@@ -118,9 +118,9 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > .entry-content > p:nth-child(2)", 
+                    "selector": ".body-content > .post > .entry-content > p:nth-child(2)", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
                 }, 
                 {
                     "accept_selectors": [
@@ -143,13 +143,13 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > .entry-content > .mtrue > span", 
+                    "selector": ".body-content > .post > .entry-content > .mtrue > span", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" mtrue \")]/span"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" mtrue \")]/span"
                 }, 
                 {
                     "accept_selectors": [
-                        ".body-content > .post-67016 > header > .article-description"
+                        ".body-content > .post > header > .article-description"
                     ], 
                     "container_id": "3dbd-48a5-87c3", 
                     "data": {
@@ -168,9 +168,9 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > header > .article-description", 
+                    "selector": ".body-content > .post > header > .article-description", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
                 }
             ]
         }

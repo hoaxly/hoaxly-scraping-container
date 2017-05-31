@@ -133,13 +133,6 @@
                 "required": false, 
                 "type": "text", 
                 "vary": false
-            }, 
-            "473b-46fc-98d7": {
-                "id": "473b-46fc-98d7", 
-                "name": "field1", 
-                "required": false, 
-                "type": "text", 
-                "vary": false
             }
         }, 
         "name": "factoidPortiaSchema"
