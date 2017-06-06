@@ -44,7 +44,9 @@ you will get a list of spiders if you run this command
 
 
 ## deploy to scrapyd
-docker@cli:/var/www/portia_projects/hoaxlyPortia$ scrapyd-deploy default
+
+  ☻ % docker exec -ti hoaxly_portia_1 bash
+  root@3d4a705434fb:/app/data/projects/hoaxlyPortia# scrapyd-deploy -a
 
 ## Elasticsearch via scrapyelasticsearch
 we are using the following fork of the python library
