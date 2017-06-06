@@ -13,7 +13,7 @@ this repo contains:
 docker-2.3.0 docker-compose-1.13.0
 
 
-## Setup 
+## Setup
 
 from projectroot run
 
@@ -42,6 +42,10 @@ you will get a list of spiders if you run this command
     docker exec hoaxly_portia_1  <PROJECT_PATH> [SPIDER] [OPTIONS]
     docker exec hoaxly_portia_1 portiacrawl /app/data/projects/hoaxlyPortia
 
+
+## deploy to scrapyd
+docker@cli:/var/www/portia_projects/hoaxlyPortia$ scrapyd-deploy default
+
 ## Elasticsearch via scrapyelasticsearch
 we are using the following fork of the python library
 https://github.com/suraj-arya/scrapy-elasticsearch
@@ -60,5 +64,5 @@ default index: hoaxly
 Spider middleware for enriching item with scraped metadata
 
     portia_projects/hoaxlyPortia/spidermiddleware.py
-    
+
 https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output
