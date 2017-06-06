@@ -116,11 +116,14 @@ install_requirements () {
     docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
     docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
 		# install scrapyd client in portia container so we can deploy from there.
-		docker exec -ti hoaxly_cli_1 sudo apt-get update
-		docker exec -ti hoaxly_cli_1 sudo apt-get install python-pip build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev
-		docker exec -ti hoaxly_cli_1 sudo pip install scrapy scrapyd-client
-		docker exec -ti hoaxly_cli_1 sudo pip install twisted --upgrade
-    docker exec -ti hoaxly_cli_1 pip install -r "portia_projects/requirements.txt"
+
+    docker exec -ti hoaxly_portia_1 sudo pip install scrapyd-client
+
+		#docker exec -ti hoaxly_cli_1 sudo apt-get update
+		#docker exec -ti hoaxly_cli_1 sudo apt-get install python-pip build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev
+		#docker exec -ti hoaxly_cli_1 sudo pip install scrapy scrapyd-client
+		#docker exec -ti hoaxly_cli_1 sudo pip install twisted --upgrade
+    #docker exec -ti hoaxly_cli_1 pip install -r "portia_projects/requirements.txt"
 
 }
 
