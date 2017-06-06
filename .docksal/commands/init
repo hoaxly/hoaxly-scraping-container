@@ -114,6 +114,12 @@ install_requirements () {
 
     docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
     docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
+		# install scrapyd client in portia container so we can deploy from there.
+		docker exec -ti hoaxly_cli_1 sudo apt-get update
+		docker exec -ti hoaxly_cli_1 sudo apt-get install python-pip build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev
+		docker exec -ti hoaxly_cli_1 sudo pip install scrapy scrapyd-client
+		docker exec -ti hoaxly_cli_1 sudo pip install twisted --upgrade
+    docker exec -ti hoaxly_cli_1 pip install -r "portia_projects/requirements.txt"
 
 }
 
@@ -136,15 +142,16 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
-#Use this command once if you setup a initial commit for a new Repository.
-#It will download Drupal Scaffolding Files.
-#composer drupal-scaffold
 
-#echo-green "Setting file/folder permissions..."
-#file_permissions
+
+
 
 echo -e "${green_bg} Step 1 ${NC}${green} Initializing local project configuration...${NC}"
-init_settings
+#fin exec "composer install"
+#Use this command once if you setup a initial commit for a new Repository.
+#It will download Drupal Scaffolding Files.
+#fin exec composer drupal-scaffold
+#init_settings
 
 if [[ $DOCKER_RUNNING == "true" ]]; then
 	echo -e "${green_bg} Step 2 ${NC}${green} Recreating services...${NC}"
@@ -153,12 +160,11 @@ else
 	echo -e "${green_bg} Step 2 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
-fin exec "composer install"
 echo "Waiting 10s for MySQL to start...";
 sleep 10
 
 echo -e "${green_bg} Step 3 ${NC}${green} Installing site...${NC}"
-time site_install
+#time site_install
 
 if is_windows; then
 	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
@@ -168,19 +174,14 @@ fi
 
 cd ${PROJECT_ROOT}
 fin exec "cd && sudo drupal self-update -y"
-//fin drupal config:override system.site uuid ${SITE_UUID}
+#fin drupal config:override system.site uuid ${SITE_UUID}
 cd ${DOCROOT_PATH}
-fin drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
-fin drush pmu shortcut -y
-fin drush en shortcut -y
-fin drush en config_split -y
-fin drush cr
-
-echo -en "${green_bg} DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
-echo -e "Or login directly here:"
-
-fin drush uli
+#fin drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
+#fin drush pmu shortcut -y
+#fin drush en shortcut -y
+#fin drush en config_split -y
+#fin drush cr
+#fin drush uli
 
 
 echo -e "${green_bg} Step 2 ${NC}${green} Compiling root Config Files & composer install ...${NC}"
