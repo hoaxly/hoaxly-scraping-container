@@ -1,4 +1,4 @@
-# Hoaxly development environment
+# Hoaxly development setup
 
 this repo contains:
 
@@ -17,7 +17,7 @@ docker-2.3.0 docker-compose-1.13.0
 
 from projectroot run
 
-    ☻ % docker-compose -f docksal.yml pull --parallel
+    ☻ % docker-compose -f .docksal/docksal.yml pull --parallel
     ☻ % fin init
 
 this will spin up your containers defined in .docksal/docksal.yml
