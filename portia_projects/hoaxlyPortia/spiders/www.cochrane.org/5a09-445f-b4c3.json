@@ -67,7 +67,7 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".date-display-single", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date-display-single \")]"
@@ -92,35 +92,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": ".field-name-field-authors > .field-items", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" field-name-field-authors \")]/*[contains(concat(\" \", @class, \" \"), \" field-items \")]"
-                }, 
-                {
-                    "accept_selectors": [
-                        "#content-inner"
-                    ], 
-                    "container_id": "8d92-461d-b76b", 
-                    "data": {
-                        "b81e-40e7-a1e6": {
-                            "attribute": "content", 
-                            "extractors": {}, 
-                            "field": "d065-406f-8a45", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "9210-47c9-99a7", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#content-inner", 
-                    "tagid": null, 
-                    "xpath": "//*[@id=\"content-inner\"]"
                 }, 
                 {
                     "accept_selectors": [
@@ -142,10 +117,60 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "xpath", 
                     "selector": "title", 
                     "tagid": null, 
                     "xpath": "//title"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".field-name-field-entity > .field-items"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "cd57-40b3-9995": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "fee9-49bb-9284", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0034-4669-9a88", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "xpath", 
+                    "selector": ".field-name-field-entity > .field-items", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" field-name-field-entity \")]/*[contains(concat(\" \", @class, \" \"), \" field-items \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".node"
+                    ], 
+                    "container_id": "8d92-461d-b76b", 
+                    "data": {
+                        "2527-4890-bc46": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "413e-4912-9e57", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".node", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" node \")]"
                 }
             ]
         }

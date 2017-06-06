@@ -108,7 +108,7 @@ site_install ()
 	# Revert site dir permissions.
 	chmod 755 "${SITEDIR_PATH}"
 }
-install_requirements () {
+install_python_requirements () {
     #docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
     #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
 
@@ -136,29 +136,14 @@ if [[ "$PROJECT_ROOT" == "" ]]; then
 	exit 1
 fi
 
-#Use this command once if you setup a initial commit for a new Repository.
-#It will download Drupal Scaffolding Files.
-#composer drupal-scaffold
-
-#echo-green "Setting file/folder permissions..."
-#file_permissions
-
-echo -e "${green_bg} Step 1 ${NC}${green} Initializing local project configuration...${NC}"
-init_settings
 
 if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 2 ${NC}${green} Recreating services...${NC}"
+	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
 	fin reset -f
 else
-	echo -e "${green_bg} Step 2 ${NC}${green} Creating services...${NC}"
+	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
 	fin up
 fi
-fin exec "composer install"
-echo "Waiting 10s for MySQL to start...";
-sleep 10
-
-echo -e "${green_bg} Step 3 ${NC}${green} Installing site...${NC}"
-time site_install
 
 if is_windows; then
 	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
@@ -166,31 +151,16 @@ if is_windows; then
 	echo
 fi
 
-cd ${PROJECT_ROOT}
-fin exec "cd && sudo drupal self-update -y"
-//fin drupal config:override system.site uuid ${SITE_UUID}
-cd ${DOCROOT_PATH}
-fin drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
-fin drush pmu shortcut -y
-fin drush en shortcut -y
-fin drush en config_split -y
-fin drush cr
 
-echo -en "${green_bg} DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
-echo -e "Or login directly here:"
-
-fin drush uli
-
-
-echo -e "${green_bg} Step 2 ${NC}${green} Compiling root Config Files & composer install ...${NC}"
+echo -e "${green_bg} Step 2 ${NC}${green} installing python requirements ...${NC}"
 
 # TODO: find a more generic way to execute commands in container or create a prepared image.
 
-install_requirements
+install_python_requirements
 
-echo -en "${green}Everything Done! ${NC} "
-echo -e "Open ${yellow}http://hoaxly.docksal:9001${NC} in your browser to verify the setup."
+
+echo -en "${green_bg} DONE! ${NC} "
+echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 echo -e "And see README.md for scraping instructions."
 
 

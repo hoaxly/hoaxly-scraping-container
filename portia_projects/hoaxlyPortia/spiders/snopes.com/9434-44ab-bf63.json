@@ -43,9 +43,9 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > header > .article-title", 
+                    "selector": ".body-content > .post > header > .article-title", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -93,9 +93,84 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "auto", 
-                    "selector": ".body-content > .post-67016 > .entry-content", 
+                    "selector": ".body-content > .post > .entry-content", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post-67016 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".body-content > .post > .entry-content > p:nth-child(2)"
+                    ], 
+                    "container_id": "3dbd-48a5-87c3", 
+                    "data": {
+                        "30b2-4bd2-83ba": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "48ce-4080-9a47", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "c232-4b57-a3de", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".body-content > .post > .entry-content > p:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".mtrue > span"
+                    ], 
+                    "container_id": "3dbd-48a5-87c3", 
+                    "data": {
+                        "d81e-4111-8210": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "da6f-4915-8094", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "581e-4ff7-a3be", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".body-content > .post > .entry-content > .mtrue > span", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" mtrue \")]/span"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".body-content > .post > header > .article-description"
+                    ], 
+                    "container_id": "3dbd-48a5-87c3", 
+                    "data": {
+                        "476c-4a87-bcac": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "9765-4862-b97d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "1805-44c5-b4f0", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".body-content > .post > header > .article-description", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
                 }
             ]
         }
@@ -103,5 +178,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "snopes.com", 
     "url": "http://www.snopes.com/fetus-can-send-stem-cells-repair-mothers-damaged-organs/", 
-    "version": "0.13.0b36"
+    "version": "0.13.0b37"
 }
