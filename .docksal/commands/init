@@ -114,7 +114,7 @@ install_python_requirements () {
 
     docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
     docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
-    docker exec -ti hoaxly_portia_1 sudo pip install scrapyd-client
+    docker exec -ti hoaxly_portia_1 sudo pip install scrapyd-client scrapyd
 
 }
 

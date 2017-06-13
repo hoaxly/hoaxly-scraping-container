@@ -17,7 +17,7 @@ PLUGINS = [
 SLYDUPEFILTER_ENABLED = True
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
-PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+PROJECT_DIR = '/app/data/projects/hoaxlyPortia'
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 200,
