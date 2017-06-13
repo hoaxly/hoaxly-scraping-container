@@ -17,7 +17,7 @@
                     "repeated": false, 
                     "required": [], 
                     "schema_id": "7949-4e6e-a53a", 
-                    "selector": ".post:nth-child(3)",
+                    "selector": ".entry-content", 
                     "siblings": 0, 
                     "tagid": null, 
                     "text-content": "#portia-content"
@@ -121,6 +121,31 @@
                     "selector": ".post:nth-child(3) > .entry-content", 
                     "tagid": null, 
                     "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content > p:nth-child(8)"
+                    ], 
+                    "container_id": "226d-4b6f-80d2", 
+                    "data": {
+                        "ef03-4eb8-9200": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "0ef9-458f-bf31", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "f58d-43ea-9b7a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".entry-content > p:nth-child(8)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[8]"
                 }
             ]
         }
@@ -128,5 +153,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "snopes.com", 
     "url": "http://www.snopes.com/jimmy-john-liautaud-hunting-photos/", 
-    "version": "0.13.0b36"
+    "version": "0.13.0b37"
 }

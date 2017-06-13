@@ -7,6 +7,10 @@ setup(
     name='hoaxlyPortia',
     version='1.0',
     packages=find_packages(),
+    install_requires=[
+        'elasticsearch',
+        'extruct',
+    ],
     package_data={
         'spiders': ['*.json', '*/*.json']
     },
