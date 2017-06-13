@@ -133,6 +133,13 @@
                 "required": false, 
                 "type": "text", 
                 "vary": false
+            }, 
+            "0ef9-458f-bf31": {
+                "id": "0ef9-458f-bf31", 
+                "name": "factoidOrigin", 
+                "required": false, 
+                "type": "safe html", 
+                "vary": false
             }
         }, 
         "name": "factoidPortiaSchema"

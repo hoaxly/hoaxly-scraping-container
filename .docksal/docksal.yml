@@ -41,24 +41,24 @@ services:
     image: registry.acolono.net:444/rosenstrauch/hoaxly-vanillaphp:latest
 
 
-  kibana:
-    image: kibana
-    mem_limit: 1024m
+#  kibana:
+#    image: kibana
+#    mem_limit: 1024m
+#    ports:
+#      - "5601:5601"
+#    depends_on:
+#      - elastic
+#    environment:
+#      - ELASTICSEARCH_URL=http://elastic:9200
+
+  scrapyd:
+    image: vimagick/scrapyd
     ports:
-      - "5601:5601"
+      - "6800:6800"
     depends_on:
       - elastic
-    environment:
-      - ELASTICSEARCH_URL=http://elastic:9200
- #
- # scrapyd:
- #   image: vimagick/scrapyd
- #   ports:
- #     - "6800:6800"
- #   depends_on:
- #     - elastic
- #   volumes:
- #     - project_root:/hoaxly
+    volumes:
+      - project_root:/hoaxly
 
   portia:
     image: scrapinghub/portia
@@ -70,3 +70,4 @@ services:
     volumes:
       - ${PWD}/portia_projects:/app/data/projects:rw
       - ${PWD}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
+      - ${PWD}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
