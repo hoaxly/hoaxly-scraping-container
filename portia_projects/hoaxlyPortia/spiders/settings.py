@@ -28,7 +28,7 @@ SPIDER_MIDDLEWARES = {
     'spidermiddleware.MicrodataExtruction': 543
 }
 
-ELASTICSEARCH_SERVERS = ['http://elastic:9200']
+ELASTICSEARCH_SERVERS = ['http://172.20.0.5:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'
