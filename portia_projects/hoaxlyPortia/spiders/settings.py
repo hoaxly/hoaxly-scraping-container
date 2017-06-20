@@ -1,7 +1,7 @@
 # Automatically created by: slyd
 import os
 
-SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
+SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 ITEM_PIPELINES = {'slybot.dupefilter.DupeFilterPipeline': 1}
 # as close as possible to spider output
@@ -17,7 +17,8 @@ PLUGINS = [
 SLYDUPEFILTER_ENABLED = True
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
-PROJECT_DIR = '/app/data/projects/hoaxlyPortia'
+PROJECT_ZIPFILE = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..'))
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 200,
@@ -28,7 +29,7 @@ SPIDER_MIDDLEWARES = {
     'spidermiddleware.MicrodataExtruction': 543
 }
 
-ELASTICSEARCH_SERVERS = ['http://elastic:9200']
+ELASTICSEARCH_SERVERS = ['http://elasticsearch:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'
