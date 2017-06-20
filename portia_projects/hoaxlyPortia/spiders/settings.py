@@ -5,7 +5,6 @@ SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 ITEM_PIPELINES = {'slybot.dupefilter.DupeFilterPipeline': 1}
 # as close as possible to spider output
-SPIDER_MIDDLEWARES = {'slybot.spiderlets.SpiderletsMiddleware': 999}
 DOWNLOADER_MIDDLEWARES = {
     'slybot.pageactions.PageActionsMiddleware': 700,
     'slybot.splash.SlybotJsMiddleware': 725
@@ -26,7 +25,8 @@ ITEM_PIPELINES = {
 }
 
 SPIDER_MIDDLEWARES = {
-    'spidermiddleware.MicrodataExtruction': 543
+    'slybot.spiderlets.SpiderletsMiddleware': 999,
+    'spidermiddleware.MicrodataExtruction': 543,
 }
 
 ELASTICSEARCH_SERVERS = ['http://elasticsearch:9200']
