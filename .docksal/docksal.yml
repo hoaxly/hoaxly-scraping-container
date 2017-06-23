@@ -41,15 +41,15 @@ services:
     image: registry.acolono.net:444/rosenstrauch/hoaxly-vanillaphp:latest
 
 
-  kibana:
-    image: kibana
-    mem_limit: 1024m
-    ports:
-     - "5601:5601"
-    depends_on:
-     - elastic
-    environment:
-     - ELASTICSEARCH_URL=http://elastic:9200
+  # kibana:
+  #   image: kibana
+  #   mem_limit: 1024m
+  #   ports:
+  #    - "5601:5601"
+  #   depends_on:
+  #    - elastic
+  #   environment:
+  #    - ELASTICSEARCH_URL=http://elastic:9200
 
   portia:
     image: scrapinghub/portia

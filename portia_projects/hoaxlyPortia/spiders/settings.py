@@ -3,7 +3,6 @@ import os
 
 SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
-ITEM_PIPELINES = {'slybot.dupefilter.DupeFilterPipeline': 1}
 # as close as possible to spider output
 DOWNLOADER_MIDDLEWARES = {
     'slybot.pageactions.PageActionsMiddleware': 700,
@@ -21,12 +20,12 @@ PROJECT_ZIPFILE = os.path.abspath(
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 200,
-    'pipelines.TypePipeline': 100,
+    'TypePipeline': 100,
 }
 
+
 SPIDER_MIDDLEWARES = {
-    'slybot.spiderlets.SpiderletsMiddleware': 999,
-    'spidermiddleware.MicrodataExtruction': 543,
+    'MicrodataExtruction': 543
 }
 
 ELASTICSEARCH_SERVERS = ['http://elasticsearch:9200']

@@ -12,9 +12,11 @@ setup(
         'extruct',
     ],
     package_data={
-        'spiders': ['*.json', '*/*.json']
+        'extras': ['*.py'],
+        'spiders': ['*.json', '*/*.json'],
     },
     data_files=[('', ['project.json', 'items.json', 'extractors.json'])],
     entry_points={'scrapy': ['settings = spiders.settings']},
+    include_package_data=True,
     zip_safe=True
 )
