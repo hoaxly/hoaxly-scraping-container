@@ -16,11 +16,36 @@ docker-2.3.0 docker-compose-1.13.0
 ## Setup
 
 from projectroot run
-
-    ☻ % docker-compose -f .docksal/docksal.yml pull --parallel
+    
+    ☻ % sudo sysctl -w vm.max_map_count=262144 # needed for elasticsearch to work [1]    
     ☻ % fin init
 
+[1] https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
+check that all containers are Up via
+
+```
+   % fin ps      
+```
+
+test the installation in browser:
+
+    * Portia: http://localhost:9001/#/projects
+    * Kibana: http://localhost:5601
+    * Elastic: http://localhost:9200/
+
 this will spin up your containers defined in .docksal/docksal.yml
+
+Disable XPACK:
+```
+    docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
+    docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
+    fin restart     
+```
+
+HINT: It may take some time (>5 min) and a huge amount of ram & cpu load to 
+restart kibana for the first time after disabling xpack, because some assets are
+rebuild. To save some memory you can stop the elastic container until kibana is 
+ready again.
 
 ## use portia
 
