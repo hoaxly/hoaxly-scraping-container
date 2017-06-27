@@ -4,8 +4,6 @@ import os
 SPIDER_MANAGER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 ITEM_PIPELINES = {'slybot.dupefilter.DupeFilterPipeline': 1}
-# as close as possible to spider output
-SPIDER_MIDDLEWARES = {'slybot.spiderlets.SpiderletsMiddleware': 999}
 DOWNLOADER_MIDDLEWARES = {
     'slybot.pageactions.PageActionsMiddleware': 700,
     'slybot.splash.SlybotJsMiddleware': 725
@@ -19,6 +17,7 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
 SPIDER_MIDDLEWARES = {
     'spiders.MicrodataExtruction': 643,
+    'slybot.spiderlets.SpiderletsMiddleware': 999
 }
 
 
