@@ -72,7 +72,7 @@ services:
     ports:
      - "6800:6800"
     build: ./
-        tty: true
+    tty: true
     command: scrapyd
     volumes_from:
       - portia
