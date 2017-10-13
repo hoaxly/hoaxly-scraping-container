@@ -61,10 +61,18 @@ services:
     mem_limit: 1024m
     ports:
       - "9001:9001"
-      - "6800:6800"
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
       - ${PWD}/portia_projects:/app/data/projects:rw
       - ${PWD}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
       - ${PWD}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
+
+  scrapyd:
+    ports:
+     - "6800:6800"
+    build: ./
+        tty: true
+    command: scrapyd
+    volumes_from:
+      - portia
