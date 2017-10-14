@@ -16,7 +16,7 @@ docker-2.3.0 docker-compose-1.13.0
 ## Setup
 
 from projectroot run
-    
+
     ☻ % sudo sysctl -w vm.max_map_count=262144 # needed for elasticsearch to work [1]    
     ☻ % fin init
 
@@ -24,7 +24,7 @@ from projectroot run
 check that all containers are Up via
 
 ```
-   % fin ps      
+   % fin ps
 ```
 
 test the installation in browser:
@@ -42,9 +42,9 @@ Disable XPACK:
     fin restart     
 ```
 
-HINT: It may take some time (>5 min) and a huge amount of ram & cpu load to 
+HINT: It may take some time (>5 min) and a huge amount of ram & cpu load to
 restart kibana for the first time after disabling xpack, because some assets are
-rebuild. To save some memory you can stop the elastic container until kibana is 
+rebuild. To save some memory you can stop the elastic container until kibana is
 ready again.
 
 ## use portia
@@ -81,19 +81,17 @@ activating and configuring the pipeline in our settings is enough to get the dat
 
 ## use kibana
 
-http://hoaxly.docksal:5601
+    http://hoaxly.docksal:5601
 
 default index: hoaxly
 (uncheck contains timedata)
 
 ## basic php frontend for elasticsearch
 
-http://search.hoaxly.docksal/index.php
+    http://search.hoaxly.docksal/index.php
 
 ## Custom Middleware
 
 [Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching item with scraped metadata
 
     portia_projects/hoaxlyPortia/spidermiddleware.py
-
-

@@ -30,7 +30,7 @@ services:
       - "9300:9300"
 
   web:
-    image: registry.acolono.net:444/rosenstrauch/hoaxly-vanillasearch-nginx
+    image: registry.acolono.net:444/hoaxly/hoaxly-vanillasearch-nginx
     ports:
       - "8080:80"
     labels:
@@ -44,17 +44,18 @@ services:
       - APP_LOG_FILE=/vanillasearch.log
 
   php:
-    image: registry.acolono.net:444/rosenstrauch/hoaxly-vanillaphp:latest
+    image: registry.acolono.net:444/hoaxly/hoaxly-vanillaphp:latest
 
-  kibana:
-    image: docker.elastic.co/kibana/kibana:5.4.0
-    mem_limit: 1024m
-    ports:
-      - "5601:5601"
-    depends_on:
-      - elastic
-    environment:
-      - ELASTICSEARCH_URL=http://elastic:9200
+  # inspect index with this container
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:5.4.0
+  #   mem_limit: 1024m
+  #   ports:
+  #     - "5601:5601"
+  #   depends_on:
+  #     - elastic
+  #   environment:
+  #     - ELASTICSEARCH_URL=http://elastic:9200
 
   portia:
     image: scrapinghub/portia
@@ -64,14 +65,14 @@ services:
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
-      - ${PWD}/portia_projects:/app/data/projects:rw
-      - ${PWD}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
-      - ${PWD}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
+      - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
+      - ${PROJECT_ROOT}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
+      - ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
 
   scrapyd:
     ports:
      - "6800:6800"
-    build: ./
+    build: ${PROJECT_ROOT}
     tty: true
     command: scrapyd
     volumes_from:
