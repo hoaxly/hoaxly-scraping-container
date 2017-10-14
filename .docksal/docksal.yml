@@ -14,51 +14,49 @@ version: "2.1"
 services:
 
   elastic:
-    image: elasticsearch
-    mem_limit: 4096m
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.4.0
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    mem_limit: 1g
     labels:
       - io.docksal.virtual-host=elastic.${VIRTUAL_HOST}
     ports:
       - "9200:9200"
       - "9300:9300"
 
-  web:
-    image: registry.acolono.net:444/rosenstrauch/hoaxly-vanillasearch-nginx
-    ports:
-      - "8080:80"
-    labels:
-      - io.docksal.virtual-host=search.${VIRTUAL_HOST}
-      - io.docksal.project-root=${PROJECT_ROOT}
+  # demo elasticsearch frontend php search interface
+  # web:
+  #   image: registry.acolono.net:444/hoaxly/hoaxly-vanillasearch-nginx
+  #   ports:
+  #     - "8080:80"
+  #   labels:
+  #     - io.docksal.virtual-host=search.${VIRTUAL_HOST}
+  #     - io.docksal.project-root=${PROJECT_ROOT}
+  #   depends_on:
+  #     - php
+  #   environment:
+  #     - APP_ES_HOST=elastic
+  #     - APP_ES_PORT=9200
+  #     - APP_LOG_FILE=/vanillasearch.log
 
-    depends_on:
-      - php
-    environment:
-      - APP_ES_HOST=elastic
-      - APP_ES_PORT=9200
-      - APP_LOG_FILE=/vanillasearch.log
+  # php:
+  #   image: registry.acolono.net:444/hoaxly/hoaxly-vanillaphp:latest
 
-  php:
-    image: registry.acolono.net:444/rosenstrauch/hoaxly-vanillaphp:latest
-
-
-  kibana:
-    image: kibana
-    mem_limit: 1024m
-    ports:
-      - "5601:5601"
-    depends_on:
-      - elastic
-    environment:
-      - ELASTICSEARCH_URL=http://elastic:9200
- #
- # scrapyd:
- #   image: vimagick/scrapyd
- #   ports:
- #     - "6800:6800"
- #   depends_on:
- #     - elastic
- #   volumes:
- #     - project_root:/hoaxly
+  # inspect index with this container
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:5.4.0
+  #   mem_limit: 1024m
+  #   ports:
+  #     - "5601:5601"
+  #   depends_on:
+  #     - elastic
+  #   environment:
+  #     - ELASTICSEARCH_URL=http://elastic:9200
 
   portia:
     image: scrapinghub/portia
@@ -68,5 +66,15 @@ services:
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
-      - ${PWD}/portia_projects:/app/data/projects:rw
-      - ${PWD}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
+      - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
+      - ${PROJECT_ROOT}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
+      - ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
+
+  scrapyd:
+    ports:
+     - "6800:6800"
+    build: ${PROJECT_ROOT}
+    tty: true
+    command: scrapyd
+    volumes_from:
+      - portia
