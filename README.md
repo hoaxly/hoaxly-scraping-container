@@ -25,8 +25,8 @@ from projectroot run
 then you are in container and can
 
     root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
-    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapy-client deploy
-    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapy-client schedule -p HoaxlyPortia snopes.com
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia snopes.com
     
 and view your results:
 
