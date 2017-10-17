@@ -16,6 +16,12 @@ scrapy crawl -s PROJECT_DIR=./ -s SPIDER_MANAGER_CLASS=slybot.spidermanager.Slyb
 
 ## TLDR
 
+_Note:_ make sure to run this on your host.
+This is needed for elasticsearch to work [4]
+
+    ☻ % sudo sysctl -w vm.max_map_count=262144
+
+
 from projectroot run
 
     ☻ % fin init
@@ -31,6 +37,7 @@ then you are in container and can
 and view your results:
 
     http://localhost:9200/hoaxly/_search
+    
 
 ## Setup (Detailed)
 
@@ -113,11 +120,7 @@ we still have a workaround in place that renames an items
 > "\_type" key to "type"
 to avoid elastic search error
 
-_Note:_ make sure to run this on your host
 
-    ☻ % sudo sysctl -w vm.max_map_count=262144
-
-needed for elasticsearch to work [4]    
 
 
 [2]: https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode
