@@ -25,7 +25,7 @@ This is needed for elasticsearch to work [4]
 from projectroot run
 
     ☻ % fin init
-    ☻ % docker exec portia scrapyd &
+    ☻ % docker exec -ti portia scrapyd &
     ☻ % docker exec -ti portia /bin/bash
     
 then you are in container and can
