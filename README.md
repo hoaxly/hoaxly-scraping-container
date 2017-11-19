@@ -32,11 +32,11 @@ then you are in container and can
 
     root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
     root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy
-    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia snopes.com
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia pesacheck.org
     
 and view your results:
 
-    http://localhost:9200/hoaxly/_search
+    http://elastic.hoaxly.docksal:9200/hoaxly/_search
     
 
 ## Setup (Detailed)
