@@ -109,16 +109,23 @@ site_install ()
 	chmod 755 "${SITEDIR_PATH}"
 }
 install_python_requirements () {
-    #docker exec -ti hoaxly_scrapyd_1 apt-get install build-essential libxml2-dev libxslt1-dev python-dev libssl-dev libffi-dev -y
-    #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
+	echo -e "${green_bg} init ${NC}${green} installing python requirements ...${NC}"
 
-    docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
-    docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt"
-    docker exec -ti hoaxly_portia_1 sudo pip install scrapyd-client scrapyd
-    docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
-    docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
+cd $PROJECT_ROOT
+    #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
+    #docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
+    #docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt" --upgrade
+    #docker exec -ti portia sudo pip install scrapyd-client scrapyd
 }
 
+remove_xpack () {
+	echo -e "${green_bg} init ${NC}${green} removing xpack ...${NC}"
+
+	cd $PROJECT_ROOT
+    docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
+    #docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
+
+}
 #-------------------------- END: Functions --------------------------------
 
 #-------------------------- Execution --------------------------------
@@ -144,12 +151,11 @@ if is_windows; then
 fi
 
 
-echo -e "${green_bg} Step 2 ${NC}${green} installing python requirements ...${NC}"
 
 # TODO: find a more generic way to execute commands in container or create a prepared image.
 
-install_python_requirements
-
+remove_xpack
+#install_python_requirements
 
 echo -en "${green_bg} DONE! ${NC} "
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."

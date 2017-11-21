@@ -1,97 +1,160 @@
-# Hoaxly development setup
+# Hoaxly Portia spiders
 
-this repo contains:
 
-- a docksal setup - _basically a docker-compose.yml file and an init script._
-- portia spiders - _portia spiders are basically scrapy spiders with bells on._
-- some configuration - _the file at config/local_slybot_settings.py will be mounted in the portia container allowing us to configure it. it is loaded by https://github.com/scrapinghub/portia/blob/master/slybot/slybot/settings.py_
-- custom spider middleware. - _portia_projects/hoaxlyPortia/spidermiddleware.py registering classes defined in this file in our configuration allows interacting with the data before pipelines kick in_
+!!!
 
+
+scrapy crawl -s PROJECT_DIR=./ -s SPIDER_MANAGER_CLASS=slybot.spidermanager.SlybotSpiderManager snopes.com
+
+
+!!!
 
 ## Requirements
 
-docker-2.3.0 docker-compose-1.13.0
+    docker-2.3.0 docker-compose-1.13.0
 
 
-## Setup
+## TLDR
+
+_Note:_ make sure to run this on your host.
+This is needed for elasticsearch to work [4]
+
+    ☻ % sudo sysctl -w vm.max_map_count=262144
+
 
 from projectroot run
 
-    ☻ % sudo sysctl -w vm.max_map_count=262144 # needed for elasticsearch to work [1]    
     ☻ % fin init
+    ☻ % docker exec -ti portia scrapyd &
+    ☻ % docker exec -ti portia /bin/bash
+    
+then you are in container and can
 
-[1] https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
-check that all containers are Up via
+    root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia pesacheck.org
+    
+and view your results:
 
-```
-   % fin ps
-```
+    http://elastic.hoaxly.docksal:9200/hoaxly/_search
+    
 
-test the installation in browser:
-
-    * Portia: http://localhost:9001/#/projects
-    * Kibana: http://localhost:5601
-    * Elastic: http://localhost:9200/
+## Setup (Detailed)
 
 this will spin up your containers defined in .docksal/docksal.yml
+check that all containers are Up via
+
+
+    ☻ % fin ps
 
 Disable XPACK:
+
 ```
-    docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
-    docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
-    fin restart     
+    ☻ docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
+    ☻ docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
+    ☻ fin restart     
 ```
+
+
+
+## components
+this repo contains:
+
+
+|     component    | Description           |
+| ------------- |:-------------:|
+| a docksal setup      | basically a docker-compose.yml file and an init script|
+| portia spiders       | portia spiders are basically scrapy spiders with bells on      |
+| some configuration   | the file at config/local_slybot_settings.py will be mounted in the portia container allowing us to configure it. it is loaded by https://github.com/scrapinghub/portia/blob/master/slybot/slybot/settings.py      |  
+|custom spider middleware|portia_projects/hoaxlyPortia/spidermiddleware.py registering classes defined in this file in our configuration allows interacting with the data before pipelines kick in|
+
+
+
+### Portia Spiders:
+
+in your browser you can visit the [webinterface of portia](http://localhost:9001) use this to build new spiders
+
+Spiders are stored in [./portia_projects](./portia_projects)
+
+we are using [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching item with scraped metadata
+
+    portia_projects/hoaxlyPortia/spidermiddleware.py
+
+
+
+
+#### Start a crawl with portia 
+
+
+you will get a list of spiders if you run this command [1]
+
+    docker exec portia  <PROJECT_PATH> [SPIDER] [OPTIONS]
+    docker exec portia portiacrawl /app/data/projects/hoaxlyPortia
+
+for example try
+
+    docker exec portia portiacrawl /app/data/projects/hoaxlyPortia www.snopes.com -o /app/data/example-output/snopes-output.json
+    --settings=hoaxly
+[1]: http://portia.readthedocs.io/en/latest/spiders.html#running-a-spider
+
+### Kibana: 
+
+once you have some data scraped to elasticsearch enable this container and visit the [kibana web interface](http://localhost:5601) to inspect your index
+default index: hoaxly
+(uncheck contains timedata)
 
 HINT: It may take some time (>5 min) and a huge amount of ram & cpu load to
 restart kibana for the first time after disabling xpack, because some assets are
 rebuild. To save some memory you can stop the elastic container until kibana is
 ready again.
 
-## use portia
 
-in your browser you can visit the [webinterface of portia](http://hoaxly.docksal:9001)
-you will find the hoaxlyPortia project containing some spiders.
+### Elastic:
 
-you can view your spiders in your file browser at portia_projects/hoaxlyPortia/spiders
+view [elasticsearch webinterface](http://localhost:9200/) in the browser
+uses a volume bound on /usr/share/elasticsearch/data [2] 
+Connects to Elasticsearch via scrapyelasticsearch python library [3]
 
-for more details see
+activating and configuring the pipeline in our settings is enough to get the data saved
+we still have a workaround in place that renames an items
+> "\_type" key to "type"
+to avoid elastic search error
+
+
+
+
+[2]: https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-cli-run-prod-mode
+[3]: https://github.com/suraj-arya/scrapy-elasticsearch
+[4]: https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html
+
+
+### scrapyd
 
 - https://doc.scrapy.org/en/latest/index.html
 - http://scrapyd.readthedocs.io/en/latest/
-- http://portia.readthedocs.io/en/latest/index.html
 
-### Start a crawl with portia
-http://portia.readthedocs.io/en/latest/spiders.html#running-a-spider
-you will get a list of spiders if you run this command
+    root@0ee451559ce0:/app/data/projects/hoaxlyPortia# scrapy crawl snopes.com
 
-    docker exec hoaxly_portia_1  <PROJECT_PATH> [SPIDER] [OPTIONS]
-    docker exec hoaxly_portia_1 portiacrawl /app/data/projects/hoaxlyPortia
+    docker exec portia scrapyd
 
 
-## deploy to scrapyd
+#### Deploy to scrapyd and scheduling crawls using [scrapyd-client](https://github.com/scrapy/scrapyd-client)
 
-    ☻ % docker exec -ti hoaxly_portia_1 bash
+    ☻ % docker exec -ti portia bash
     root@87a89036ec31:/app/slyd# cd /app/data/projects/hoaxlyPortia
     root@3d4a705434fb:/app/data/projects/hoaxlyPortia# scrapyd-deploy -a
+    
+    scrapyd-client deploy
 
-## Elasticsearch via scrapyelasticsearch
-we are using the following fork of the python library
-https://github.com/suraj-arya/scrapy-elasticsearch
-activating and configuring the pipeline in our settings is enough to get the data saved (infact we still have a workaround in place that renames an items "_type" key to "type" to avoid elastic search error)
+once deployed you can interact directly with scrapyd through the webapi
 
-## use kibana
+    scrapyd-client schedule -p hoaxlyPortia snopes.com
+    scrapyd-client schedule
+    curl http://localhost:6800/schedule.json -d project=HoaxlyPortia -d spider=www.theskepticsguide.org
+    curl http://localhost:6800/listprojects.json
+    curl http://localhost:6800/listspiders.json?project=HoaxlyPortia
 
-    http://hoaxly.docksal:5601
 
-default index: hoaxly
-(uncheck contains timedata)
-
-## basic php frontend for elasticsearch
+## basic php frontend demo for elasticsearch
 
     http://search.hoaxly.docksal/index.php
-
-## Custom Middleware
-
-[Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching item with scraped metadata
-
-    portia_projects/hoaxlyPortia/spidermiddleware.py
