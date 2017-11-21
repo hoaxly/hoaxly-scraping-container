@@ -2,10 +2,12 @@ FROM scrapinghub/portia
 
 RUN set -xe \
     && apt-get update \
-    && apt-get install -y gcc \
+    && sudo dpkg --configure -a \
+    && apt-get install -f -y gcc \
                           python3-dev python-dev \
                           curl bash \
-                          make build-essential libssl-dev libffi-dev python-software-properties software-properties-common
+                          make build-essential libffi-dev \
+                          python-software-properties software-properties-common
 
 
 COPY portia_projects/requirements.txt .
