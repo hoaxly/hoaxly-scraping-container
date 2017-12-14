@@ -108,14 +108,17 @@ site_install ()
 	# Revert site dir permissions.
 	chmod 755 "${SITEDIR_PATH}"
 }
-install_python_requirements () {
+install_python_helpers () {
 	echo -e "${green_bg} init ${NC}${green} installing python requirements ...${NC}"
 
 cd $PROJECT_ROOT
     #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
     #docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
     #docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt" --upgrade
-    #docker exec -ti portia sudo pip install scrapyd-client scrapyd
+    #docker exec -ti python_container sudo pip install scrapyd-client scrapyd
+
+	docker exec -ti hoaxly_python_container_1 pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
+	docker exec -ti portia pip install /app/data/projects/packages
 }
 
 remove_xpack () {
@@ -155,10 +158,10 @@ fi
 # TODO: find a more generic way to execute commands in container or create a prepared image.
 
 remove_xpack
-#install_python_requirements
+install_python_helpers
 
 echo -en "${green_bg} DONE! ${NC} "
-echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
+echo -e "check your containers started.."
 echo -e "And see README.md for scraping instructions."
 
 

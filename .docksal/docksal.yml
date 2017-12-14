@@ -31,6 +31,30 @@ services:
     volumes:
       - esdata1:/usr/share/elasticsearch/data
 
+  # CLI
+  # Used for all python commandline tools
+  python_container:
+    hostname: python_container
+    image: python
+    volumes:
+      # Project root volume
+      - project_root:/var/www:rw,nocopy
+      # Shared ssh-agent socket
+      - docksal_ssh_agent:/.ssh-agent:ro
+    stdin_open: true
+    tty: true
+    working_dir: '/var/www/portia_projects/hoaxlyPortia'
+    command: [ "/bin/bash" ]
+    environment:
+      - HOST_UID
+      - HOST_GID
+      - DOCROOT
+      - XDEBUG_ENABLED=${XDEBUG_ENABLED:-0}
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
+
+
   # demo elasticsearch frontend php search interface
   # web:
   #   image: registry.acolono.net:444/hoaxly/hoaxly-vanillasearch-nginx
@@ -80,11 +104,12 @@ services:
       - ${PROJECT_ROOT}/data/slyd:/app/slyd/data
       - ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
       - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
+      #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
       - ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
       #- ${PROJECT_ROOT}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
-      - ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
-      - ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/mypipelines.py:/app/slyd/slybot/slybot/mypipelines.py
-      - ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/mymiddleware.py:/app/slyd/slybot/slybot/mymiddleware.py
+      #- ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
+      #- ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/mypipelines.py:/app/slyd/slybot/slybot/mypipelines.py
+      #- ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/mymiddleware.py:/app/slyd/slybot/slybot/mymiddleware.py
 
 
 
