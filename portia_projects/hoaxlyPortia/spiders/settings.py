@@ -5,8 +5,8 @@ import scrapyelasticsearch
 import slybot
 
 #SPIDER_MANAGER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
-SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
-#SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
+#SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
+SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 
 DOWNLOADER_MIDDLEWARES = {
@@ -18,7 +18,7 @@ PLUGINS = [
     'slybot.plugins.selectors.Selectors'
 ]
 SLYDUPEFILTER_ENABLED = False
-#DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
 SPIDER_MIDDLEWARES = {
     'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
@@ -28,7 +28,6 @@ SPIDER_MIDDLEWARES = {
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 600,
-
     'hoaxlyHelpers.mypipelines.TypePipeline': 3,
     'slybot.dupefilter.DupeFilterPipeline': 700
 }
@@ -40,9 +39,11 @@ ELASTICSEARCH_UNIQ_KEY = 'url'
 ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
 
 # ugly but hardcoding works
+PROJECT_DIR = '/app/data/projects/hoaxlyPortia'
+
 #PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 #PROJECT_DIR = '/app/slyd/eggs/HoaxlyPortia/'
-PROJECT_ZIPFILE = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
+#PROJECT_ZIPFILE = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
 
 try:
     from local_slybot_settings import *
