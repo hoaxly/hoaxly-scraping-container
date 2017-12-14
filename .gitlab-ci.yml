@@ -1,6 +1,6 @@
+image: tmaier/docker-compose:17.09
 services:
-  - docker:dind
-
+  - docker:17.09-dind
 variables:
   IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
 
