@@ -11,7 +11,7 @@ RUN set -xe \
 
 
 COPY portia_projects/requirements.txt .
-COPY portia_projects/hoaxlyPortia /app/data/projects/
+COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia/
 
 
 RUN pip install --no-cache-dir -r requirements.txt
