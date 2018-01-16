@@ -20,3 +20,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./scrapyd.conf /etc/scrapyd/
 VOLUME /etc/scrapyd/ /var/lib/scrapyd/
 EXPOSE 6800
+ENTRYPOINT ["scrapyd", "--pidfile="]
