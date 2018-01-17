@@ -32,21 +32,21 @@ echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
 if_failed ()
 {
-	if [ ! $? -eq 0 ]; then
-		if [[ "$1" == "" ]]; then msg="an error occurred"; else msg="$1"; fi
-		echo-red "$msg";
-		exit 1;
-	fi
+  if [ ! $? -eq 0 ]; then
+    if [[ "$1" == "" ]]; then msg="an error occurred"; else msg="$1"; fi
+    echo-red "$msg";
+    exit 1;
+  fi
 }
 
 is_windows ()
 {
-	local res=$(uname | grep 'CYGWIN_NT')
-	if [[ "$res" != "" ]]; then
-		return 0
-	else
-		return 1
-	fi
+  local res=$(uname | grep 'CYGWIN_NT')
+  if [[ "$res" != "" ]]; then
+    return 0
+  else
+    return 1
+  fi
 }
 
 # Copy a settings file.
@@ -55,78 +55,37 @@ is_windows ()
 # @param $2 destination file
 copy_settings_file()
 {
-	local source="$1"
-	local dest="$2"
+  local source="$1"
+  local dest="$2"
 
-	if [[ ! -f $dest ]]; then
-		echo "Copying ${dest}..."
-		cp $source $dest
-	else
-		echo-yellow "${dest} already in place."
-	fi
+  if [[ ! -f $dest ]]; then
+    echo "Copying ${dest}..."
+    cp $source $dest
+  else
+    echo-yellow "${dest} already in place."
+  fi
 }
 
 #-------------------------- END: Helper functions --------------------------------
 
 #-------------------------- Functions --------------------------------
 
-compile_configs ()
-{
-	# .gitlab-ci hooks
-	if [[ -f ${PROJECT_ROOT}/.gitlab-ci.yml ]]; then
-		rm ${PROJECT_ROOT}/.gitlab-ci.yml
-	fi
-	envsubst '${AO_PROJECT_ID}' < ${PROJECT_ROOT}/config/default/.gitlab-ci.yml >> ${PROJECT_ROOT}/.gitlab-ci.yml
-
-	# composer.json.
-	if [[ -f ${PROJECT_ROOT}/composer.json ]]; then
-		rm ${PROJECT_ROOT}/composer.json
-	fi
-	envsubst '${AO_PROJECT_ID} ${AO_PROJECT_DESC}' < ${PROJECT_ROOT}/config/default/composer.json >> ${PROJECT_ROOT}/composer.json
-
-	# README.md.
-	if [[ -f ${PROJECT_ROOT}/README.md ]]; then
-		rm ${PROJECT_ROOT}/README.md
-	fi
-	envsubst '${AO_GIT_URL} ${AO_PROJECT_ID} ${VIRTUAL_HOST}' < ${PROJECT_ROOT}/config/default/README.md >> ${PROJECT_ROOT}/README.md
-}
-
-# Set file/folder permissions
-file_permissions ()
-{
-	echo-green "Resetting files directory permissions..."
-	mkdir -p "${SITEDIR_PATH}/files"
-	chmod -R 777 "${SITEDIR_PATH}/files"
-}
-
-# Install site
-site_install ()
-{
-	cd ${DOCROOT_PATH}
-	fin drush si -y --site-name="${AO_PROJECT_DESC}" --root=/var/www/web
-
-	# Revert site dir permissions.
-	chmod 755 "${SITEDIR_PATH}"
-}
 install_python_helpers () {
-	echo -e "${green_bg} init ${NC}${green} installing python requirements ...${NC}"
-
-cd $PROJECT_ROOT
-    #docker exec -ti hoaxly_scrapyd_1 pip install -r "/hoaxly/config/requirements.txt"
-    #docker exec -ti hoaxly_portia_1 pip install https://github.com/suraj-arya/scrapy-elasticsearch/archive/master.zip
-    #docker exec -ti hoaxly_portia_1 pip install -r "/app/data/projects/requirements.txt" --upgrade
-    #docker exec -ti python_container sudo pip install scrapyd-client scrapyd
-
-	docker exec -ti hoaxly_python_container_1 pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
-	docker exec -ti portia pip install /app/data/projects/packages
+  echo -e "${green_bg} init ${NC}${green} installing python requirements ...${NC}"
+  cd $PROJECT_ROOT
+  # install scrapyd client in our cli container
+  docker exec -ti hoaxly_python_container_1 pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
+  # install our own helper package in portia container even though it should already be installed in the docker container but this allows installing it as [editable](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
+  #docker exec -ti portia pip install --editable /app/data/projects/packages
 }
 
 remove_xpack () {
-	echo -e "${green_bg} init ${NC}${green} removing xpack ...${NC}"
+  echo -e "${green_bg} init ${NC}${green} removing xpack ...${NC}"
 
-	cd $PROJECT_ROOT
-    docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
-    #docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
+  cd $PROJECT_ROOT
+  docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
+  # when you are using kibana this will have to be run too.
+  #docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
 
 }
 #-------------------------- END: Functions --------------------------------
@@ -134,23 +93,23 @@ remove_xpack () {
 #-------------------------- Execution --------------------------------
 
 if [[ "$PROJECT_ROOT" == "" ]]; then
-	echo-red "\$PROJECT_ROOT is not set"
-	exit 1
+  echo-red "\$PROJECT_ROOT is not set"
+  exit 1
 fi
 
 
 if [[ $DOCKER_RUNNING == "true" ]]; then
-	echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
-	fin reset -f
+  echo -e "${green_bg} Step 1 ${NC}${green} Recreating services...${NC}"
+  fin reset -f
 else
-	echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
-	fin up
+  echo -e "${green_bg} Step 1 ${NC}${green} Creating services...${NC}"
+  fin up
 fi
 
 if is_windows; then
-	echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
-	echo-green "192.168.64.100  ${VIRTUAL_HOST}"
-	echo
+  echo-green "Add ${VIRTUAL_HOST} to your hosts file (/etc/hosts), e.g.:"
+  echo-green "192.168.64.100  ${VIRTUAL_HOST}"
+  echo
 fi
 
 
@@ -161,7 +120,7 @@ remove_xpack
 install_python_helpers
 
 echo -en "${green_bg} DONE! ${NC} "
-echo -e "check your containers started.."
+echo -e "check your containers started by running fin status"
 echo -e "And see README.md for scraping instructions."
 
 

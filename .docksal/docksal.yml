@@ -100,16 +100,12 @@ services:
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
-      #- ${PROJECT_ROOT}/config/scrapyd.conf:/etc/scrapyd/scrapyd.conf
       - ${PROJECT_ROOT}/data/slyd:/app/slyd/data
       - ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
       - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
+      # when working on the helpers mount them here
       #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
       - ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
-      #- ${PROJECT_ROOT}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
-      #- ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
-      #- ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/mypipelines.py:/app/slyd/slybot/slybot/mypipelines.py
-      #- ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/mymiddleware.py:/app/slyd/slybot/slybot/mymiddleware.py
 
 
 
