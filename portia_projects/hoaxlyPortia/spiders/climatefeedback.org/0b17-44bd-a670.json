@@ -117,7 +117,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        "article > span > header > p > .updated"
+                        ".updated"
                     ], 
                     "container_id": "fdc8-4b8a-99da", 
                     "data": {
@@ -136,9 +136,9 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "css", 
-                    "selector": "article > span > header > p > .updated", 
+                    "selector": ".updated", 
                     "tagid": null, 
-                    "xpath": "//article/span/header/p/*[contains(concat(\" \", @class, \" \"), \" updated \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" updated \")]"
                 }, 
                 {
                     "accept_selectors": [
@@ -202,5 +202,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "climatefeedback.org", 
     "url": "http://climatefeedback.org/evaluation/scientists-officially-declare-2016-hottest-year-record-chris-mooney-the-washington-post/", 
-    "version": "0.13.0b36"
+    "version": "0.13.1"
 }

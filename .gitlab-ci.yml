@@ -2,7 +2,7 @@ image: tmaier/docker-compose:17.09
 services:
   - docker:17.09-dind
 variables:
-  IMAGE_TAG: $CI_REGISTRY_IMAGE:current
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:latest
 
 before_script:
   #- docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY

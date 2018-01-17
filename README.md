@@ -21,23 +21,27 @@ This is needed for elasticsearch to work [4]
 
     ☻ % sudo sysctl -w vm.max_map_count=262144
 
-
 from projectroot run
 
     ☻ % fin init
     ☻ % docker exec -ti portia scrapyd &
     ☻ % docker exec -ti portia /bin/bash
-    
+
 then you are in container and can
 
     root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
-    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy local
     root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia pesacheck.org
-    
+
 and view your results:
 
     http://elastic.hoaxly.docksal:9200/hoaxly/_search
-    
+
+
+## Production:
+
+just pull the image from registry and run it, then you should see the projects spiders ready deployed and can schedule crawls through the api and watch the results show up in elasticsearch
+mount the settings you need so scrapy knows where to pipe the data
 
 ## Setup (Detailed)
 
@@ -72,7 +76,7 @@ this repo contains:
 
 ### Portia Spiders:
 
-in your browser you can visit the [webinterface of portia](http://localhost:9001) use this to build new spiders
+in your browser you can visit the [webinterface of portia](http://hoaxly.docksal:9001/#/projects) use this to build new spiders
 
 Spiders are stored in [./portia_projects](./portia_projects)
 
@@ -83,7 +87,7 @@ we are using [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/
 
 
 
-#### Start a crawl with portia 
+#### Start a crawl with portia
 
 
 you will get a list of spiders if you run this command [1]
@@ -97,7 +101,7 @@ for example try
     --settings=hoaxly
 [1]: http://portia.readthedocs.io/en/latest/spiders.html#running-a-spider
 
-### Kibana: 
+### Kibana:
 
 once you have some data scraped to elasticsearch enable this container and visit the [kibana web interface](http://localhost:5601) to inspect your index
 default index: hoaxly
@@ -112,7 +116,7 @@ ready again.
 ### Elastic:
 
 view [elasticsearch webinterface](http://localhost:9200/) in the browser
-uses a volume bound on /usr/share/elasticsearch/data [2] 
+uses a volume bound on /usr/share/elasticsearch/data [2]
 Connects to Elasticsearch via scrapyelasticsearch python library [3]
 
 activating and configuring the pipeline in our settings is enough to get the data saved
@@ -143,7 +147,7 @@ to avoid elastic search error
     ☻ % docker exec -ti portia bash
     root@87a89036ec31:/app/slyd# cd /app/data/projects/hoaxlyPortia
     root@3d4a705434fb:/app/data/projects/hoaxlyPortia# scrapyd-deploy -a
-    
+
     scrapyd-client deploy
 
 once deployed you can interact directly with scrapyd through the webapi
