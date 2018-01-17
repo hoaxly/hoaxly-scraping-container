@@ -88,7 +88,7 @@ services:
 
 # enable this container to build new spiders
   portia:
-    image: registry.acolono.net:444/hoaxly/hoaxly
+    image: registry.acolono.net:444/hoaxly/hoaxly:latest
     build: ${PROJECT_ROOT}
     container_name: portia
     #restart: always
