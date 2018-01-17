@@ -38,6 +38,20 @@ ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
 # ugly but hardcoding works
 PROJECT_DIR = '/app/data/projects/hoaxlyPortia'
 
+
+# Polite Scraping
+# see https://blog.scrapinghub.com/2016/08/25/how-to-crawl-the-web-politely-with-scrapy/
+#
+ROBOTSTXT_OBEY = True
+
+USER_AGENT = 'Hoaxly Factchecking Search engine bot (bot@hoax.ly)'
+# 55 second delay
+DOWNLOAD_DELAY = 55.0
+
+## https://doc.scrapy.org/en/latest/topics/autothrottle.html?
+AUTOTHROTTLE_ENABLED = True
+HTTPCACHE_ENABLED = True
+
 try:
     from local_slybot_settings import *
 except ImportError:
