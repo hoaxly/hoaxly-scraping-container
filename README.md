@@ -30,7 +30,7 @@ from projectroot run
 then you are in container and can
 
     root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
-    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy local
     root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia pesacheck.org
 
 and view your results:
@@ -41,6 +41,7 @@ and view your results:
 ## Production:
 
 just pull the image from registry and run it, then you should see the projects spiders ready deployed and can schedule crawls through the api and watch the results show up in elasticsearch
+mount the settings you need so scrapy knows where to pipe the data
 
 ## Setup (Detailed)
 
@@ -75,7 +76,7 @@ this repo contains:
 
 ### Portia Spiders:
 
-in your browser you can visit the [webinterface of portia](http://localhost:9001) use this to build new spiders
+in your browser you can visit the [webinterface of portia](http://hoaxly.docksal:9001/#/projects) use this to build new spiders
 
 Spiders are stored in [./portia_projects](./portia_projects)
 
