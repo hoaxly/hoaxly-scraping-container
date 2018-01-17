@@ -15,6 +15,7 @@ services:
 
   elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:5.4.0
+    mem_limit: 3g
     ulimits:
       memlock:
         soft: -1
@@ -22,12 +23,37 @@ services:
       nofile:
         soft: 65536
         hard: 65536
-    mem_limit: 1g
     labels:
       - io.docksal.virtual-host=elastic.${VIRTUAL_HOST}
     ports:
       - "9200:9200"
       - "9300:9300"
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+
+  # CLI
+  # Used for all python commandline tools that are not necessary for the actual scrapy container that may not exist on the host machine.
+  python_container:
+    hostname: python_container
+    image: python
+    volumes:
+      # Project root volume
+      - project_root:/var/www:rw,nocopy
+      # Shared ssh-agent socket
+      - docksal_ssh_agent:/.ssh-agent:ro
+    stdin_open: true
+    tty: true
+    working_dir: '/var/www/portia_projects/hoaxlyPortia'
+    command: [ "/bin/bash" ]
+    environment:
+      - HOST_UID
+      - HOST_GID
+      - DOCROOT
+      - XDEBUG_ENABLED=${XDEBUG_ENABLED:-0}
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
+
 
   # demo elasticsearch frontend php search interface
   # web:
@@ -47,7 +73,8 @@ services:
   # php:
   #   image: registry.acolono.net:444/hoaxly/hoaxly-vanillaphp:latest
 
-  # inspect index with this container
+
+  # inspect index with this container once you have data in elasticsearch
   # kibana:
   #   image: docker.elastic.co/kibana/kibana:5.4.0
   #   mem_limit: 1024m
@@ -58,23 +85,31 @@ services:
   #   environment:
   #     - ELASTICSEARCH_URL=http://elastic:9200
 
+
+# enable this container to build new spiders
   portia:
-    image: scrapinghub/portia
+    image: registry.acolono.net:444/hoaxly/hoaxly:latest
+    build: ${PROJECT_ROOT}
+    container_name: portia
+    #restart: always
+    tty: true
     mem_limit: 1024m
     ports:
       - "9001:9001"
+      - "6800:6800"
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
+      - ${PROJECT_ROOT}/data/slyd:/app/slyd/data
+      - ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
       - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
-      - ${PROJECT_ROOT}/config/local_slybot_settings.py:/app/slyd/slybot/slybot/local_slybot_settings.py
-      - ${PROJECT_ROOT}/portia_projects/hoaxlyPortia/spiders/settings.py:/app/slyd/slybot/slybot/settings.py
+      # when working on the helpers mount them here
+      #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
+      - ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
 
-  scrapyd:
-    ports:
-     - "6800:6800"
-    build: ${PROJECT_ROOT}
-    tty: true
-    command: scrapyd
-    volumes_from:
-      - portia
+
+
+
+volumes:
+  esdata1:
+    driver: local

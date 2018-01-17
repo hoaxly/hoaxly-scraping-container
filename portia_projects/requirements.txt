@@ -1,2 +1,6 @@
+https://github.com/scrapy/scrapyd-client/archive/master.zip
+https://github.com/rosenstrauch/scrapy-elasticsearch/archive/master.zip
 elasticsearch>=5.0.0,<6.0.0
 extruct==v0.3.0a2
+scrapy==1.4
+scrapyd==1.2
