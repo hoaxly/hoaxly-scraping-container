@@ -143,5 +143,45 @@
             }
         }, 
         "name": "factoidPortiaSchema"
+    }, 
+    "4340-439e-a3b1": {
+        "fields": {
+            "03f9-4310-a983": {
+                "id": "03f9-4310-a983", 
+                "name": "ProjectTitle", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "2189-48e5-8ae9": {
+                "id": "2189-48e5-8ae9", 
+                "name": "projectDescription", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "7455-4a03-8ddd": {
+                "id": "7455-4a03-8ddd", 
+                "name": "projectInfo", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "d0fa-416b-bdc3": {
+                "id": "d0fa-416b-bdc3", 
+                "name": "projectShort", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "9b6c-4343-9169": {
+                "id": "9b6c-4343-9169", 
+                "name": "projectTeam", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }
+        }, 
+        "name": "sanitySchema"
     }
 }
