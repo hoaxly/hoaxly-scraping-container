@@ -52,6 +52,9 @@ DOWNLOAD_DELAY = 55.0
 AUTOTHROTTLE_ENABLED = True
 HTTPCACHE_ENABLED = True
 
+# limit concurrent requests per domain
+CONCURRENT_REQUESTS_PER_DOMAIN = 7
+
 try:
     from local_slybot_settings import *
 except ImportError:
