@@ -100,8 +100,8 @@ services:
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
-      - ${PROJECT_ROOT}/data/slyd:/app/slyd/data
-      - ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
+      #- ${PROJECT_ROOT}/data/slyd:/app/slyd/data
+      #- ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
       - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
       # when working on the helpers mount them here
       #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw

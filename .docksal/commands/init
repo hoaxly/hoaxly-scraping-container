@@ -83,7 +83,7 @@ remove_xpack () {
   echo -e "${green_bg} init ${NC}${green} removing xpack ...${NC}"
 
   cd $PROJECT_ROOT
-  docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
+  docker exec hoaxly_elasticsearch_1 bin/elasticsearch-plugin remove x-pack
   # when you are using kibana this will have to be run too.
   #docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
 
