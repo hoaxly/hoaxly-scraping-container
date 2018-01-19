@@ -29,7 +29,7 @@ ITEM_PIPELINES = {
     'slybot.dupefilter.DupeFilterPipeline': 700
 }
 
-ELASTICSEARCH_SERVERS = ['http://elastic:changeme@elastic:9200']
+ELASTICSEARCH_SERVERS = ['http://elastic:changeme@elasticsearch:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'
@@ -48,7 +48,7 @@ USER_AGENT = 'Hoaxly Factchecking Search engine bot (bot@hoax.ly)'
 # 55 second delay
 DOWNLOAD_DELAY = 55.0
 
-## https://doc.scrapy.org/en/latest/topics/autothrottle.html?
+# https://doc.scrapy.org/en/latest/topics/autothrottle.html?
 AUTOTHROTTLE_ENABLED = True
 HTTPCACHE_ENABLED = True
 
