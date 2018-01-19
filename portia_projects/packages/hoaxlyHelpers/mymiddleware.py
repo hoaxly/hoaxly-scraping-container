@@ -29,5 +29,4 @@ class MicrodataExtruction(object):
                             item[key] = value
                 # todo: instead of randomly scraping all metadata maybe only
                 # scrape the stuff matching our schema?
-            print item
             yield item

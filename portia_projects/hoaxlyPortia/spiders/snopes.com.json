@@ -6,11 +6,11 @@
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "none", 
+    "links_to_follow": "all", 
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "http://www.snopes.com/jimmy-john-liautaud-hunting-photos/", 
+            "url": "https://www.snopes.com/category/facts/", 
             "type": "url"
         }
     ]

@@ -140,6 +140,13 @@
                 "required": false, 
                 "type": "safe html", 
                 "vary": false
+            }, 
+            "c690-4abc-baad": {
+                "id": "c690-4abc-baad", 
+                "name": "field2", 
+                "required": false, 
+                "type": "safe html", 
+                "vary": false
             }
         }, 
         "name": "factoidPortiaSchema"
