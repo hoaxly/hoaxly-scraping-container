@@ -6,12 +6,12 @@
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "none", 
+    "links_to_follow": "all", 
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "type": "url", 
-            "url": "http://www.stopfake.org/en/fake-europe-accuses-ukraine-of-increasing-radioactivity/"
+            "url": "http://www.stopfake.org/en/", 
+            "type": "url"
         }
     ]
 }

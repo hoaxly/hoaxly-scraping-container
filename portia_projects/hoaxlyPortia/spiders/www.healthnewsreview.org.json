@@ -1,16 +1,18 @@
 {
     "allowed_domains": [], 
     "exclude_patterns": [], 
-    "follow_patterns": [], 
+    "follow_patterns": [
+        "^http://www.healthnewsreview.org/review/"
+    ], 
     "id": "www.healthnewsreview.org", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "none", 
+    "links_to_follow": "patterns", 
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "http://www.healthnewsreview.org/review/nbcs-look-at-kangaroo-care-20-years-later-no-mention-of-important-research-limitations/", 
+            "url": "http://www.healthnewsreview.org/reviews", 
             "type": "url"
         }
     ]

@@ -17,16 +17,16 @@ PLUGINS = [
 ]
 SLYDUPEFILTER_ENABLED = False
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
-
+DUPEFILTER_DEBUG = True
 SPIDER_MIDDLEWARES = {
-    #'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
+    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 600,
     'hoaxlyHelpers.mypipelines.TypePipeline': 3,
-    #'slybot.dupefilter.DupeFilterPipeline': 700
+    'slybot.dupefilter.DupeFilterPipeline': 700
 }
 
 ELASTICSEARCH_SERVERS = ['http://elastic:changeme@elasticsearch:9200']
