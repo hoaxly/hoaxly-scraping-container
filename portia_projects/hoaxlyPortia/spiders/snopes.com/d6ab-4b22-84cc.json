@@ -32,7 +32,7 @@
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "a458-4806-9323", 
-                            "required": false
+                            "required": true
                         }
                     }, 
                     "id": "7c70-4abf-b2e7", 
@@ -82,7 +82,7 @@
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "48ce-4080-9a47", 
-                            "required": false
+                            "required": true
                         }
                     }, 
                     "id": "79cf-463a-899d", 
@@ -153,5 +153,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "snopes.com", 
     "url": "http://www.snopes.com/jimmy-john-liautaud-hunting-photos/", 
-    "version": "0.13.0b37"
+    "version": "0.13.1"
 }

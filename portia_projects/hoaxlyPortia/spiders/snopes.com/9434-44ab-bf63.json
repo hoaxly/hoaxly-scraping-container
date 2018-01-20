@@ -32,7 +32,7 @@
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "a458-4806-9323", 
-                            "required": false
+                            "required": true
                         }
                     }, 
                     "id": "0cde-44b3-b56b", 
@@ -107,7 +107,7 @@
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "48ce-4080-9a47", 
-                            "required": false
+                            "required": true
                         }
                     }, 
                     "id": "c232-4b57-a3de", 
@@ -178,5 +178,5 @@
     "scrapes": "7949-4e6e-a53a", 
     "spider": "snopes.com", 
     "url": "http://www.snopes.com/fetus-can-send-stem-cells-repair-mothers-damaged-organs/", 
-    "version": "0.13.0b37"
+    "version": "0.13.1"
 }
