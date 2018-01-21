@@ -13,20 +13,23 @@ class MicrodataExtruction(object):
 
     def process_spider_output(self, response, result, spider):
         """get all metadata and add them as fields to item"""
-
-        for item in result:
-            mde = MicrodataExtractor()
-            data = mde.extract(response.body)
-            if data:
-                item['microdata'] = True
-                for field in data:
-                    if 'type' in field:
-                        item['type'] = field['type']
-                    if 'properties' in field:
-                        for key, value in field['properties'].items():
-                            # print value
-                            # print key
-                            item[key] = value
-                # todo: instead of randomly scraping all metadata maybe only
-                # scrape the stuff matching our schema?
-            yield item
+        for x in result:
+            if not isinstance(x, Request):
+                # only handle items
+                mde = MicrodataExtractor()
+                data = mde.extract(response.body)
+                if data:
+                    x['microdata'] = True
+                    for field in data:
+                        if 'type' in field:
+                            x['type'] = field['type']
+                        if 'properties' in field:
+                            for key, value in field['properties'].items():
+                                # print value
+                                # print key
+                                x[key] = value
+                    # todo: instead of randomly scraping all metadata maybe only
+                    # scrape the stuff matching our schema?
+                yield x
+            else:
+                yield x
