@@ -25,11 +25,13 @@ class MicrodataExtruction(object):
                             x['type'] = field['type']
                         if 'properties' in field:
                             for key, value in field['properties'].items():
-                                # print value
-                                # print key
                                 x[key] = value
-                    # todo: instead of randomly scraping all metadata maybe only
-                    # scrape the stuff matching our schema?
-                yield x
+                    # yield the enriched item
+                    yield x
+                else:
+                    # if no data set flag and yield the item
+                    x['microdata'] = False
+                    yield x
             else:
+                # yield the request
                 yield x
