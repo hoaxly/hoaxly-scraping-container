@@ -1,0 +1,22 @@
+{
+    "allowed_domains": [], 
+    "exclude_patterns": [
+        "^https://sciencebasedmedicine.org/category", 
+        "^https://sciencebasedmedicine.org/reference/"
+    ], 
+    "follow_patterns": [
+        "^https://sciencebasedmedicine.org/"
+    ], 
+    "id": "sciencebasedmedicine.org", 
+    "js_disable_patterns": [], 
+    "js_enable_patterns": [], 
+    "js_enabled": false, 
+    "links_to_follow": "patterns", 
+    "respect_nofollow": false, 
+    "start_urls": [
+        {
+            "url": "https://sciencebasedmedicine.org/category/clinical-trials/", 
+            "type": "url"
+        }
+    ]
+}
