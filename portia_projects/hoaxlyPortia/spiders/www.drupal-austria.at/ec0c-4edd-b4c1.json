@@ -1,0 +1,108 @@
+{
+    "extractors": {}, 
+    "id": "ec0c-4edd-b4c1", 
+    "name": "medienhandbuchat drupalaustria", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "3729-4061-a370", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "4340-439e-a3b1", 
+                    "selector": ".site__content > div", 
+                    "siblings": 1, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".page-title"
+                    ], 
+                    "container_id": "3729-4061-a370", 
+                    "data": {
+                        "cb44-45e8-be2c": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "03f9-4310-a983", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6599-49d3-bad5", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".site__content > div > div:nth-child(2) > .page-title", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[2]/*[contains(concat(\" \", @class, \" \"), \" page-title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".field--name-field-paragraphs > div:nth-child(1) > .paragraph"
+                    ], 
+                    "container_id": "3729-4061-a370", 
+                    "data": {
+                        "1a9d-411f-9d21": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "2189-48e5-8ae9", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "d7ea-4022-9d98", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--name-field-paragraphs > div:nth-child(1) > .paragraph", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--name-field-paragraphs \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" paragraph \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".field--name-field-project-drupalversion", 
+                        ".field--name-field-project-client"
+                    ], 
+                    "container_id": "3729-4061-a370", 
+                    "data": {
+                        "6014-4972-a387": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "7455-4a03-8ddd", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "63d1-47e4-837a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--label-inline", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--label-inline \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "4340-439e-a3b1", 
+    "spider": "www.drupal-austria.at", 
+    "url": "https://www.drupal-austria.at/projekte/medienhandbuchat", 
+    "version": "0.13.1"
+}

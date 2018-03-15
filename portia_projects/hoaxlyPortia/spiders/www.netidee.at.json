@@ -2,7 +2,7 @@
     "allowed_domains": [], 
     "exclude_patterns": [], 
     "follow_patterns": [], 
-    "id": "snopes.com", 
+    "id": "www.netidee.at", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
@@ -10,7 +10,7 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://www.snopes.com/category/facts/", 
+            "url": "https://www.netidee.at/entdecken?type=project&year=&tags=", 
             "type": "url"
         }
     ]

@@ -13,7 +13,7 @@ version: "2.1"
 
 services:
 
-  elastic:
+  elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:5.4.0
     mem_limit: 3g
     ulimits:
@@ -29,7 +29,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     volumes:
-      - esdata1:/usr/share/elasticsearch/data
+      - esdata2:/usr/share/elasticsearch/data
 
   # CLI
   # Used for all python commandline tools that are not necessary for the actual scrapy container that may not exist on the host machine.
@@ -100,8 +100,8 @@ services:
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
     volumes:
-      - ${PROJECT_ROOT}/data/slyd:/app/slyd/data
-      - ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
+      #- ${PROJECT_ROOT}/data/slyd:/app/slyd/data
+      #- ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
       - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
       # when working on the helpers mount them here
       #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
@@ -111,5 +111,5 @@ services:
 
 
 volumes:
-  esdata1:
+  esdata2:
     driver: local

@@ -2,18 +2,18 @@
     "allowed_domains": [], 
     "exclude_patterns": [], 
     "follow_patterns": [
-        "^https://climatefeedback.org/evaluation/", 
-        "https://climatefeedback.org/claimreview"
+        "^https://www.drupal-austria.at/projects", 
+        "^https://www.drupal-austria.at/projekte"
     ], 
-    "id": "climatefeedback.org", 
+    "id": "www.drupal-austria.at", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
     "links_to_follow": "patterns", 
-    "respect_nofollow": false, 
+    "respect_nofollow": true, 
     "start_urls": [
         {
-            "url": "https://climatefeedback.org/claim-reviews/", 
+            "url": "https://www.drupal-austria.at/drupal-webseiten-aus-oesterreich", 
             "type": "url"
         }
     ]
