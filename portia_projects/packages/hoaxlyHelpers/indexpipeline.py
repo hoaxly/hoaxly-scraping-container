@@ -1,14 +1,14 @@
 
-"""contains custom scrapy pipelines."""
+"""contains custom scrapy pipeline."""
 
 from scrapy.exceptions import DropItem
 
 
-class TypePipeline(object):
-    """This class renames _type field."""
+class IndexPipeline(object):
+    """This class renames _index field."""
 
     def process_item(self, item, spider):
         """implements https://doc.scrapy.org/en/latest/topics/item-pipeline.html#process_item"""
-        if item['_type']:
-            item['schema'] = item.pop('_type')
+        if item['_index']:
+            item['self'] = item.pop('_index')
         return item
