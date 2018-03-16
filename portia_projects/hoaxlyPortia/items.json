@@ -147,6 +147,13 @@
                 "required": false, 
                 "type": "safe html", 
                 "vary": false
+            }, 
+            "b4b8-4d91-ae48": {
+                "id": "b4b8-4d91-ae48", 
+                "name": "factoidUserComments", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
             }
         }, 
         "name": "factoidPortiaSchema"

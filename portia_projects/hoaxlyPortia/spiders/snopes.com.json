@@ -1,12 +1,15 @@
 {
     "allowed_domains": [], 
-    "exclude_patterns": [], 
+    "exclude_patterns": [
+        "^https://www.snopes.com/category", 
+        "^https://www.snopes.com/random"
+    ], 
     "follow_patterns": [], 
     "id": "snopes.com", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "all", 
+    "links_to_follow": "patterns", 
     "respect_nofollow": false, 
     "start_urls": [
         {
