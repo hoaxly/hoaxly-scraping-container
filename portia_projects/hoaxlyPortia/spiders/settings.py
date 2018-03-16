@@ -25,8 +25,9 @@ SPIDER_MIDDLEWARES = {
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 600,
-    'hoaxlyHelpers.mypipelines.TypePipeline': 3,
-    'slybot.dupefilter.DupeFilterPipeline': 700
+    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
+    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
+    'slybot.dupefilter.DupeFilterPipeline': 300
 }
 
 ELASTICSEARCH_SERVERS = ['http://elastic:changeme@elasticsearch:9200']
