@@ -1,4 +1,4 @@
-# Requesting spider for [url].
+# Consider spider for [url].
 
 [summary and comments, reasons and questions]
 
