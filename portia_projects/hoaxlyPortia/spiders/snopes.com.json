@@ -4,7 +4,9 @@
         "^https://www.snopes.com/category", 
         "^https://www.snopes.com/random"
     ], 
-    "follow_patterns": [], 
+    "follow_patterns": [
+        "^https://www.snopes.com/fact-check"
+    ], 
     "id": "snopes.com", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
@@ -15,6 +17,22 @@
         {
             "url": "https://www.snopes.com/category/facts/", 
             "type": "url"
+        }, 
+        {
+            "url": "https://www.snopes.com/fact-check/page/[1-50]", 
+            "fragments": [
+                {
+                    "valid": true, 
+                    "type": "fixed", 
+                    "value": "https://www.snopes.com/fact-check/page/"
+                }, 
+                {
+                    "valid": true, 
+                    "type": "range", 
+                    "value": "1-50"
+                }
+            ], 
+            "type": "generated"
         }
     ]
 }
