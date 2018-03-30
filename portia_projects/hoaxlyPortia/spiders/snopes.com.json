@@ -15,10 +15,6 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://www.snopes.com/category/facts/", 
-            "type": "url"
-        }, 
-        {
             "url": "https://www.snopes.com/fact-check/page/[1-50]", 
             "fragments": [
                 {
