@@ -32,7 +32,7 @@
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "a458-4806-9323", 
-                            "required": true
+                            "required": false
                         }
                     }, 
                     "id": "0cde-44b3-b56b", 
@@ -107,7 +107,7 @@
                             "attribute": "content", 
                             "extractors": {}, 
                             "field": "48ce-4080-9a47", 
-                            "required": true
+                            "required": false
                         }
                     }, 
                     "id": "c232-4b57-a3de", 

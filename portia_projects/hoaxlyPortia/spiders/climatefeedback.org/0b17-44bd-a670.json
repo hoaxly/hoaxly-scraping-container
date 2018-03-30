@@ -89,34 +89,6 @@
                 }, 
                 {
                     "accept_selectors": [
-                        "article > span > header > p > a:nth-child(1)"
-                    ], 
-                    "container_id": "fdc8-4b8a-99da", 
-                    "data": {
-                        "a165-46e2-addd": {
-                            "attribute": "content", 
-                            "extractors": [
-                                "f537-4cfc-9346", 
-                                "eabe-4969-83f9"
-                            ], 
-                            "field": "827d-49e6-a401", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "fe09-475b-8524", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "css", 
-                    "selector": "article > span > header > p > a:nth-child(1)", 
-                    "tagid": null, 
-                    "xpath": "//article/span/header/p/a[1]"
-                }, 
-                {
-                    "accept_selectors": [
                         ".updated"
                     ], 
                     "container_id": "fdc8-4b8a-99da", 
@@ -195,6 +167,31 @@
                     "selector": ".expert-widget > .wid-body", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" expert-widget \")]/*[contains(concat(\" \", @class, \" \"), \" wid-body \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".bot-tag > a"
+                    ], 
+                    "container_id": "fdc8-4b8a-99da", 
+                    "data": {
+                        "af8d-4a10-acd5": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "923b-49d5-8d2b", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "8e42-4921-af08", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".bot-tag > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" bot-tag \")]/a"
                 }
             ]
         }

@@ -1,0 +1,234 @@
+{
+    "extractors": {}, 
+    "id": "d8bd-4bca-92a8", 
+    "name": "Does chemotherapy cause cancer to spread Scienc", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "b874-4224-bef2", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": ".post-template-default", 
+                    "siblings": 1, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-title"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "af5e-4db3-93e7": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "533e-4e73-8012", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hero-wrapper > .hero-posts > .with-featured-image > .container > .hero-text > .entry-title", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hero-wrapper \")]/*[contains(concat(\" \", @class, \" \"), \" hero-posts \")]/*[contains(concat(\" \", @class, \" \"), \" with-featured-image \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" hero-text \")]/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".hero-cats > a:nth-child(1)", 
+                        ".hero-cats > a:nth-child(3)"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "1c5c-4a40-b5eb": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "923b-49d5-8d2b", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "a1f7-4559-a44b", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hero-wrapper > .hero-posts > .with-featured-image > .container > .hero-cats > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hero-wrapper \")]/*[contains(concat(\" \", @class, \" \"), \" hero-posts \")]/*[contains(concat(\" \", @class, \" \"), \" with-featured-image \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" hero-cats \")]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".hero-text > p"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "4023-4d95-8217": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "9765-4862-b97d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "f66e-403d-80fe", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hero-wrapper > .hero-posts > .with-featured-image > .container > .hero-text > p", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hero-wrapper \")]/*[contains(concat(\" \", @class, \" \"), \" hero-posts \")]/*[contains(concat(\" \", @class, \" \"), \" with-featured-image \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" hero-text \")]/p"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".hero-date-span"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "203a-4840-97d6": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "1414-4984-8caa", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "25f1-4306-905b", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hero-wrapper > .hero-posts > .with-featured-image > .container > .hero-text > .hero-date > .hero-date-span", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hero-wrapper \")]/*[contains(concat(\" \", @class, \" \"), \" hero-posts \")]/*[contains(concat(\" \", @class, \" \"), \" with-featured-image \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" hero-text \")]/*[contains(concat(\" \", @class, \" \"), \" hero-date \")]/*[contains(concat(\" \", @class, \" \"), \" hero-date-span \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".hero-date > a:nth-child(2)"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "60ae-48b5-be48": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "dff0-4c77-8a86", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "99ca-45e6-97f5", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hero-wrapper > .hero-posts > .with-featured-image > .container > .hero-text > .hero-date > a:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hero-wrapper \")]/*[contains(concat(\" \", @class, \" \"), \" hero-posts \")]/*[contains(concat(\" \", @class, \" \"), \" with-featured-image \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" hero-text \")]/*[contains(concat(\" \", @class, \" \"), \" hero-date \")]/a[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#main"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "dbc2-4e2d-8cd8": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d065-406f-8a45", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "7927-4ac9-861c", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hfeed > .site-content > .content-area > .site-main", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hfeed \")]/*[contains(concat(\" \", @class, \" \"), \" site-content \")]/*[contains(concat(\" \", @class, \" \"), \" content-area \")]/*[contains(concat(\" \", @class, \" \"), \" site-main \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".dsq-widget-item:nth-child(1)", 
+                        ".dsq-widget-item:nth-child(2)"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "8152-4afc-b0bf": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "b4b8-4d91-ae48", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "48f7-43b3-a95a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .site-footer > .container > .footer-widgets > .widget_text > .textwidget > .dsq-widget-list > .dsq-widget-item", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" site-footer \")]/*[contains(concat(\" \", @class, \" \"), \" container \")]/*[contains(concat(\" \", @class, \" \"), \" footer-widgets \")]/*[contains(concat(\" \", @class, \" \"), \" widget_text \")]/*[contains(concat(\" \", @class, \" \"), \" textwidget \")]/*[contains(concat(\" \", @class, \" \"), \" dsq-widget-list \")]/*[contains(concat(\" \", @class, \" \"), \" dsq-widget-item \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "p:nth-child(23) > a"
+                    ], 
+                    "container_id": "b874-4224-bef2", 
+                    "data": {
+                        "447c-4562-8994": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "a837-469d-a613", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9a1a-4a16-9a3c", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-template-default > .hfeed > .site-content > .content-area > .site-main > .post > .entry-content > p:nth-child(23) > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-template-default \")]/*[contains(concat(\" \", @class, \" \"), \" hfeed \")]/*[contains(concat(\" \", @class, \" \"), \" site-content \")]/*[contains(concat(\" \", @class, \" \"), \" content-area \")]/*[contains(concat(\" \", @class, \" \"), \" site-main \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[23]/a"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "sciencebasedmedicine.org", 
+    "url": "https://sciencebasedmedicine.org/does-chemotherapy-cause-cancer-to-spread/", 
+    "version": "0.13.1"
+}

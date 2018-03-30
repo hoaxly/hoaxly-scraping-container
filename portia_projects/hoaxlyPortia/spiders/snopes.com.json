@@ -1,17 +1,34 @@
 {
     "allowed_domains": [], 
-    "exclude_patterns": [], 
-    "follow_patterns": [], 
+    "exclude_patterns": [
+        "^https://www.snopes.com/category", 
+        "^https://www.snopes.com/random"
+    ], 
+    "follow_patterns": [
+        "^https://www.snopes.com/fact-check"
+    ], 
     "id": "snopes.com", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "all", 
+    "links_to_follow": "patterns", 
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://www.snopes.com/category/facts/", 
-            "type": "url"
+            "url": "https://www.snopes.com/fact-check/page/[1-50]", 
+            "fragments": [
+                {
+                    "valid": true, 
+                    "type": "fixed", 
+                    "value": "https://www.snopes.com/fact-check/page/"
+                }, 
+                {
+                    "valid": true, 
+                    "type": "range", 
+                    "value": "1-50"
+                }
+            ], 
+            "type": "generated"
         }
     ]
 }

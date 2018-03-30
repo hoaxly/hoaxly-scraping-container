@@ -1,0 +1,57 @@
+{
+    "extractors": {}, 
+    "id": "ed32-4c74-9e6d", 
+    "name": "Do Chestnut Lemon or Peppermint Scents Repel Spi", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "6572-4be8-9464", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": "#post-8654", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-title"
+                    ], 
+                    "container_id": "6572-4be8-9464", 
+                    "data": {
+                        "58c3-40f5-b901": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6e5e-431a-a349", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#post-8654 > .entry-title", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"post-8654\"]/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "entomologytoday.org", 
+    "url": "https://entomologytoday.org/2018/01/22/do-chestnut-lemon-or-peppermint-scents-repel-spiders/", 
+    "version": "0.13.1"
+}

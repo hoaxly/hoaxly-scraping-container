@@ -1,0 +1,57 @@
+{
+    "extractors": {}, 
+    "id": "99c4-433b-a8b0", 
+    "name": "RFC - FYI on What is the Internet RFC", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "aa7d-42e6-bc0f", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "7949-4e6e-a53a", 
+                    "selector": "#hwelcome", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        "h1:nth-child(2)"
+                    ], 
+                    "container_id": "aa7d-42e6-bc0f", 
+                    "data": {
+                        "e58a-4846-830c": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "a458-4806-9323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "345d-42e2-8626", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": "#hwelcome > h1", 
+                    "tagid": null, 
+                    "xpath": "//*[@id=\"hwelcome\"]/h1"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "7949-4e6e-a53a", 
+    "spider": "www.rfc-editor.org", 
+    "url": "http://www.faqs.org/rfcs/rfc1462.html", 
+    "version": "0.13.1"
+}
