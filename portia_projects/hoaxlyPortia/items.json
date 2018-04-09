@@ -165,34 +165,48 @@
                 "name": "ProjectTitle", 
                 "required": false, 
                 "type": "text", 
-                "vary": false
+                "vary": true
             }, 
             "2189-48e5-8ae9": {
                 "id": "2189-48e5-8ae9", 
                 "name": "projectDescription", 
                 "required": false, 
                 "type": "text", 
-                "vary": false
+                "vary": true
             }, 
             "7455-4a03-8ddd": {
                 "id": "7455-4a03-8ddd", 
                 "name": "projectInfo", 
                 "required": false, 
                 "type": "text", 
-                "vary": false
+                "vary": true
             }, 
             "d0fa-416b-bdc3": {
                 "id": "d0fa-416b-bdc3", 
                 "name": "projectShort", 
                 "required": false, 
                 "type": "text", 
-                "vary": false
+                "vary": true
             }, 
             "9b6c-4343-9169": {
                 "id": "9b6c-4343-9169", 
                 "name": "projectTeam", 
                 "required": false, 
                 "type": "text", 
+                "vary": true
+            }, 
+            "880a-4a10-bef3": {
+                "id": "880a-4a10-bef3", 
+                "name": "projectLink", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "d982-4b96-a323": {
+                "id": "d982-4b96-a323", 
+                "name": "projectTags", 
+                "required": false, 
+                "type": "url", 
                 "vary": false
             }
         }, 

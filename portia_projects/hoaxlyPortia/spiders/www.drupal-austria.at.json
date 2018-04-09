@@ -2,8 +2,8 @@
     "allowed_domains": [], 
     "exclude_patterns": [], 
     "follow_patterns": [
-        "^https://www.drupal-austria.at/projects", 
-        "^https://www.drupal-austria.at/projekte"
+        "/projects/", 
+        "/projekte/"
     ], 
     "id": "www.drupal-austria.at", 
     "js_disable_patterns": [], 
