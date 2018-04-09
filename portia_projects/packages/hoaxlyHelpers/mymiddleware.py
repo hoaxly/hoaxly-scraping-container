@@ -22,7 +22,7 @@ class MicrodataExtruction(object):
                 # yield the request without making changes
                 #logging.debug('this is a request and not an item')
                 yield x
-            else if isinstance(x, Item):
+            else:
                 # if this is an item inspect for microdata
                 data = extruct.extract(response.body, response.url)
                 if not data:
@@ -41,6 +41,4 @@ class MicrodataExtruction(object):
                         logging.debug(microdatafields)
                         x[micodatatype] = microdatafields
 
-                yield x
-            else
                 yield x
