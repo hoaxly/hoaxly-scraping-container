@@ -74,7 +74,7 @@ install_python_helpers () {
   echo -e "${green_bg} init ${NC}${green} installing python requirements ...${NC}"
   cd $PROJECT_ROOT
   # install scrapyd client in our cli container
-  docker exec -ti hoaxly_python_container_1 pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
+  docker exec -ti hoaxlyscrapingcontainer_python_container_1 pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
   # install our own helper package in portia container even though it should already be installed in the docker container but this allows installing it as [editable](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
   #docker exec -ti portia pip install --editable /app/data/projects/packages
 }
@@ -83,7 +83,7 @@ remove_xpack () {
   echo -e "${green_bg} init ${NC}${green} removing xpack ...${NC}"
 
   cd $PROJECT_ROOT
-  docker exec hoaxly_elasticsearch_1 bin/elasticsearch-plugin remove x-pack
+  docker exec hoaxlyscrapingcontainer_hoaxly-storage-container_1 bin/elasticsearch-plugin remove x-pack
   # when you are using kibana this will have to be run too.
   #docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
 
