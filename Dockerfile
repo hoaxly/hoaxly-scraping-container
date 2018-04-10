@@ -20,15 +20,18 @@ COPY portia_projects/packages /app/data/projects/packages
 # our current spiders
 COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia
 
+# first some overrides to the parent container
 #RUN pip install setuptools --upgrade
 #RUN pip3 install scrapy
 RUN pip3 install scrapyd
 # RUN pip3 install lxml
-RUN pip install scrapyd-client --no-cache
-RUN pip install scrapyd-deploy --no-cache
 
+# some tooling
+RUN pip3 install scrapyd-client
 
+# and our own requirements
 RUN pip install -r requirements.txt
+# finally our own helperPackage
 RUN pip3 install -e /app/data/projects/packages
 
 COPY ./scrapyd.conf /etc/scrapyd/
