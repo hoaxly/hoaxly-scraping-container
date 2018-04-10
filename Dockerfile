@@ -1,4 +1,4 @@
-FROM scrapinghub/portia:latest
+FROM scrapinghub/portia:slybot-0.13.0
 
 RUN set -xe \
     && apt-get update \
