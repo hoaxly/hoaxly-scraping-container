@@ -89,6 +89,7 @@ services:
 # enable this container to build new spiders
   hoaxly-scraping-container:
     image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
+    # use this to build image locally for working on the image
     build: ${PROJECT_ROOT}
     container_name: portia
     #restart: always
@@ -99,13 +100,13 @@ services:
       - "6800:6800"
     labels:
       - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
-    volumes:
-      #- ${PROJECT_ROOT}/data/slyd:/app/slyd/data
-      #- ${PROJECT_ROOT}/data/scrapyd:/var/lib/scrapyd
-      - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
+    #volumes:
+      # when working on spiders mount here
+      #- ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
       # when working on the helpers mount them here
       #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
-      - ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
+      # when testing manual runs to file mount this
+      #- ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
 
 
 

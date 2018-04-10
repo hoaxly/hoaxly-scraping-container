@@ -5,9 +5,12 @@ RUN set -xe \
     && dpkg --configure -a \
     && apt-get install -f -y gcc \
                           python3-dev python-dev \
-                          curl bash \
-                          make build-essential libxslt1-dev libtool xml-core libxml2 libxml2-dev libxslt-dev libffi-dev \
-                          python-software-properties software-properties-common
+                          curl bash make build-essential
+RUN set -xe \
+    && apt-get install -f -y libtool xml-core libxml2-dev libxslt1-dev \
+                                  libxml2 zlib1g-dev libffi-dev \
+                                  python-software-properties \
+                                  software-properties-common
 
 # the file with our requirements
 COPY portia_projects/requirements.txt .
@@ -16,10 +19,13 @@ COPY portia_projects/packages /app/data/projects/packages
 # our current spiders
 COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia
 
+RUN pip install setuptools --upgrade
+RUN pip3 install scrapy
+RUN pip3 install scrapyd
+# RUN pip3 install lxml
+RUN pip install scrapyd-client --no-cache
+RUN pip install scrapyd-deploy
 
-RUN pip3 install setuptools --upgrade
-RUN pip3 install scrapyd-client
-RUN pip3 install scrapyd-deploy
 
 RUN pip install -r requirements.txt
 RUN pip3 install -e /app/data/projects/packages
