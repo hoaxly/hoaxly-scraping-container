@@ -22,17 +22,17 @@ COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia
 
 # first some overrides to the parent container
 #RUN pip install setuptools --upgrade
-#RUN pip3 install scrapy
-RUN pip3 install scrapyd
+#RUN pip install scrapy
+RUN pip install scrapyd
 # RUN pip3 install lxml
 
 # some tooling
-RUN pip3 install scrapyd-client
+RUN pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
 
 # and our own requirements
 RUN pip install -r requirements.txt
 # finally our own helperPackage
-RUN pip3 install -e /app/data/projects/packages
+RUN pip install -e /app/data/projects/packages
 
 COPY ./scrapyd.conf /etc/scrapyd/
 VOLUME /etc/scrapyd/ /var/lib/scrapyd/
