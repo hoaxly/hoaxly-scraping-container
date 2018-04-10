@@ -117,7 +117,7 @@ fi
 # TODO: find a more generic way to execute commands in container or create a prepared image.
 
 remove_xpack
-install_python_helpers
+#install_python_helpers
 
 echo -en "${green_bg} DONE! ${NC} "
 echo -e "check your containers started by running fin status"

@@ -4,8 +4,8 @@ import os
 import hoaxlyHelpers
 import scrapyelasticsearch
 #import slybot
-#SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
-SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
+SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
+#SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
 
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 
@@ -23,7 +23,7 @@ SLYDUPEFILTER_ENABLED = True
 DUPEFILTER_DEBUG = True
 SPLASH_COOKIES_DEBUG = True
 SPIDER_MIDDLEWARES = {
-    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 843,
+    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 1003,
     #'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
@@ -44,7 +44,7 @@ ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
 
 # ugly but hardcoding works
 #PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PROJECT_DIR = '/app/data/projects/hoaxlyPortia/'
+#PROJECT_DIR = '/app/data/projects/hoaxlyPortia/'
 PROJECT_ZIPFILE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 
