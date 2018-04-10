@@ -1,4 +1,4 @@
-FROM scrapinghub/portia
+FROM scrapinghub/portia:latest
 
 RUN set -xe \
     && apt-get update \
@@ -6,7 +6,7 @@ RUN set -xe \
     && apt-get install -f -y gcc \
                           python3-dev python-dev \
                           curl bash \
-                          make build-essential libffi-dev \
+                          make build-essential libxslt1-dev libtool xml-core libxml2 libxml2-dev libxslt-dev libffi-dev \
                           python-software-properties software-properties-common
 
 # the file with our requirements
@@ -17,9 +17,12 @@ COPY portia_projects/packages /app/data/projects/packages
 COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia
 
 
-RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir /app/data/projects/packages
+RUN pip3 install setuptools --upgrade
+RUN pip3 install scrapyd-client
+RUN pip3 install scrapyd-deploy
 
+RUN pip install -r requirements.txt
+RUN pip3 install -e /app/data/projects/packages
 
 COPY ./scrapyd.conf /etc/scrapyd/
 VOLUME /etc/scrapyd/ /var/lib/scrapyd/
