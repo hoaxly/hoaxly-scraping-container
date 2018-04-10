@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "0cde-44b3-b56b", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".body-content > .post > header > .article-title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "2579-4a5a-8833", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".body-content > .breadcrumb-nav > a:nth-child(2)", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" breadcrumb-nav \")]/a[2]"
                 }, 
                 {
@@ -86,15 +86,15 @@
                         }
                     }, 
                     "id": "0bc2-4b01-b577", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".body-content > .post > .entry-content", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }, 
                 {
@@ -111,15 +111,15 @@
                         }
                     }, 
                     "id": "c232-4b57-a3de", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".body-content > .post > .entry-content > p:nth-child(2)", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
                 }, 
                 {
@@ -136,15 +136,15 @@
                         }
                     }, 
                     "id": "581e-4ff7-a3be", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".body-content > .post > .entry-content > .mtrue > span", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" mtrue \")]/span"
                 }, 
                 {
@@ -161,15 +161,15 @@
                         }
                     }, 
                     "id": "1805-44c5-b4f0", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".body-content > .post > header > .article-description", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" body-content \")]/*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
                 }
             ]

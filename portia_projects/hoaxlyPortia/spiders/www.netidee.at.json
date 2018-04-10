@@ -10,8 +10,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://www.netidee.at/entdecken?type=project&year=&tags=", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://www.netidee.at/entdecken?type=project&year=&tags="
         }
     ]
 }

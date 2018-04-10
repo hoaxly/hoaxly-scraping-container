@@ -10,8 +10,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://www.theskepticsguide.org/podcast/sgu/615", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://www.theskepticsguide.org/podcast/sgu/615"
         }
     ]
 }

@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "345d-42e2-8626", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "#hwelcome > h1", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[@id=\"hwelcome\"]/h1"
                 }
             ]

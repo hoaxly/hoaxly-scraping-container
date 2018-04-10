@@ -10,8 +10,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "http://factchecking.mk/review-reporters-without-borders-is-a-fraud/", 
-            "type": "url"
+            "type": "url", 
+            "url": "http://factchecking.mk/review-reporters-without-borders-is-a-fraud/"
         }
     ]
 }

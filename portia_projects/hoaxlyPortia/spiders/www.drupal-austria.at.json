@@ -13,8 +13,8 @@
     "respect_nofollow": true, 
     "start_urls": [
         {
-            "url": "https://www.drupal-austria.at/drupal-webseiten-aus-oesterreich", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://www.drupal-austria.at/drupal-webseiten-aus-oesterreich"
         }
     ]
 }

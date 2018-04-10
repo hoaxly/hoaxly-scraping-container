@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "6e5e-431a-a349", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "#post-8654 > .entry-title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[@id=\"post-8654\"]/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
                 }
             ]
