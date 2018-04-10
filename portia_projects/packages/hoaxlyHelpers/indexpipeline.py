@@ -1,8 +1,6 @@
 
 """contains custom scrapy pipeline."""
 
-from scrapy.exceptions import DropItem
-
 
 class IndexPipeline(object):
     """This class renames _index field."""

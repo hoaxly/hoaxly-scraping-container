@@ -2,9 +2,10 @@
 import os
 import hoaxlyHelpers
 import scrapyelasticsearch
-import slybot
+#import slybot
+#SPIDER_MANAGER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
+SPIDER_MANAGER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
 
-SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 
 DOWNLOADER_MIDDLEWARES = {
@@ -15,23 +16,26 @@ PLUGINS = [
     'slybot.plugins.scrapely_annotations.Annotations',
     'slybot.plugins.selectors.Selectors'
 ]
-SLYDUPEFILTER_ENABLED = False
-DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+SLYDUPEFILTER_ENABLED = True
+#DUPEFILTER_CLASS = 'scrapy.dupefilters.RFPDupeFilter'
+#DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 DUPEFILTER_DEBUG = True
+SPLASH_COOKIES_DEBUG = True
 SPIDER_MIDDLEWARES = {
     'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
+    #'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
 
 ITEM_PIPELINES = {
-    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
-    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
-    'slybot.dupefilter.DupeFilterPipeline': 600,
-    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 700
-
+    #'hoaxlyHelpers.mypipelines.TypePipeline': 700,
+    #'hoaxlyHelpers.indexpipeline.IndexPipeline': 800,
+    'slybot.dupefilter.DupeFilterPipeline': 1,
+    #'scrapy.dupefilters.DupeFilterPipeline': 100,
+    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
 }
 
-ELASTICSEARCH_SERVERS = ['http://elastic:changeme@elasticsearch:9200']
+ELASTICSEARCH_SERVERS = ['http://elastic:changeme@hoaxly-storage-container:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'
@@ -39,6 +43,7 @@ ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
 
 # ugly but hardcoding works
 PROJECT_DIR = '/app/data/projects/hoaxlyPortia'
+#PROJECT_ZIPFILE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 
 # Polite Scraping
@@ -52,7 +57,7 @@ DOWNLOAD_DELAY = 55.0
 
 # https://doc.scrapy.org/en/latest/topics/autothrottle.html?
 AUTOTHROTTLE_ENABLED = True
-HTTPCACHE_ENABLED = True
+HTTPCACHE_ENABLED = False
 
 # limit concurrent requests per domain
 CONCURRENT_REQUESTS_PER_DOMAIN = 7

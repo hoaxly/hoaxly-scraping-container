@@ -2,7 +2,7 @@ FROM scrapinghub/portia
 
 RUN set -xe \
     && apt-get update \
-    && sudo dpkg --configure -a \
+    && dpkg --configure -a \
     && apt-get install -f -y gcc \
                           python3-dev python-dev \
                           curl bash \

@@ -74,8 +74,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        ".field--name-field-project-drupalversion", 
-                        ".field--name-field-project-client"
+                        ".site__content > div > div:nth-child(3) > .project-full > .field--label-inline"
                     ], 
                     "container_id": "3729-4061-a370", 
                     "data": {
@@ -97,6 +96,57 @@
                     "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--label-inline", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--label-inline \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".field--name-field-project-link > .field__item > a"
+                    ], 
+                    "container_id": "3729-4061-a370", 
+                    "data": {
+                        "b46e-4d90-91c2": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "880a-4a10-bef3", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "3698-4137-8fcb", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--name-field-project-link > .field__item > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--name-field-project-link \")]/*[contains(concat(\" \", @class, \" \"), \" field__item \")]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        "span:nth-child(1)", 
+                        "span:nth-child(2)"
+                    ], 
+                    "container_id": "3729-4061-a370", 
+                    "data": {
+                        "b92a-41c9-9005": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "d982-4b96-a323", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "303b-440d-b863", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".site__content > div > div:nth-child(3) > .project-full > .link-buttons-list > .link-button", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" link-buttons-list \")]/*[contains(concat(\" \", @class, \" \"), \" link-button \")]"
                 }
             ]
         }

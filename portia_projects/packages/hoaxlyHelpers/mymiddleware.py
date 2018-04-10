@@ -20,12 +20,14 @@ class MicrodataExtruction(object):
         for x in result:
             if isinstance(x, Request):
                 # yield the request without making changes
+                #logging.debug('this is a request and not an item')
                 yield x
             else:
                 # if this is an item inspect for microdata
                 data = extruct.extract(response.body, response.url)
                 if not data:
                     # if no microdata was found set flag and yield the item
+                    logging.debug('this item has no microdata')
                     x['hasMetaData'] = False
                 else:
                     # if there is microdata parse it to item

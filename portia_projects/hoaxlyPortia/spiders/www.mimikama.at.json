@@ -1,15 +1,15 @@
 {
-    "allowed_domains": [], 
-    "exclude_patterns": [], 
+    "allowed_domains": [],
+    "exclude_patterns": [],
     "follow_patterns": [
-        "^https://www.mimikama.at/allgemein"
-    ], 
-    "id": "www.mimikama.at", 
-    "js_disable_patterns": [], 
-    "js_enable_patterns": [], 
-    "js_enabled": false, 
-    "links_to_follow": "patterns", 
-    "respect_nofollow": false, 
+        "/allgemein/"
+    ],
+    "id": "www.mimikama.at",
+    "js_disable_patterns": [],
+    "js_enable_patterns": [],
+    "js_enabled": false,
+    "links_to_follow": "patterns",
+    "respect_nofollow": false,
     "start_urls": [
         {
             "url": "http://www.mimikama.at/allgemein/personalausweis-kopieren-verboten/", 

@@ -1,2 +1,2 @@
-import mymiddleware
-import mypipelines
+from . import mymiddleware
+#from . import mypipelines
