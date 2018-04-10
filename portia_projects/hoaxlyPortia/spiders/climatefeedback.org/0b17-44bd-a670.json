@@ -51,15 +51,15 @@
                         }
                     }, 
                     "id": "d780-4a91-b095", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".entry-title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
                 }, 
                 {
@@ -76,15 +76,15 @@
                         }
                     }, 
                     "id": "542d-4456-a372", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".entry-content", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }, 
                 {
@@ -101,15 +101,15 @@
                         }
                     }, 
                     "id": "33ec-4963-97ac", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".updated", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" updated \")]"
                 }, 
                 {
@@ -127,15 +127,15 @@
                         }
                     }, 
                     "id": "1c2a-455c-9d46", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".entry-content > p:nth-child(1) > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[1]/a"
                 }, 
                 {
@@ -157,15 +157,15 @@
                         }
                     }, 
                     "id": "3e31-42a7-8b23", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".expert-widget > .wid-body", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" expert-widget \")]/*[contains(concat(\" \", @class, \" \"), \" wid-body \")]"
                 }, 
                 {
@@ -182,15 +182,15 @@
                         }
                     }, 
                     "id": "8e42-4921-af08", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".bot-tag > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" bot-tag \")]/a"
                 }
             ]

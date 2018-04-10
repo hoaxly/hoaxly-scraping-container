@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "7c70-4abf-b2e7", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".post > header > .article-title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-title \")]"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "dce6-4e37-b730", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".post > header > .article-description", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/header/*[contains(concat(\" \", @class, \" \"), \" article-description \")]"
                 }, 
                 {
@@ -86,15 +86,15 @@
                         }
                     }, 
                     "id": "79cf-463a-899d", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".post > .entry-content > p:nth-child(2)", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p[2]"
                 }, 
                 {
@@ -111,15 +111,15 @@
                         }
                     }, 
                     "id": "9609-4089-a529", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".post:nth-child(3) > .entry-content", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[3][contains(concat(\" \", @class, \" \"), \" post \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }, 
                 {
@@ -134,15 +134,15 @@
                         }
                     }, 
                     "id": "f58d-43ea-9b7a", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*"
                 }
             ]

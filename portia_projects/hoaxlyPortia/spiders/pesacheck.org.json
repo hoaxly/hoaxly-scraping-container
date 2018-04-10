@@ -10,8 +10,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://pesacheck.org/tagged/education", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://pesacheck.org/tagged/education"
         }
     ]
 }

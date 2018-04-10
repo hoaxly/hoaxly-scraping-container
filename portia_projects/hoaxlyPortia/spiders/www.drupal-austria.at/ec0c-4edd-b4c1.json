@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "6599-49d3-bad5", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".site__content > div > div:nth-child(2) > .page-title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[2]/*[contains(concat(\" \", @class, \" \"), \" page-title \")]"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "d7ea-4022-9d98", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--name-field-paragraphs > div:nth-child(1) > .paragraph", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--name-field-paragraphs \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" paragraph \")]"
                 }, 
                 {
@@ -86,15 +86,15 @@
                         }
                     }, 
                     "id": "63d1-47e4-837a", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--label-inline", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--label-inline \")]"
                 }, 
                 {
@@ -111,15 +111,15 @@
                         }
                     }, 
                     "id": "3698-4137-8fcb", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".site__content > div > div:nth-child(3) > .project-full > .field--name-field-project-link > .field__item > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" field--name-field-project-link \")]/*[contains(concat(\" \", @class, \" \"), \" field__item \")]/a"
                 }, 
                 {
@@ -137,15 +137,15 @@
                         }
                     }, 
                     "id": "303b-440d-b863", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".site__content > div > div:nth-child(3) > .project-full > .link-buttons-list > .link-button", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" site__content \")]/div/div[3]/*[contains(concat(\" \", @class, \" \"), \" project-full \")]/*[contains(concat(\" \", @class, \" \"), \" link-buttons-list \")]/*[contains(concat(\" \", @class, \" \"), \" link-button \")]"
                 }
             ]
