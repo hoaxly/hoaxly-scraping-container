@@ -23,7 +23,7 @@ SLYDUPEFILTER_ENABLED = True
 DUPEFILTER_DEBUG = True
 SPLASH_COOKIES_DEBUG = True
 SPIDER_MIDDLEWARES = {
-    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 843,
+    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 1003,
     #'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
