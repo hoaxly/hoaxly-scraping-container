@@ -90,7 +90,7 @@ services:
   hoaxly-scraping-container:
     image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
     # use this to build image locally for working on the image
-    build: ${PROJECT_ROOT}
+    #build: ${PROJECT_ROOT}
     container_name: portia
     #restart: always
     tty: true
