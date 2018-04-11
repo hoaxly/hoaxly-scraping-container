@@ -36,7 +36,7 @@ ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
 }
 
-ELASTICSEARCH_SERVERS = ['http://elastic:changeme@hoaxly-storage-container:9200']
+ELASTICSEARCH_SERVERS = ['http://hoaxly-storage-container:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'
