@@ -12,24 +12,12 @@
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "patterns", 
+    "links_to_follow": "all", 
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "fragments": [
-                {
-                    "type": "fixed", 
-                    "valid": true, 
-                    "value": "https://www.snopes.com/fact-check/page/"
-                }, 
-                {
-                    "type": "range", 
-                    "valid": true, 
-                    "value": "1-50"
-                }
-            ], 
-            "type": "generated", 
-            "url": "https://www.snopes.com/fact-check/page/[1-50]"
+            "url": "https://www.snopes.com/fact-check/page/2/", 
+            "type": "url"
         }
     ]
 }
