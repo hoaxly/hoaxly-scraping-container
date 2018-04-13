@@ -23,8 +23,8 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 DUPEFILTER_DEBUG = True
 SPLASH_COOKIES_DEBUG = True
 SPIDER_MIDDLEWARES = {
-    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 1003,
-    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
+   # 'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
 
