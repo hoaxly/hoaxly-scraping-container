@@ -29,9 +29,9 @@ SPIDER_MIDDLEWARES = {
 }
 
 ITEM_PIPELINES = {
-    'hoaxlyHelpers.mypipelines.TypePipeline': 700,
-    'hoaxlyHelpers.indexpipeline.IndexPipeline': 800,
-    'slybot.dupefilter.DupeFilterPipeline': 1,
+    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
+    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
+    'slybot.dupefilter.DupeFilterPipeline': 600,
     #'scrapy.dupefilters.DupeFilterPipeline': 100,
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
 }
