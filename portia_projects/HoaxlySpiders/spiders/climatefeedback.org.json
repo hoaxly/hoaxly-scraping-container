@@ -2,19 +2,18 @@
     "allowed_domains": [], 
     "exclude_patterns": [], 
     "follow_patterns": [
-        "/evaluation/", 
         "/claimreview/"
     ], 
     "id": "climatefeedback.org", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
-    "js_enabled": true, 
+    "js_enabled": false, 
     "links_to_follow": "patterns", 
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "type": "url", 
-            "url": "https://climatefeedback.org/claim-reviews/2/"
+            "url": "https://climatefeedback.org/claim-reviews/", 
+            "type": "url"
         }
     ]
 }

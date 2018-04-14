@@ -1,0 +1,236 @@
+{
+    "extractors": {}, 
+    "id": "f25e-40fb-a38c", 
+    "name": "Climate change likely helped increase Hurricane", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "10a8-421c-8e56", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "59e6-4047-b5de", 
+                    "selector": ".main", 
+                    "siblings": 1, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-title"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "b268-43d8-8d8d": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "957a-4a8e-9a89", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6a00-42ac-abae", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .post-7296 > header > .entry-title", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/header/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".col-sm-4:nth-child(2)"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "3f57-43b8-9e9a": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "2c4e-415e-a6a5", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "5b3a-41b5-9183", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".col-sm-4:nth-child(3)"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "d3b0-4027-8f49": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "ccb4-4209-b417", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "012d-43ce-ae3b", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[3]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "span.fact-check-card__details__text > a:nth-child(2)"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "e96d-42ef-a944": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "5b2b-4217-b6a7", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "6460-4063-ba53", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" mb2 \")]/p/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]/a[2]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".fact-check-card"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "ae9c-4d65-b116": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "4531-4ddf-a1f4", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9bb8-4e02-8a3d", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content > p:nth-child(6)", 
+                        "p:nth-child(7)", 
+                        "h4:nth-child(11) > strong", 
+                        "h4:nth-child(17) > strong"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "6839-4bac-8bb5": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "7dd4-41ea-857d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2114-4376-bbf9", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .post-7296 > .entry-content > p, .main > .post-7296 > .entry-content > h4 > strong", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p | //*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/h4/strong"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".bot-tag:nth-child(3) > a", 
+                        ".bot-tag:nth-child(2) > a"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "70d1-4166-9091": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "d4cf-419d-ab88", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "f40f-4d84-b5c7", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > .spaceup1 > .bot-tag > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" spaceup1 \")]/*[contains(concat(\" \", @class, \" \"), \" bot-tag \")]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".main > p:nth-child(3)"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "ab69-4d5b-96b1": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "9316-4a62-a60a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "1fd7-45c3-ad68", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".main > p:nth-child(3)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/p[3]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "59e6-4047-b5de", 
+    "spider": "climatefeedback.org", 
+    "url": "https://climatefeedback.org/claimreview/climate-change-likely-helped-increase-hurricane-harveys-rainfall-early-say-exactly-much/", 
+    "version": "0.13.1"
+}

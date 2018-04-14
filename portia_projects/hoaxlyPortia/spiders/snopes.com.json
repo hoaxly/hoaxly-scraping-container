@@ -16,8 +16,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://www.snopes.com/fact-check/page/2/", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://www.snopes.com/fact-check/page/2/"
         }
     ]
 }
