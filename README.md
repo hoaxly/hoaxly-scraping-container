@@ -15,7 +15,6 @@ scrapy crawl -s PROJECT_DIR=./ -s SPIDER_MANAGER_CLASS=slybot.spidermanager.Slyb
 
 
 ## TLDR
-
 _Note:_ make sure to run this on your host.
 This is needed for elasticsearch to work [4]
 
@@ -24,14 +23,22 @@ This is needed for elasticsearch to work [4]
 from projectroot run
 
     ☻ % fin init
-    ☻ % docker exec -ti portia scrapyd &
-    ☻ % docker exec -ti portia /bin/bash
 
-then you are in container and can
+### Edit or create a spiders
 
-    root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
+1. visit portia.hoaxly.docksal
+2. create or edit a spider in the HoaxlySpiders project
+3. export to scrapy_projects as scrapy spider
+
+### Deploy spiders via cli and schedule a run
+
+    ☻ % docker exec -ti cli /bin/bash
+
+then you are in the cli container and can
+
+    root@9e8c8aa1b4c2:/app/slyd# cd /var/www/scrapy_projects/HoaxlySpiders
     root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy local
-    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia pesacheck.org
+    root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia climatefeedback.org
 
 and view your results:
 
@@ -43,34 +50,7 @@ and view your results:
 just pull the image from registry and run it, then you should see the projects spiders ready deployed and can schedule crawls through the api and watch the results show up in elasticsearch
 mount the settings you need so scrapy knows where to pipe the data
 
-## Setup (Detailed)
-
-this will spin up your containers defined in .docksal/docksal.yml
-check that all containers are Up via
-
-
-    ☻ % fin ps
-
-Disable XPACK:
-
-```
-    ☻ docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
-    ☻ docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
-    ☻ fin restart     
-```
-
-
-
 ## components
-this repo contains:
-
-
-|     component    | Description           |
-| ------------- |:-------------:|
-| a docksal setup      | basically a docker-compose.yml file and an init script|
-| portia spiders       | portia spiders are basically scrapy spiders with bells on      |
-| some configuration   | the file at config/local_slybot_settings.py will be mounted in the portia container allowing us to configure it. it is loaded by https://github.com/scrapinghub/portia/blob/master/slybot/slybot/settings.py      |  
-|custom spider middleware|portia_projects/hoaxlyPortia/spidermiddleware.py registering classes defined in this file in our configuration allows interacting with the data before pipelines kick in|
 
 
 
@@ -103,7 +83,7 @@ for example try
 
 ### Kibana:
 
-once you have some data scraped to elasticsearch enable this container and visit the [kibana web interface](http://localhost:5601) to inspect your index
+once you have some data scraped to elasticsearch enable this container and visit the [kibana web interface](http://kibana.hoaxly.docksal:5601) to inspect your index
 default index: hoaxly
 (uncheck contains timedata)
 
@@ -115,7 +95,7 @@ ready again.
 
 ### Elastic:
 
-view [elasticsearch webinterface](http://localhost:9200/) in the browser
+view [elasticsearch webinterface](http://elastic.hoaxly.docksal:9200/) in the browser
 uses a volume bound on /usr/share/elasticsearch/data [2]
 Connects to Elasticsearch via scrapyelasticsearch python library [3]
 
@@ -137,23 +117,21 @@ to avoid elastic search error
 - https://doc.scrapy.org/en/latest/index.html
 - http://scrapyd.readthedocs.io/en/latest/
 
-    root@0ee451559ce0:/app/data/projects/hoaxlyPortia# scrapy crawl snopes.com
-
-    docker exec portia scrapyd
+the scrapyd service runs in its own container
 
 
 #### Deploy to scrapyd and scheduling crawls using [scrapyd-client](https://github.com/scrapy/scrapyd-client)
 
-    ☻ % docker exec -ti portia bash
-    root@87a89036ec31:/app/slyd# cd /app/data/projects/hoaxlyPortia
+    ☻ % docker exec -ti cli bash
+    root@87a89036ec31:/app/slyd# cd cd /var/www/scrapy_projects/HoaxlySpiders
     root@3d4a705434fb:/app/data/projects/hoaxlyPortia# scrapyd-deploy -a
 
-    scrapyd-client deploy
 
 once deployed you can interact directly with scrapyd through the webapi
 
-    scrapyd-client schedule -p hoaxlyPortia snopes.com
-    scrapyd-client schedule
+    scrapyd-client schedule -p HoaxlySpiders climatefeedback.org
+
+or from anywhere else with access to the scrapyd containers
     curl http://localhost:6800/schedule.json -d project=HoaxlyPortia -d spider=www.theskepticsguide.org
     curl http://localhost:6800/listprojects.json
     curl http://localhost:6800/listspiders.json?project=HoaxlyPortia
