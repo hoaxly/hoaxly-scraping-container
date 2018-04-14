@@ -76,7 +76,9 @@ install_python_helpers () {
   # install scrapyd client in our cli container
 docker exec  -ti cli pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
   # install our own helper package in scrapyd container even though it should already be installed in the docker container but this allows installing it as [editable](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
-docker exec -ti scrapydaemon pip install --editable /app/data/projects/packages
+
+#docker exec -ti scrapydaemon pip install --no-cache-dir -r /requirements.txt
+#docker exec -ti scrapydaemon pip install --editable /packages
 }
 
 remove_xpack () {

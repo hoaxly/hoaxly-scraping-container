@@ -14,6 +14,7 @@ version: "2.1"
 services:
 
   hoaxly-storage-container:
+    container_name: storage-container
     image: registry.acolono.net:444/hoaxly/hoaxly-storage-container:latest
     mem_limit: 3g
     ulimits:
@@ -44,8 +45,10 @@ services:
       - docksal_ssh_agent:/.ssh-agent:ro
     stdin_open: true
     tty: true
-    working_dir: '/var/www/scrapy_projects/HoaxlySpiders'
+    working_dir: '/var/www/scrapy_projects/'
     command: [ "/bin/bash" ]
+    labels:
+      - io.docksal.virtual-host=cli.${VIRTUAL_HOST}
     environment:
       - HOST_UID
       - HOST_GID
@@ -87,17 +90,23 @@ services:
   #     - ELASTICSEARCH_URL=http://elastic:9200
   hoaxly-scraping-container:
     container_name: scrapydaemon
-    hostname: scrapydaemon
-    image: harrisbaird/scrapyd
+#    hostname: scrapydaemon.hoaxly.docksal
+    image: registry.acolono.net:444/hoaxly/hoaxly-scrapydaemon-container
     ports:
       - "6800:6800"
+    volumes:
+      - ${PWD}/portia_projects/packages:/packages
+      - ${PWD}/portia_projects/requirements.txt:/requirements.txt
     labels:
-      - io.docksal.virtual-host=scrapyd.${VIRTUAL_HOST}
+      - io.docksal.virtual-host=scrapydaemon.${VIRTUAL_HOST}
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
 
 # enable this container to build new spiders
   # hoaxly-spiderbreeder-container:
-  #   container_name: spiderbreeder
-  #   hostname: spiderbreeder
+  #   container_name: hoaxly-spiderbreeder-container
+  #   #hostname: spiderbreeder
   #   image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
   #   # use this to build image locally for working on the image
   #   build: ${PROJECT_ROOT}
@@ -106,7 +115,7 @@ services:
   #   ports:
   #     - "9001:9001"
   #   labels:
-  #     - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
+  #     - io.docksal.virtual-host=scrapyd.${VIRTUAL_HOST}
   #   volumes:
   #     # when working on spiders mount here
   #     - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
@@ -114,7 +123,7 @@ services:
   #     #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
   #     # when testing manual runs to file mount this
   #     #- ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
-  #
+
 
 volumes:
   esdata2:

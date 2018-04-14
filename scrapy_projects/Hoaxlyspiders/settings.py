@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+import hoaxlyHelpers
+import scrapyelasticsearch
 # Scrapy settings for Hoaxlyspiders project
 #
 # For simplicity, this file contains only settings considered important or
@@ -49,7 +50,10 @@ ROBOTSTXT_OBEY = True
 #SPIDER_MIDDLEWARES = {
 #    'Hoaxlyspiders.middlewares.HoaxlyspidersSpiderMiddleware': 543,
 #}
-
+SPIDER_MIDDLEWARES = {
+    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
+   # 'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+}
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
@@ -67,6 +71,22 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'Hoaxlyspiders.pipelines.HoaxlyspidersPipeline': 300,
 #}
+ITEM_PIPELINES = {
+    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
+    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
+    #'slybot.dupefilter.DupeFilterPipeline': 600,
+    #'scrapy.dupefilters.DupeFilterPipeline': 100,
+    'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
+}
+# Polite Scraping
+# see https://blog.scrapinghub.com/2016/08/25/how-to-crawl-the-web-politely-with-scrapy/
+#
+ROBOTSTXT_OBEY = True
+
+USER_AGENT = 'Hoaxly Factchecking Search engine bot (bot@hoax.ly)'
+# 55 second delay
+DOWNLOAD_DELAY = 55.0
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -81,6 +101,12 @@ ROBOTSTXT_OBEY = True
 # Enable showing throttling stats for every response received:
 #AUTOTHROTTLE_DEBUG = False
 
+# https://doc.scrapy.org/en/latest/topics/autothrottle.html?
+AUTOTHROTTLE_ENABLED = True
+HTTPCACHE_ENABLED = False
+
+# limit concurrent requests per domain
+CONCURRENT_REQUESTS_PER_DOMAIN = 7
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
 #HTTPCACHE_ENABLED = True
@@ -88,3 +114,10 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+ELASTICSEARCH_SERVERS = ['http://elastic:changeme@hoaxly-storage-container:9200']
+ELASTICSEARCH_INDEX = 'hoaxly'
+ELASTICSEARCH_TYPE = 'items'
+ELASTICSEARCH_UNIQ_KEY = 'url'
+ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
