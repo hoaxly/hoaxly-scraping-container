@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "f19f-4630-91c7", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".title > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" title \")]/a"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "08d8-4a8f-8ee9", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".postAuthor > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" postAuthor \")]/a"
                 }, 
                 {
@@ -86,15 +86,15 @@
                         }
                     }, 
                     "id": "31c1-440e-b337", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "section > div:nth-child(1) > .span8", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//section/div[1]/*[contains(concat(\" \", @class, \" \"), \" span8 \")]"
                 }, 
                 {
@@ -111,15 +111,15 @@
                         }
                     }, 
                     "id": "9c40-44b2-a5b4", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//title"
                 }
             ]

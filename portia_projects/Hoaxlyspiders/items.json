@@ -1,0 +1,77 @@
+{
+    "59e6-4047-b5de": {
+        "fields": {
+            "957a-4a8e-9a89": {
+                "id": "957a-4a8e-9a89", 
+                "name": "factoidHeadline", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "2c4e-415e-a6a5": {
+                "id": "2c4e-415e-a6a5", 
+                "name": "factoidClaim", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "ccb4-4209-b417": {
+                "id": "ccb4-4209-b417", 
+                "name": "factoidVerdict", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "5b2b-4217-b6a7": {
+                "id": "5b2b-4217-b6a7", 
+                "name": "factoidSourceUrls", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "4531-4ddf-a1f4": {
+                "id": "4531-4ddf-a1f4", 
+                "name": "factoidSummary", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "7dd4-41ea-857d": {
+                "id": "7dd4-41ea-857d", 
+                "name": "factoidContent", 
+                "required": false, 
+                "type": "safe html", 
+                "vary": false
+            }, 
+            "d4cf-419d-ab88": {
+                "id": "d4cf-419d-ab88", 
+                "name": "factoidTags", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "9316-4a62-a60a": {
+                "id": "9316-4a62-a60a", 
+                "name": "factoidPubdate", 
+                "required": false, 
+                "type": "date", 
+                "vary": false
+            }, 
+            "1e1b-498a-b66a": {
+                "id": "1e1b-498a-b66a", 
+                "name": "factoidRating", 
+                "required": false, 
+                "type": "image", 
+                "vary": false
+            }, 
+            "ed85-43b8-9957": {
+                "id": "ed85-43b8-9957", 
+                "name": "factoidRatingValue", 
+                "required": false, 
+                "type": "image", 
+                "vary": false
+            }
+        }, 
+        "name": "HoaxlyInboxSchema"
+    }
+}

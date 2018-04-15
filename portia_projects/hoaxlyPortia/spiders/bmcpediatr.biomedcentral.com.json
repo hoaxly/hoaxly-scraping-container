@@ -10,8 +10,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://bmcpediatr.biomedcentral.com/articles", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://bmcpediatr.biomedcentral.com/articles"
         }
     ]
 }

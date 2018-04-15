@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "f0cd-4be6-bb4c", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "xpath", 
                     "selector": "title", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//title"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "9281-4658-8eea", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "xpath", 
                     "selector": "h1", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//h1"
                 }, 
                 {
@@ -90,15 +90,15 @@
                         }
                     }, 
                     "id": "8478-4954-9542", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".reviewers > ul > li", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" reviewers \")]/ul/li"
                 }, 
                 {
@@ -115,15 +115,15 @@
                         }
                     }, 
                     "id": "66d1-41ec-b1c5", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "xpath", 
                     "selector": ".date", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date \")]"
                 }, 
                 {
@@ -140,15 +140,15 @@
                         }
                     }, 
                     "id": "f0ac-488e-bb70", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "xpath", 
                     "selector": ".story-link", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" story-link \")]"
                 }, 
                 {
@@ -165,15 +165,15 @@
                         }
                     }, 
                     "id": "7ccd-4fad-92d6", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".categories-wrap > .categories > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" categories-wrap \")]/*[contains(concat(\" \", @class, \" \"), \" categories \")]/a"
                 }, 
                 {
@@ -190,15 +190,15 @@
                         }
                     }, 
                     "id": "bb2b-4983-8459", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".tags-wrap > .categories > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" tags-wrap \")]/*[contains(concat(\" \", @class, \" \"), \" categories \")]/a"
                 }, 
                 {
@@ -215,15 +215,15 @@
                         }
                     }, 
                     "id": "59c4-4f57-87bc", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".total", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" total \")]"
                 }, 
                 {
@@ -240,15 +240,15 @@
                         }
                     }, 
                     "id": "eac2-4ef3-ae87", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".rating > img", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" rating \")]/img"
                 }, 
                 {
@@ -265,15 +265,15 @@
                         }
                     }, 
                     "id": "21ad-495e-896c", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".source-content > h3", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" source-content \")]/h3"
                 }, 
                 {
@@ -290,15 +290,15 @@
                         }
                     }, 
                     "id": "ad25-4c16-a5b5", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".item-content-full > div", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/div"
                 }, 
                 {
@@ -315,15 +315,15 @@
                         }
                     }, 
                     "id": "176f-48d8-a63a", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".source-logo", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" source-logo \")]"
                 }
             ]

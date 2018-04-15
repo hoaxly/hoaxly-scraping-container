@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "eb30-4b3c-a935", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".podcast-segments > div:nth-child(5)", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" podcast-segments \")]/div[5]"
                 }, 
                 {
@@ -62,15 +62,15 @@
                         }
                     }, 
                     "id": "12c2-4537-b559", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".podcast-segments > div:nth-child(5) > ul > li", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" podcast-segments \")]/div[5]/ul/li"
                 }, 
                 {
@@ -88,15 +88,15 @@
                         }
                     }, 
                     "id": "fddd-4c14-81e3", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".podcast-segments > div:nth-child(5) > ul > li > .podcast-item-value > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" podcast-segments \")]/div[5]/ul/li/*[contains(concat(\" \", @class, \" \"), \" podcast-item-value \")]/a"
                 }
             ]

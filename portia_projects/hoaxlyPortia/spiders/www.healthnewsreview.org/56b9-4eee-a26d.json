@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "e112-4c01-81d6", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .top-content > .utilities > .date", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" top-content \")]/*[contains(concat(\" \", @class, \" \"), \" utilities \")]/*[contains(concat(\" \", @class, \" \"), \" date \")]"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "bf42-4d34-ba72", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .top-content > .utilities > .story-link", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" top-content \")]/*[contains(concat(\" \", @class, \" \"), \" utilities \")]/*[contains(concat(\" \", @class, \" \"), \" story-link \")]"
                 }, 
                 {
@@ -86,15 +86,15 @@
                         }
                     }, 
                     "id": "b9e8-4d6c-8031", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .top-content > h1", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" top-content \")]/h1"
                 }, 
                 {
@@ -111,15 +111,15 @@
                         }
                     }, 
                     "id": "5888-4311-bd1d", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": ".top-content > .content-details > .reviewers > ul > li", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" top-content \")]/*[contains(concat(\" \", @class, \" \"), \" content-details \")]/*[contains(concat(\" \", @class, \" \"), \" reviewers \")]/ul/li"
                 }, 
                 {
@@ -136,15 +136,15 @@
                         }
                     }, 
                     "id": "777b-4c88-a370", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .top-content > .content-details > .rating > img", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" top-content \")]/*[contains(concat(\" \", @class, \" \"), \" content-details \")]/*[contains(concat(\" \", @class, \" \"), \" rating \")]/img"
                 }, 
                 {
@@ -162,15 +162,15 @@
                         }
                     }, 
                     "id": "8130-438c-8ec7", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .top-content > .content-details > .tags-wrap > .categories > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" top-content \")]/*[contains(concat(\" \", @class, \" \"), \" content-details \")]/*[contains(concat(\" \", @class, \" \"), \" tags-wrap \")]/*[contains(concat(\" \", @class, \" \"), \" categories \")]/a"
                 }, 
                 {
@@ -187,15 +187,15 @@
                         }
                     }, 
                     "id": "84d0-41b4-aca5", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .top-content > .content-details > .categories-wrap > .categories > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" top-content \")]/*[contains(concat(\" \", @class, \" \"), \" content-details \")]/*[contains(concat(\" \", @class, \" \"), \" categories-wrap \")]/*[contains(concat(\" \", @class, \" \"), \" categories \")]/a"
                 }, 
                 {
@@ -213,15 +213,15 @@
                         }
                     }, 
                     "id": "902c-4a27-86ed", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .source-content > h3, .item-content-full > div:nth-child(4)", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" source-content \")]/h3 | //*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/div[4]"
                 }, 
                 {
@@ -238,15 +238,15 @@
                         }
                     }, 
                     "id": "441f-4a80-bddd", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > div:nth-child(4) > div:nth-child(12) > .total", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/div[4]/div[12]/*[contains(concat(\" \", @class, \" \"), \" total \")]"
                 }, 
                 {
@@ -264,15 +264,15 @@
                         }
                     }, 
                     "id": "ac70-4307-926b", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": true, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": ".item-content-full > .summary > p:nth-child(3) > a", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" item-content-full \")]/*[contains(concat(\" \", @class, \" \"), \" summary \")]/p[3]/a"
                 }
             ]

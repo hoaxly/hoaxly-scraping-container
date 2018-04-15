@@ -10,8 +10,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "http://www.emergent.info/", 
-            "type": "url"
+            "type": "url", 
+            "url": "http://www.emergent.info/"
         }
     ]
 }

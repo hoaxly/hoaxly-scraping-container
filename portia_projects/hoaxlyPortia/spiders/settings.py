@@ -1,10 +1,11 @@
 # Automatically created by: slyd
+import sys
 import os
 import hoaxlyHelpers
 import scrapyelasticsearch
 #import slybot
-#SPIDER_MANAGER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
-SPIDER_MANAGER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
+#SPIDER_LOADER_CLASS = 'slybot.spidermanager.ZipfileSlybotSpiderManager'
+SPIDER_LOADER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
 
 EXTENSIONS = {'slybot.closespider.SlybotCloseSpider': 1}
 
@@ -18,19 +19,19 @@ PLUGINS = [
 ]
 SLYDUPEFILTER_ENABLED = True
 #DUPEFILTER_CLASS = 'scrapy.dupefilters.RFPDupeFilter'
-#DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 DUPEFILTER_DEBUG = True
 SPLASH_COOKIES_DEBUG = True
 SPIDER_MIDDLEWARES = {
     'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
-    #'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+   # 'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
 
 ITEM_PIPELINES = {
-    #'hoaxlyHelpers.mypipelines.TypePipeline': 700,
-    #'hoaxlyHelpers.indexpipeline.IndexPipeline': 800,
-    'slybot.dupefilter.DupeFilterPipeline': 1,
+    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
+    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
+    'slybot.dupefilter.DupeFilterPipeline': 600,
     #'scrapy.dupefilters.DupeFilterPipeline': 100,
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
 }
@@ -42,6 +43,7 @@ ELASTICSEARCH_UNIQ_KEY = 'url'
 ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
 
 # ugly but hardcoding works
+#PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 PROJECT_DIR = '/app/data/projects/hoaxlyPortia'
 #PROJECT_ZIPFILE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 

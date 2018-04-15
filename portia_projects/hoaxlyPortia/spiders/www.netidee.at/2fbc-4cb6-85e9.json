@@ -36,15 +36,15 @@
                         }
                     }, 
                     "id": "b56b-4f8a-b903", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "css", 
                     "selector": "main > .project-details > .description-block > .description-block--headline", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//main/*[contains(concat(\" \", @class, \" \"), \" project-details \")]/*[contains(concat(\" \", @class, \" \"), \" description-block \")]/*[contains(concat(\" \", @class, \" \"), \" description-block--headline \")]"
                 }, 
                 {
@@ -61,15 +61,15 @@
                         }
                     }, 
                     "id": "8137-48d2-a990", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "main > .project-details > .description-block > .description-block--text > p", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//main/*[contains(concat(\" \", @class, \" \"), \" project-details \")]/*[contains(concat(\" \", @class, \" \"), \" description-block \")]/*[contains(concat(\" \", @class, \" \"), \" description-block--text \")]/p"
                 }, 
                 {
@@ -86,15 +86,15 @@
                         }
                     }, 
                     "id": "d985-40cb-a8e1", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "main > .project-details > .description-block > .description-block--subinfo", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//main/*[contains(concat(\" \", @class, \" \"), \" project-details \")]/*[contains(concat(\" \", @class, \" \"), \" description-block \")]/*[contains(concat(\" \", @class, \" \"), \" description-block--subinfo \")]"
                 }, 
                 {
@@ -111,15 +111,15 @@
                         }
                     }, 
                     "id": "e1a9-4e5b-8caa", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "main > .intro > .intro-wrapper > .intro-content > .intro-description", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//main/*[contains(concat(\" \", @class, \" \"), \" intro \")]/*[contains(concat(\" \", @class, \" \"), \" intro-wrapper \")]/*[contains(concat(\" \", @class, \" \"), \" intro-content \")]/*[contains(concat(\" \", @class, \" \"), \" intro-description \")]"
                 }, 
                 {
@@ -136,15 +136,15 @@
                         }
                     }, 
                     "id": "4359-440b-a14d", 
-                    "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
                     "reject_selectors": [], 
-                    "required": [], 
                     "repeated": false, 
+                    "required": [], 
                     "selection_mode": "auto", 
                     "selector": "main > .js-view-dom-id-4ceb838d50d9c18ef1318bbdb4eee39a86b09834470d8e8439bb8bf3fd881672 > .js-view-dom-id-47b1ad5edabb4efb51d9c9ed7415afd5ca822b94a6111c7c04ee737b6eed31b6 > .project-team > div:nth-child(2) > .preview-items", 
                     "tagid": null, 
+                    "text-content": "content", 
                     "xpath": "//main/*[contains(concat(\" \", @class, \" \"), \" js-view-dom-id-4ceb838d50d9c18ef1318bbdb4eee39a86b09834470d8e8439bb8bf3fd881672 \")]/*[contains(concat(\" \", @class, \" \"), \" js-view-dom-id-47b1ad5edabb4efb51d9c9ed7415afd5ca822b94a6111c7c04ee737b6eed31b6 \")]/*[contains(concat(\" \", @class, \" \"), \" project-team \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" preview-items \")]"
                 }
             ]

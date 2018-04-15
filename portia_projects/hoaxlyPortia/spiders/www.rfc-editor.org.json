@@ -1,19 +1,19 @@
 {
-    "allowed_domains": [],
-    "exclude_patterns": [],
+    "allowed_domains": [], 
+    "exclude_patterns": [], 
     "follow_patterns": [
         "/rfcs/"
-    ],
-    "id": "www.rfc-editor.org",
-    "js_disable_patterns": [],
-    "js_enable_patterns": [],
-    "js_enabled": false,
-    "links_to_follow": "patterns",
-    "respect_nofollow": false,
+    ], 
+    "id": "www.rfc-editor.org", 
+    "js_disable_patterns": [], 
+    "js_enable_patterns": [], 
+    "js_enabled": false, 
+    "links_to_follow": "patterns", 
+    "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "http://www.faqs.org/rfcs/rfc-sidx15.html",
-            "type": "url"
+            "type": "url", 
+            "url": "http://www.faqs.org/rfcs/rfc-sidx15.html"
         }
     ]
 }

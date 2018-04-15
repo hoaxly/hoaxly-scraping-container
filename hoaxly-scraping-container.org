@@ -1,0 +1,64 @@
+* Hoaxly-scraping-container
+** Demo of how to create a new spider
+   :PROPERTIES:
+   :ID:       00280696-f8fa-47e1-a0e3-363461c5848e
+   :END:
+*** create a new branch
+ 
+ [[file:hoaxly.org_imgs/20180119_143931_3319QVe.png]]
+
+
+*** run fin init
+
+*** visit http://hoaxly.docksal:9001/#/projects/hoaxlyPortia
+*** enter url you want to scrape
+ [[file:hoaxly.org_imgs/20180119_144324_3319dfk.png]]
+
+ [[file:hoaxly.org_imgs/20180119_144527_3319qpq.png]]
+
+*** visit the page where you want to start crawling through links
+
+[[file:hoaxly.org_imgs/20180119_144652_33193zw.png]]
+*** create a new spider
+
+[[file:hoaxly.org_imgs/20180119_144716_3319E-2.png]]
+*** follow a link to a sample item you want to scrape
+[[file:hoaxly.org_imgs/20180119_144817_33192HG.png]]
+
+[[file:hoaxly.org_imgs/20180119_144832_3319DSM.png]]
+*** create a new sample anotation
+[[file:hoaxly.org_imgs/20180119_144856_3319QcS.png]]
+*** select the appropriate schema
+
+[[file:hoaxly.org_imgs/20180119_144936_3319dmY.png]]
+
+[[file:hoaxly.org_imgs/20180119_145019_3319qwe.png]]
+*** annotate the first element by clicking on the visible project headline
+
+[[file:hoaxly.org_imgs/20180119_145056_331936k.png]]
+*** select the appropriate field from schema
+[[file:hoaxly.org_imgs/20180119_145146_3319EFr.png]]
+*** repeat for all fields in the schema
+[[file:hoaxly.org_imgs/20180119_145238_3319RPx.png]]
+
+[[file:hoaxly.org_imgs/20180119_145415_3319DZA.png]]
+*** close sample
+[[file:hoaxly.org_imgs/20180119_145433_3319QjG.png]]
+*** configure url crawiling schema
+[[file:hoaxly.org_imgs/20180119_145501_3319dtM.png]]
+
+using regex
+[[file:hoaxly.org_imgs/20180119_145607_3319q3S.png]]
+*** add and commit the new spider
+[[file:hoaxly.org_imgs/20180119_145722_33193BZ.png]]
+
+#+BEGIN_EXAMPLE
+☻ % git add portia_projects/hoaxlyPortia/spiders/ -p
+☻ % git commit portia_projects/hoaxlyPortia/spiders/
+#+END_EXAMPLE
+
+use a commit message that tells us what spider you are adding using which schema
+*** create a merge request
+[[file:hoaxly.org_imgs/20180119_150000_3319EMf.png]]
+
+assign it to someone for review
