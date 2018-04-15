@@ -35,23 +35,35 @@ class ClimatefeedbackOrg(BasePortiaSpider):
                 [
                     Field(
                         'factoidHeadline',
-                        '.post-7296 > header > .entry-title *::text',
+                        'header > .entry-title *::text',
+                        []),
+                    Field(
+                        'factoidContent',
+                        '.entry-content *::text',
                         []),
                     Field(
                         'factoidSummary',
-                        '.post-7296 > .entry-content > .fact-check-card *::text',
+                        '.fact-check-card *::text',
                         []),
                     Field(
                         'factoidClaim',
-                        '.post-7296 > .entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2) *::text',
+                        '.entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2) *::text',
                         []),
                     Field(
                         'factoidVerdict',
-                        '.post-7296 > .entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3) *::text',
+                        '.entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3) *::text',
+                        []),
+                    Field(
+                        'factoidRating',
+                        '.fact-check-card__row__verdict__img::attr(src)',
                         []),
                     Field(
                         'factoidSourceUrls',
-                        '.post-7296 > .entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(2)::attr(href)',
+                        '.fact-check-card__details__text > a::attr(href)',
+                        []),
+                    Field(
+                        'factoidTags',
+                        '.bot-tag > a::attr(href)',
                         []),
                     Field(
                         'factoidPubdate',

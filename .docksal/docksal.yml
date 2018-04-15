@@ -95,8 +95,8 @@ services:
     ports:
       - "6800:6800"
     volumes:
-      - ${PWD}/portia_projects/packages:/packages
-      - ${PWD}/portia_projects/requirements.txt:/requirements.txt
+      - ${PROJECT_ROOT}/portia_projects/packages:/packages
+      - ${PROJECT_ROOT}/portia_projects/requirements.txt:/requirements.txt
     labels:
       - io.docksal.virtual-host=scrapydaemon.${VIRTUAL_HOST}
     dns:
@@ -104,25 +104,25 @@ services:
       - ${DOCKSAL_DNS2}
 
 # enable this container to build new spiders
-  # hoaxly-spiderbreeder-container:
-  #   container_name: hoaxly-spiderbreeder-container
-  #   #hostname: spiderbreeder
-  #   image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
-  #   # use this to build image locally for working on the image
-  #   build: ${PROJECT_ROOT}
-  #   tty: true
-  #   mem_limit: 1024m
-  #   ports:
-  #     - "9001:9001"
-  #   labels:
-  #     - io.docksal.virtual-host=scrapyd.${VIRTUAL_HOST}
-  #   volumes:
-  #     # when working on spiders mount here
-  #     - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
-  #     # when working on the helpers mount them here
-  #     #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
-  #     # when testing manual runs to file mount this
-  #     #- ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
+  hoaxly-spiderbreeder-container:
+    container_name: hoaxly-spiderbreeder-container
+    #hostname: spiderbreeder
+    image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
+    # use this to build image locally for working on the image
+    build: ${PROJECT_ROOT}
+    tty: true
+    mem_limit: 1024m
+    ports:
+      - "9001:9001"
+    labels:
+      - io.docksal.virtual-host=portia.${VIRTUAL_HOST}
+    volumes:
+      # when working on spiders mount here
+      - ${PROJECT_ROOT}/portia_projects:/app/data/projects:rw
+      # when working on the helpers mount them here
+      #- ${PROJECT_ROOT}/portia_projects/packages:/app/data/packages:rw
+      # when testing manual runs to file mount this
+      #- ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
 
 
 volumes:

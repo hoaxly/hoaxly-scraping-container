@@ -16,9 +16,6 @@ SPIDER_MODULES = ['Hoaxlyspiders.spiders']
 NEWSPIDER_MODULE = 'Hoaxlyspiders.spiders'
 
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Hoaxlyspiders (+http://www.yourdomain.com)'
-
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -83,7 +80,9 @@ ITEM_PIPELINES = {
 #
 ROBOTSTXT_OBEY = True
 
-USER_AGENT = 'Hoaxly Factchecking Search engine bot (bot@hoax.ly)'
+# Crawl responsibly by identifying yourself (and your website) on the user-agent
+
+USER_AGENT = 'Hoaxly Factchecking Search engine bot (+bot@hoax.ly)'
 # 55 second delay
 DOWNLOAD_DELAY = 55.0
 

@@ -40,7 +40,7 @@
                 "id": "7dd4-41ea-857d", 
                 "name": "factoidContent", 
                 "required": false, 
-                "type": "text", 
+                "type": "safe html", 
                 "vary": false
             }, 
             "d4cf-419d-ab88": {
@@ -55,6 +55,20 @@
                 "name": "factoidPubdate", 
                 "required": false, 
                 "type": "date", 
+                "vary": false
+            }, 
+            "1e1b-498a-b66a": {
+                "id": "1e1b-498a-b66a", 
+                "name": "factoidRating", 
+                "required": false, 
+                "type": "image", 
+                "vary": false
+            }, 
+            "ed85-43b8-9957": {
+                "id": "ed85-43b8-9957", 
+                "name": "factoidRatingValue", 
+                "required": false, 
+                "type": "image", 
                 "vary": false
             }
         }, 

@@ -12,8 +12,8 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://climatefeedback.org/claim-reviews/", 
-            "type": "url"
+            "type": "url", 
+            "url": "https://climatefeedback.org/claim-reviews/"
         }
     ]
 }

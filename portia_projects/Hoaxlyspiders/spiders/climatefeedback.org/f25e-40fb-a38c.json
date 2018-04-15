@@ -24,7 +24,7 @@
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-title"
+                        "header > .entry-title"
                     ], 
                     "container_id": "10a8-421c-8e56", 
                     "data": {
@@ -42,14 +42,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .post-7296 > header > .entry-title", 
+                    "selection_mode": "css", 
+                    "selector": "header > .entry-title", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/header/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
+                    "xpath": "//header/*[contains(concat(\" \", @class, \" \"), \" entry-title \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".col-sm-4:nth-child(2)"
+                        ".entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2)"
                     ], 
                     "container_id": "10a8-421c-8e56", 
                     "data": {
@@ -67,14 +67,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2)", 
+                    "selection_mode": "css", 
+                    "selector": ".entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2)", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[2]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[2]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".col-sm-4:nth-child(3)"
+                        ".entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3)"
                     ], 
                     "container_id": "10a8-421c-8e56", 
                     "data": {
@@ -92,14 +92,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3)", 
+                    "selection_mode": "css", 
+                    "selector": ".entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3)", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[3]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[3]"
                 }, 
                 {
                     "accept_selectors": [
-                        "span.fact-check-card__details__text > a:nth-child(2)"
+                        ".fact-check-card__details__text > a"
                     ], 
                     "container_id": "10a8-421c-8e56", 
                     "data": {
@@ -116,11 +116,11 @@
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(2)", 
+                    "repeated": true, 
+                    "selection_mode": "css", 
+                    "selector": ".fact-check-card__details__text > a", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" mb2 \")]/p/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]/a[2]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]/a"
                 }, 
                 {
                     "accept_selectors": [
@@ -142,17 +142,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .post-7296 > .entry-content > .fact-check-card", 
+                    "selection_mode": "css", 
+                    "selector": ".fact-check-card", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-content > p:nth-child(6)", 
-                        "p:nth-child(7)", 
-                        "h4:nth-child(11) > strong", 
-                        "h4:nth-child(17) > strong"
+                        ".entry-content"
                     ], 
                     "container_id": "10a8-421c-8e56", 
                     "data": {
@@ -169,16 +166,15 @@
                     "pre_text": null, 
                     "reject_selectors": [], 
                     "required": [], 
-                    "repeated": true, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .post-7296 > .entry-content > p, .main > .post-7296 > .entry-content > h4 > strong", 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".entry-content", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/p | //*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-7296 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/h4/strong"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".bot-tag:nth-child(3) > a", 
-                        ".bot-tag:nth-child(2) > a"
+                        ".bot-tag > a"
                     ], 
                     "container_id": "10a8-421c-8e56", 
                     "data": {
@@ -196,10 +192,10 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": true, 
-                    "selection_mode": "auto", 
-                    "selector": ".main > .spaceup1 > .bot-tag > a", 
+                    "selection_mode": "css", 
+                    "selector": ".bot-tag > a", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" spaceup1 \")]/*[contains(concat(\" \", @class, \" \"), \" bot-tag \")]/a"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" bot-tag \")]/a"
                 }, 
                 {
                     "accept_selectors": [
@@ -221,10 +217,35 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
+                    "selection_mode": "css", 
                     "selector": ".main > p:nth-child(3)", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/p[3]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".fact-check-card__row__verdict__img"
+                    ], 
+                    "container_id": "10a8-421c-8e56", 
+                    "data": {
+                        "893b-4377-91b9": {
+                            "attribute": "src", 
+                            "extractors": {}, 
+                            "field": "1e1b-498a-b66a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "84a3-4a62-a150", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".fact-check-card__row__verdict__img", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row__verdict__img \")]"
                 }
             ]
         }
