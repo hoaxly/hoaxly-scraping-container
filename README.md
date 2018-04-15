@@ -1,35 +1,28 @@
 
 # Table of Contents
 
-1.  [Setup](#org67020e2)
-    1.  [step 1 is to fetch the images](#orgafe844e)
-    2.  [Step 2 is to spin up the local instances and initialize them.](#orgde9a677)
+1.  [Setup](#org6e8aa9c)
+    1.  [Step 1: Fetch the images](#org38d359a)
+    2.  [Step 2: Spin up the local instances and initialize them.](#org0cfadc9)
 
-portia is an abstraction layer on top of scrapy.
-that provides a ui in the browser for orchestrating spiders, portia spiders can be exported in two ways
-
-is a portia spiders collection for crawling websites and scraping content.
-
--   **we create some code and call it a spider:** a spider describes what data to get from where
-
-You can write scrapy spiders in python code or you can use a service like portia (portia can be selfhosted
-or used on saas platform scrapycloud/hub) to build your spider in the browser and export. Portia provides you with
-an additional abstraction layer on top of scrapy.
+A spider describes what data to get from where. You can write scrapy spiders in python code or you can use a tool like Portia.
+Portia is an abstraction layer on top of scrapy that provides a UI in the browser for creating spiders.
+Portia spiders can be exported in two ways (portia and scrapy)
+This is a portia spiders collection for crawling websites and scraping content.
 
 A running spider is called a crawler.
-running a spider to scrape the data we care about from a source
-A spider crawl can be triggered manually to fetch data once or schedule a spider to crawl on a regular basis to fetch
-data continuously.
-During a crawl the spider retrieves data and outputs it to a target (stdout, json files etc.)
+A spider crawl can be triggered manually to fetch data once or scheduled to crawl on a regular basis to fetch
+data continuously. During a crawl the spider retrieves data and outputs it to a target (stdout, json files etc.)
 
 
-<a id="org67020e2"></a>
+<a id="org6e8aa9c"></a>
 
 # Setup
 
-Requirements
+<span class="underline">Requirements:</span>
 
-docker-2.3.0 docker-compose-1.13.0
+-   docker-2.3.0
+-   docker-compose-1.13.0
 
 <span class="underline">Note:</span> make sure to run this on your host.
 This is needed for elasticsearch to work [4]
@@ -37,11 +30,11 @@ This is needed for elasticsearch to work [4]
     sudo sysctl -w vm.max_map_count=262144
 
 
-<a id="orgafe844e"></a>
+<a id="org38d359a"></a>
 
-## step 1 is to fetch the images
+## Step 1: Fetch the images
 
-login to our registry if you have access to get at the images you need to locally build and run spiders.
+Login to our registry (using your gitlab credentials) to get at the images that you need in order to locally build and run spiders.
 
     docker login registry.acolono.net:444
     docker pull registry.acolono.net:444/hoaxly/hoaxly-storage-container
@@ -49,11 +42,11 @@ login to our registry if you have access to get at the images you need to locall
     docker pull registry.acolono.net:444/hoaxly/hoaxly-scraping-container
 
 
-<a id="orgde9a677"></a>
+<a id="org0cfadc9"></a>
 
-## Step 2 is to spin up the local instances and initialize them.
+## Step 2: Spin up the local instances and initialize them.
 
-from projectroot run
+In your project's rootfolder, run:
 
     fin init
 

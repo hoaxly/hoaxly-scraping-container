@@ -1,3 +1,4 @@
+#+OPTIONS: h:5
 * HoaxlyScrapingContainer
   :PROPERTIES:
   :ID:       b2ef372c-735c-47ea-8ecb-3749ca62c06d
@@ -203,16 +204,15 @@
 
       Run:
       #+BEGIN_EXAMPLE
-
-              ☻ % docker exec -ti cli /bin/bash
+docker exec -ti cli /bin/bash
 
       #+END_EXAMPLE
 
-      Now you are in container and can
+      Now you are in container and can tell you local scrapydaemon container to run these spiders
       #+BEGIN_EXAMPLE
 
       scrapyd-client deploy local
-      scrapyd-client -t http://scrapydaemon.hoaxly.docksal:6800/schedule -p HoaxlyPortia climatefeedback.org
+      scrapyd-client -t http://scrapydaemon.hoaxly.docksal:6800 schedule -p Hoaxlyspiders climatefeedback.org
 
       #+END_EXAMPLE
       and view your results in the storage container:
@@ -221,7 +221,7 @@
 
 
 
-**** Deploy to Crawling service (scrapyd)
+**** Deploy to Production Crawling service (scrapyd)
 
      Scrapyd is a daemon that can be started to schedule runs
 
@@ -259,8 +259,8 @@
 **** Helpers middleware
      the [[./portia_projects/packages][HoaxlyHelpers Middleware package contains things that]] have been moved into their own helper package and are installed in both the spiderbreeder and runner containers
 
-      Hoaxly uses [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching items with scraped metadata
-       [[file:portia_projects/packages/hoaxlyHelpers/mymiddleware.py][spidermiddleware
+     Hoaxly uses [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching items with scraped metadata
+     [[file:portia_projects/packages/hoaxlyHelpers/mymiddleware.py][spidermiddleware
 
      by default a running spider just outputs to screen or files.
      by configuring a pipeline we can define where the data is also sent.
@@ -276,22 +276,26 @@
 
 
 **** Distributed as Docker container registry
-     to be used in local dev and in production
-     #+BEGIN_SRC dockerfile :tangle Dockerfile
-FROM scrapinghub/portia
+     #+BEGIN_CENTER
+     To be used in local dev and in production
+     #+END_CENTER
+     building our container on top of portia
+     #+BEGIN_SRC dockerfile :tangle Dockerfile :comments org
+ ## -*- docker-image-name: "registry.acolono.net:444/hoaxly/hoaxly-scraping-container" -*-
+       FROM scrapinghub/portia
 
-# the file with our requirements
-COPY portia_projects/requirements.txt .
-# our helper package
-COPY portia_projects/packages /app/data/projects/packages
-# our current spiders
-COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia
+       # the file with our requirements
+       COPY portia_projects/requirements.txt .
+       # our helper package
+       COPY portia_projects/packages /app/data/projects/packages
+       # our current spiders
+       COPY portia_projects/Hoaxlyspiders /app/data/projects/Hoaxlyspiders
 
 
-# and our own requirements
-RUN pip install  --no-cache-dir -r requirements.txt
-# finally our own helperPackage
-RUN pip install -e /app/data/projects/packages
+       # and our own requirements
+       RUN pip install  --no-cache-dir -r requirements.txt
+       # finally our own helperPackage
+       RUN pip install -e /app/data/projects/packages
 
      #+END_SRC
      we are having our container conviniently built by our gitlab ci bot
