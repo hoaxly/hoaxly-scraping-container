@@ -1,4 +1,4 @@
-FROM portia
+FROM scrapinghub/portia
 
 RUN set -xe \
     && apt-get update \
