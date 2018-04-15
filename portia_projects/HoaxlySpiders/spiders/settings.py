@@ -1,6 +1,7 @@
 # Automatically created by: portia
 import os
-
+import hoaxlyHelpers
+import scrapyelasticsearch
 SPIDER_MANAGER_CLASS = 'slybot.spidermanager.SlybotSpiderManager'
 EXTENSIONS = {
     'slybot.closespider.SlybotCloseSpider': 1

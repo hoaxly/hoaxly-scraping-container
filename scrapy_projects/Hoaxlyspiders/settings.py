@@ -72,8 +72,8 @@ SPIDER_MIDDLEWARES = {
 #    'Hoaxlyspiders.pipelines.HoaxlyspidersPipeline': 300,
 #}
 ITEM_PIPELINES = {
-    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
-    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
+    #'hoaxlyHelpers.mypipelines.TypePipeline': 400,
+    #'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
     #'slybot.dupefilter.DupeFilterPipeline': 600,
     #'scrapy.dupefilters.DupeFilterPipeline': 100,
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
@@ -116,7 +116,7 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 7
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-ELASTICSEARCH_SERVERS = ['http://elastic:changeme@hoaxly-storage-container:9200']
+ELASTICSEARCH_SERVERS = ['http://hoaxly-storage-container:9200']
 ELASTICSEARCH_INDEX = 'hoaxly'
 ELASTICSEARCH_TYPE = 'items'
 ELASTICSEARCH_UNIQ_KEY = 'url'

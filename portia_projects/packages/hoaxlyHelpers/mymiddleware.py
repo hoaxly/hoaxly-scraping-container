@@ -25,6 +25,9 @@ class MicrodataExtruction(object):
             else:
                 # if this is an item inspect for microdata
                 data = extruct.extract(response.body, response.url)
+                logging.debug(response.url)
+                x['url'] = response.url
+
                 if not data:
                     # if no microdata was found set flag and yield the item
                     logging.debug('this item has no microdata')
