@@ -9,7 +9,7 @@
 
 
   #+END_CENTER
-*** ReadMe for a summary about the HoaxlyScrapingContainer
+*** ReadMe for a summary about the HoaxlySpiderbreederContainer
     A spider describes what data to get from where. You can write scrapy spiders in python code or you can use a tool like Portia.
     Portia is an abstraction layer on top of scrapy that provides a UI in the browser for creating spiders.
     Portia spiders can be exported in two ways (portia and scrapy)
@@ -20,30 +20,31 @@
     data continuously. During a crawl the spider retrieves data and outputs it to a target (stdout, json files etc.)
 **** Setup
 
-     Requirements
+     _Requirements:_
 
-     docker-2.3.0 docker-compose-1.13.0
+     - docker-2.3.0
+     - docker-compose-1.13.0
 
      _Note:_ make sure to run this on your host.
      This is needed for elasticsearch to work [4]
-#+BEGIN_EXAMPLE
-sudo sysctl -w vm.max_map_count=262144
-#+END_EXAMPLE
+     #+BEGIN_EXAMPLE
+     sudo sysctl -w vm.max_map_count=262144
+     #+END_EXAMPLE
 ***** Step 1: Fetch the images
 
       Login to our registry (using your gitlab credentials) to get at the images that you need in order to locally build and run spiders.
 
       #+BEGIN_SRC shell :eval never-export
- docker login registry.acolono.net:444
- docker pull registry.acolono.net:444/hoaxly/hoaxly-storage-container
- docker pull registry.acolono.net:444/hoaxly/hoaxly-scrapydaemon-container
- docker pull registry.acolono.net:444/hoaxly/hoaxly-scraping-container
+        docker login registry.acolono.net:444
+        docker pull registry.acolono.net:444/hoaxly/hoaxly-storage-container
+        docker pull registry.acolono.net:444/hoaxly/hoaxly-scrapydaemon-container
+        docker pull registry.acolono.net:444/hoaxly/hoaxly-scraping-container
       #+END_SRC
 ***** Step 2: Spin up the local instances and initialize them.
       In your project's rootfolder, run:
-#+BEGIN_EXAMPLE
-fin init
-#+END_EXAMPLE
+      #+BEGIN_EXAMPLE
+        fin init
+      #+END_EXAMPLE
 
 *** Hoaxly Crawler Components
 
@@ -53,10 +54,7 @@ fin init
      A spider describes what data we want to fetch and which pages to crawl searching for that data.
 ***** Visit the [webinterface of portia](http://hoaxly.docksal:9001/#/projects): use this to build new spiders
 
-      Spiders are stored in [./portia_projects](./portia_projects)
-
-      Hoaxly uses [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching items with scraped metadata
-[[file:portia_projects/packages/hoaxlyHelpers/mymiddleware.py][spidermiddleware]]
+      Spiders are stored in [[file:portia_projects][hoaxly-scraping-container/portia_projects]]
 
 ***** How to create a new Spider
       :PROPERTIES:
@@ -110,7 +108,7 @@ fin init
        :PROPERTIES:
        :ID:       6382897c-f172-4835-bf55-0378bf06711e
        :END:
-TODO: screenshot of new schema
+       TODO: screenshot of new schema
 
        [[file:hoaxly.org_imgs/20180119_144936_3319dmY.png]]
 
@@ -257,10 +255,12 @@ TODO: screenshot of new schema
      for portia spiders deployment should work normally but currently requires a workaround in our settings
 
 **** Settings
-we are configuring our project in [[./scrapy_projects/Hoaxlyspiders/settings.py][scrapy spider settings]] and [[./portia_projects/Hoaxlyspiders/spiders/settings.py][portiaproject settings]]
+     we are configuring our project in [[./scrapy_projects/Hoaxlyspiders/settings.py][scrapy spider settings]] and [[./portia_projects/Hoaxlyspiders/spiders/settings.py][portiaproject settings]]
 **** Helpers middleware
      the [[./portia_projects/packages][HoaxlyHelpers Middleware package contains things that]] have been moved into their own helper package and are installed in both the spiderbreeder and runner containers
 
+      Hoaxly uses [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching items with scraped metadata
+       [[file:portia_projects/packages/hoaxlyHelpers/mymiddleware.py][spidermiddleware
 
      by default a running spider just outputs to screen or files.
      by configuring a pipeline we can define where the data is also sent.
@@ -277,7 +277,7 @@ we are configuring our project in [[./scrapy_projects/Hoaxlyspiders/settings.py]
 
 **** Distributed as Docker container registry
      to be used in local dev and in production
-#+BEGIN_SRC dockerfile :tangle Dockerfile
+     #+BEGIN_SRC dockerfile :tangle Dockerfile
 FROM scrapinghub/portia
 
 # the file with our requirements
@@ -293,16 +293,12 @@ RUN pip install  --no-cache-dir -r requirements.txt
 # finally our own helperPackage
 RUN pip install -e /app/data/projects/packages
 
-#+END_SRC
-
-
-we are having this conviniently built by our gitlab ci bot
-#+BEGIN_SRC yaml :tangle .gitlab-ci.yml
-
+     #+END_SRC
+     we are having our container conviniently built by our gitlab ci bot
+     #+BEGIN_SRC yaml :tangle .gitlab-ci.yml
 image: tmaier/docker-compose:17.09
 services:
   - docker:17.09-dind
-
 
 stages:
 - build
@@ -340,7 +336,7 @@ pages:
   only:
   - master
 
-#+END_SRC
+     #+END_SRC
 
 *** Hoaxly Container Ports (and adapters)
     to talk to the other hoaxly containers
