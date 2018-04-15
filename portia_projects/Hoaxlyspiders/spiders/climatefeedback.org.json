@@ -1,23 +1,19 @@
 {
     "allowed_domains": [], 
-    "exclude_patterns": [
-        "category", 
-        "random", 
-        "trump"
-    ], 
+    "exclude_patterns": [], 
     "follow_patterns": [
-        "check"
+        "/claimreview/"
     ], 
-    "id": "snopes.com", 
+    "id": "climatefeedback.org", 
     "js_disable_patterns": [], 
     "js_enable_patterns": [], 
     "js_enabled": false, 
-    "links_to_follow": "all", 
+    "links_to_follow": "patterns", 
     "respect_nofollow": false, 
     "start_urls": [
         {
             "type": "url", 
-            "url": "https://www.snopes.com/fact-check/page/2/"
+            "url": "https://climatefeedback.org/claim-reviews/"
         }
     ]
 }

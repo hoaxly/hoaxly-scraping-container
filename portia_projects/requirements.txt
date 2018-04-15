@@ -1,7 +1,4 @@
-
 extruct==0.4.0
 https://github.com/rosenstrauch/scrapy-elasticsearch/archive/master.zip
 elasticsearch>=5.0.0,<6.0.0
-scrapy==1.5
-scrapyd==1.2
 https://github.com/scrapy/scrapyd-client/archive/master.zip
