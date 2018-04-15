@@ -1,64 +1,322 @@
-* Hoaxly-scraping-container
-** Demo of how to create a new spider
-   :PROPERTIES:
-   :ID:       00280696-f8fa-47e1-a0e3-363461c5848e
-   :END:
-*** create a new branch
- 
- [[file:hoaxly.org_imgs/20180119_143931_3319QVe.png]]
+* HoaxlyScrapingContainer
+  :PROPERTIES:
+  :ID:       b2ef372c-735c-47ea-8ecb-3749ca62c06d
+  :END:
+
+#+BEGIN_CENTER
+ Crawl whole websites or parts of a website  extracting the data you need from websites.
+
+ You can index a whole website with the web crawler module of Apache ManifoldCF.
+
+ With its Webinterface you can setup a homepage, a sitemap or a RSS-Feed as the start point and set how deep the crawl should be.
+
+ Its possible to setup rules which parts to crawl and which to exclude.
+
+ Another software for crawling a website is Scrapy.  https://scrapy.org/
 
 
-*** run fin init
+#+END_CENTER
+*** ReadMe for a summary about the HoaxlyScrapingContainer
+   portia is an abstraction layer on top of scrapy.
+   that provides a ui in the browser for orchestrating spiders, portia spiders can be exported in two ways
 
-*** visit http://hoaxly.docksal:9001/#/projects/hoaxlyPortia
-*** enter url you want to scrape
- [[file:hoaxly.org_imgs/20180119_144324_3319dfk.png]]
 
- [[file:hoaxly.org_imgs/20180119_144527_3319qpq.png]]
+  is a portia spiders collection for crawling websites and scraping content.
 
-*** visit the page where you want to start crawling through links
+   - we create some code and call it a spider :: a spider describes what data to get from where
+   You can write scrapy spiders in python code or you can use a service like portia (portia can be selfhosted
+   or used on saas platform scrapycloud/hub) to build your spider in the browser and export. Portia provides you with
+   an additional abstraction layer on top of scrapy.
 
-[[file:hoaxly.org_imgs/20180119_144652_33193zw.png]]
-*** create a new spider
 
-[[file:hoaxly.org_imgs/20180119_144716_3319E-2.png]]
-*** follow a link to a sample item you want to scrape
-[[file:hoaxly.org_imgs/20180119_144817_33192HG.png]]
+   A running spider is called a crawler.
+   running a spider to scrape the data we care about from a source
+   A spider crawl can be triggered manually to fetch data once or schedule a spider to crawl on a regular basis to fetch
+   data continuously.
+   During a crawl the spider retrieves data and outputs it to a target (stdout, json files etc.)
 
-[[file:hoaxly.org_imgs/20180119_144832_3319DSM.png]]
-*** create a new sample anotation
-[[file:hoaxly.org_imgs/20180119_144856_3319QcS.png]]
-*** select the appropriate schema
 
-[[file:hoaxly.org_imgs/20180119_144936_3319dmY.png]]
 
-[[file:hoaxly.org_imgs/20180119_145019_3319qwe.png]]
-*** annotate the first element by clicking on the visible project headline
+   # Hoaxly Portia spiders
 
-[[file:hoaxly.org_imgs/20180119_145056_331936k.png]]
-*** select the appropriate field from schema
-[[file:hoaxly.org_imgs/20180119_145146_3319EFr.png]]
-*** repeat for all fields in the schema
-[[file:hoaxly.org_imgs/20180119_145238_3319RPx.png]]
 
-[[file:hoaxly.org_imgs/20180119_145415_3319DZA.png]]
-*** close sample
-[[file:hoaxly.org_imgs/20180119_145433_3319QjG.png]]
-*** configure url crawiling schema
-[[file:hoaxly.org_imgs/20180119_145501_3319dtM.png]]
+   !!!
 
-using regex
-[[file:hoaxly.org_imgs/20180119_145607_3319q3S.png]]
-*** add and commit the new spider
-[[file:hoaxly.org_imgs/20180119_145722_33193BZ.png]]
 
-#+BEGIN_EXAMPLE
-☻ % git add portia_projects/hoaxlyPortia/spiders/ -p
-☻ % git commit portia_projects/hoaxlyPortia/spiders/
-#+END_EXAMPLE
+   scrapy crawl -s PROJECT_DIR=./ -s SPIDER_MANAGER_CLASS=slybot.spidermanager.SlybotSpiderManager snopes.com
 
-use a commit message that tells us what spider you are adding using which schema
-*** create a merge request
-[[file:hoaxly.org_imgs/20180119_150000_3319EMf.png]]
 
-assign it to someone for review
+   !!!
+
+   ## Requirements
+
+       docker-2.3.0 docker-compose-1.13.0
+
+
+   ## TLDR
+
+   _Note:_ make sure to run this on your host.
+   This is needed for elasticsearch to work [4]
+
+       ☻ % sudo sysctl -w vm.max_map_count=262144
+
+   from projectroot run
+
+       ☻ % fin init
+       ☻ % docker exec -ti portia scrapyd &
+       ☻ % docker exec -ti portia /bin/bash
+
+   then you are in container and can
+
+       root@9e8c8aa1b4c2:/app/slyd# cd /app/data/projects/hoaxlyPortia/
+       root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client deploy local
+       root@9e8c8aa1b4c2:/app/data/projects/hoaxlyPortia# scrapyd-client schedule -p HoaxlyPortia pesacheck.org
+
+   and view your results in the storage container:
+
+       http://elastic.hoaxly.docksal:9200/hoaxly/_search
+
+
+   ## Production:
+
+   just pull the image from registry and run it, then you should see the projects spiders ready deployed and can schedule crawls through the api and watch the results show up in elasticsearch
+   mount the settings you need so scrapy knows where to pipe the data
+
+   ## Setup (Detailed)
+
+   this will spin up your containers defined in .docksal/docksal.yml
+   check that all containers are Up via
+
+
+       ☻ % fin ps
+
+   Disable XPACK:
+
+   ```
+       ☻ docker exec hoaxly_elastic_1 bin/elasticsearch-plugin remove x-pack
+       ☻ docker exec hoaxly_kibana_1 bin/kibana-plugin remove x-pack
+       ☻ fin restart     
+   ```
+
+
+
+*** Hoaxly Container Ports (and adapters)
+ to talk to the other hoaxly containers
+**** exposes port 6800 to allow scheduling spiders
+ scrapyd, if running, can be interacted with 
+**** uses port 9200 an 9300 to read from Storage Container via
+ Elasticsearch via scrapyelasticsearch python library [3]
+
+   activating and configuring the pipeline in our settings is enough to get the data saved
+   we still have a workaround in place that renames an items
+   > "\_type" key to "type"
+   to avoid elastic search error
+  
+*** Hoaxly Crawler Components
+
+ this container repo contains:
+
+**** Visual Spider Builder (Portia):
+ a spider describes what data we want to fetch and which pages to crawl searching for that data.
+***** in your browser you can visit the [webinterface of portia](http://hoaxly.docksal:9001/#/projects) use this to build new spiders
+
+   Spiders are stored in [./portia_projects](./portia_projects)
+
+   we are using [Custom Spider middleware](https://doc.scrapy.org/en/latest/topics/spider-middleware.html#scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output) for enriching item with scraped metadata
+
+       portia_projects/hoaxlyPortia/spidermiddleware.py
+***** How to create a new Spider
+      :PROPERTIES:
+      :ID:       f5cea585-15aa-4e87-b546-9f47bae6fee3
+      :END:
+****** create a new branch
+       :PROPERTIES:
+       :ID:       a56c5c3d-abf8-41e9-a6aa-b364160859eb
+       :END:
+
+    [[file:hoaxly.org_imgs/20180119_143931_3319QVe.png]]
+
+
+****** visit http://hoaxly.docksal:9001/#/projects/hoaxlyPortia
+       :PROPERTIES:
+       :ID:       679cbfab-c484-4f87-8b92-c913bbbbb573
+       :END:
+****** enter url you want to scrape
+       :PROPERTIES:
+       :ID:       3f7bab5a-8aac-4552-b3b0-102a0dfb2e79
+       :END:
+    [[file:hoaxly.org_imgs/20180119_144324_3319dfk.png]]
+
+    [[file:hoaxly.org_imgs/20180119_144527_3319qpq.png]]
+
+****** visit the page where you want to start crawling through links
+       :PROPERTIES:
+       :ID:       64beade0-a088-4413-bb21-c4ff8672ed6e
+       :END:
+
+   [[file:hoaxly.org_imgs/20180119_144652_33193zw.png]]
+****** create a new spider
+       :PROPERTIES:
+       :ID:       657c0a53-b887-4835-a8e9-f71f86be71ab
+       :END:
+
+   [[file:hoaxly.org_imgs/20180119_144716_3319E-2.png]]
+****** follow a link to a sample item you want to scrape
+       :PROPERTIES:
+       :ID:       31ce87a1-b0ff-43f5-80d1-0844381eb09c
+       :END:
+   [[file:hoaxly.org_imgs/20180119_144817_33192HG.png]]
+
+   [[file:hoaxly.org_imgs/20180119_144832_3319DSM.png]]
+****** create a new sample anotation
+       :PROPERTIES:
+       :ID:       b5e6e56a-ad67-41b1-bc4d-d3ca398d2594
+       :END:
+   [[file:hoaxly.org_imgs/20180119_144856_3319QcS.png]]
+****** select the appropriate schema
+       :PROPERTIES:
+       :ID:       6382897c-f172-4835-bf55-0378bf06711e
+       :END:
+
+   [[file:hoaxly.org_imgs/20180119_144936_3319dmY.png]]
+
+   [[file:hoaxly.org_imgs/20180119_145019_3319qwe.png]]
+****** annotate the first element by clicking on the visible project headline
+       :PROPERTIES:
+       :ID:       49b3ce66-cd45-4b1f-ab8b-001de12f3e44
+       :END:
+
+   [[file:hoaxly.org_imgs/20180119_145056_331936k.png]]
+****** select the appropriate field from schema
+       :PROPERTIES:
+       :ID:       32ff9456-8ec8-4cbf-a2aa-11734ac7a1ac
+       :END:
+   [[file:hoaxly.org_imgs/20180119_145146_3319EFr.png]]
+****** repeat for all fields in the schema
+       :PROPERTIES:
+       :ID:       4215fafd-5293-48f6-8865-f661a5266528
+       :END:
+   [[file:hoaxly.org_imgs/20180119_145238_3319RPx.png]]
+
+   [[file:hoaxly.org_imgs/20180119_145415_3319DZA.png]]
+****** close sample
+       :PROPERTIES:
+       :ID:       c35b514d-29c7-47e1-90cf-a5e0fddaa3ba
+       :END:
+   [[file:hoaxly.org_imgs/20180119_145433_3319QjG.png]]
+****** configure url crawiling schema
+       :PROPERTIES:
+       :ID:       95b6f7ff-1bb8-4451-90cc-7614939b78ab
+       :END:
+   [[file:hoaxly.org_imgs/20180119_145501_3319dtM.png]]
+
+   using regex
+   [[file:hoaxly.org_imgs/20180119_145607_3319q3S.png]]
+****** add and commit the new spider
+       :PROPERTIES:
+       :ID:       f8162753-b52f-4264-a52b-f8f79a37b3ae
+       :END:
+   [[file:hoaxly.org_imgs/20180119_145722_33193BZ.png]]
+
+   #+BEGIN_EXAMPLE
+   ☻ % git add portia_projects/hoaxlyPortia/spiders/ -p
+   ☻ % git commit portia_projects/hoaxlyPortia/spiders/
+   #+END_EXAMPLE
+
+   use a commit message that tells us what spider you are adding using which schema
+****** create a merge request
+       :PROPERTIES:
+       :ID:       b0b5e916-db45-4fa8-8e59-39a7951210d3
+       :END:
+   [[file:hoaxly.org_imgs/20180119_150000_3319EMf.png]]
+
+   assign it to someone for review
+
+
+
+   TODO: define a useful https://gitlab.acolono.net/help/user/project/description_templates for spider contributions
+***** Running a spider
+
+ This is useful for testing your spider locally before using it to retrieve data regularly.
+
+ For portia spiders: portiacrawl command [fn:1]
+ For spiders created programmatically: scrapy crawl cli command 
+
+
+   you will get a list of spiders if you run this command
+
+       docker exec portia  <PROJECT_PATH> [SPIDER] [OPTIONS]
+       docker exec portia portiacrawl /app/data/projects/hoaxlyPortia
+
+   for example try
+
+       docker exec portia portiacrawl /app/data/projects/hoaxlyPortia www.snopes.com -o /app/data/example-output/snopes-output.json
+       --settings=hoaxly
+
+
+
+
+
+
+
+**** Crawling service (scrapyd)
+
+ is a daemon that can be started to schedule runs
+
+
+  - https://doc.scrapy.org/en/latest/index.html
+  - http://scrapyd.readthedocs.io/en/latest/
+
+      root@0ee451559ce0:/app/data/projects/hoaxlyPortia# scrapy crawl snopes.com
+
+      docker exec portia scrapyd
+
+
+  #### Deploy to scrapyd and scheduling crawls using [scrapyd-client](https://github.com/scrapy/scrapyd-client)
+
+      ☻ % docker exec -ti portia bash
+      root@87a89036ec31:/app/slyd# cd /app/data/projects/hoaxlyPortia
+      root@3d4a705434fb:/app/data/projects/hoaxlyPortia# scrapyd-deploy -a
+
+      scrapyd-client deploy
+
+  once deployed you can interact directly with scrapyd through the webapi
+
+      scrapyd-client schedule -p hoaxlyPortia snopes.com
+      scrapyd-client schedule
+      curl http://localhost:6800/schedule.json -d project=HoaxlyPortia -d spider=www.theskepticsguide.org
+      curl http://localhost:6800/listprojects.json
+      curl http://localhost:6800/listspiders.json?project=HoaxlyPortia
+
+
+  A crawl can be scheduled to run regularly by deploying it to a dedicated server.
+
+  for portia spiders deployment should work normally but currently requires a workaround in our settings
+
+
+**** Settings
+
+**** Helpers
+
+  by default a running spider just outputs to screen or files.
+  by configuring a pipeline we can define where the data is also sent.
+
+  if you want to store everthing you can just pipe it to a storage service.
+  in most cases you will want to process the data beforehand in order to e.g. filter out unnecessary parts
+  - to do that we use middleware :: by configuring middleware we can manipulate the data or spider
+
+  - pipeline for storing in elasticsearch
+  - microdata middlware :: extract microdata along with visual data
+  - index & type pipelines :: compatibility layer to make bulk uploading to es work
+  
+
+
+**** docker container 
+ to be used in local dev and in production
+ Local dev environment
+
+* Footnotes
+
+[fn:1] http://portia.readthedocs.io/en/latest/spiders.html#running-a-spider
+
+
