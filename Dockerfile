@@ -1,4 +1,4 @@
-FROM portia-dev
+FROM portia
 
 RUN set -xe \
     && apt-get update \
