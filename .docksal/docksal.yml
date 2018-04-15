@@ -109,7 +109,7 @@ services:
     #hostname: spiderbreeder
     image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
     # use this to build image locally for working on the image
-    build: ${PROJECT_ROOT}
+    #build: ${PROJECT_ROOT}
     tty: true
     mem_limit: 1024m
     ports:
