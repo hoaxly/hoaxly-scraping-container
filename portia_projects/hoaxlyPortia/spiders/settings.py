@@ -23,15 +23,15 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 DUPEFILTER_DEBUG = True
 SPLASH_COOKIES_DEBUG = True
 SPIDER_MIDDLEWARES = {
-    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 1003,
-    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+    'hoaxlyHelpers.mymiddleware.MicrodataExtruction': 643,
+   # 'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
     'slybot.spiderlets.SpiderletsMiddleware': 999
 }
 
 ITEM_PIPELINES = {
-    'hoaxlyHelpers.mypipelines.TypePipeline': 700,
-    'hoaxlyHelpers.indexpipeline.IndexPipeline': 800,
-    'slybot.dupefilter.DupeFilterPipeline': 1,
+    'hoaxlyHelpers.mypipelines.TypePipeline': 400,
+    'hoaxlyHelpers.indexpipeline.IndexPipeline': 500,
+    'slybot.dupefilter.DupeFilterPipeline': 600,
     #'scrapy.dupefilters.DupeFilterPipeline': 100,
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 900
 }

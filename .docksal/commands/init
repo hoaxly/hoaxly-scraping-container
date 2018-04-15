@@ -74,9 +74,11 @@ install_python_helpers () {
   echo -e "${green_bg} init ${NC}${green} installing python requirements ...${NC}"
   cd $PROJECT_ROOT
   # install scrapyd client in our cli container
-  docker exec -ti hoaxlyscrapingcontainer_python_container_1 pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
-  # install our own helper package in portia container even though it should already be installed in the docker container but this allows installing it as [editable](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
-  #docker exec -ti portia pip install --editable /app/data/projects/packages
+docker exec  -ti cli pip install https://github.com/scrapy/scrapyd-client/archive/master.zip
+  # install our own helper package in scrapyd container even though it should already be installed in the docker container but this allows installing it as [editable](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs)
+
+#docker exec -ti scrapydaemon pip install --no-cache-dir -r /requirements.txt
+#docker exec -ti scrapydaemon pip install --editable /packages
 }
 
 remove_xpack () {
@@ -113,11 +115,7 @@ if is_windows; then
 fi
 
 
-
-# TODO: find a more generic way to execute commands in container or create a prepared image.
-
-remove_xpack
-#install_python_helpers
+install_python_helpers
 
 echo -en "${green_bg} DONE! ${NC} "
 echo -e "check your containers started by running fin status"

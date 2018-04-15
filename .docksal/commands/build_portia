@@ -15,10 +15,13 @@ fi
 		echo-red  "$PROJECT_ROOT/data already exists. aborting"
 	fi
 mkdir $PROJECT_ROOT/data
-git clone git@github.com:scrapinghub/portia.git
+git clone git@github.com:scrapinghub/portia.git --branch=develop
 cd portia/portiaui
 npm install && bower install
 cd node_modules/ember-cli && npm install && cd ../../
 ember build
 cd ..
+
+docker build . -t portia-dev
+
 #-------------------------- End Execution --------------------------------

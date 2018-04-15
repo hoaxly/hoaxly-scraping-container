@@ -1,14 +1,14 @@
-FROM scrapinghub/portia:slybot-0.13.0
+FROM scrapinghub/portia
 
 RUN set -xe \
     && apt-get update \
-    && dpkg --configure -a \
-    && apt-get install -f -y gcc \
-                          python3-dev python-dev \
-                          curl bash make build-essential
+    && dpkg --configure -a
+#    && apt-get install -f -y gcc \
+#                          python3-dev python-dev \
+#                          curl bash make build-essential
 RUN set -xe \
-    && apt-get install -f -y python-software-properties \
-                             software-properties-common
+#    && apt-get install -f -y python-software-properties \
+#                             software-properties-common
 #                            libtool xml-core libxml2-dev libxslt1-dev \
 #                            libxml2 zlib1g-dev libffi-dev \
 
@@ -26,6 +26,6 @@ RUN pip install  --no-cache-dir -r requirements.txt
 # finally our own helperPackage
 RUN pip install -e /app/data/projects/packages
 
-COPY ./scrapyd.conf /etc/scrapyd/
-VOLUME /etc/scrapyd/ /var/lib/scrapyd/
-EXPOSE 6800
+#COPY ./scrapyd.conf /etc/scrapyd/
+#VOLUME /etc/scrapyd/ /var/lib/scrapyd/
+#EXPOSE 6800
