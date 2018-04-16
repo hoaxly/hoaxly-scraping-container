@@ -21,3 +21,8 @@ private
 console
 
 portia
+
+scrapy_projects/build
+*.egg-info
+
+__pycache__

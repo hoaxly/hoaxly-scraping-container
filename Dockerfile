@@ -6,7 +6,7 @@ COPY portia_projects/requirements.txt .
 # our helper package
 COPY portia_projects/packages /app/data/projects/packages
 # our current spiders
-COPY portia_projects/hoaxlyPortia /app/data/projects/hoaxlyPortia
+COPY portia_projects/Hoaxlyspiders /app/data/projects/Hoaxlyspiders
 
 
 # and our own requirements

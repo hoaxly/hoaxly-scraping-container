@@ -9,13 +9,21 @@ from scrapy.spiders import Rule
 from ..utils.spiders import BasePortiaSpider
 from ..utils.starturls import FeedGenerator, FragmentGenerator
 from ..utils.processors import Item, Field, Text, Number, Price, Date, Url, Image, Regex
-from ..items import HoaxlyinboxschemaItem, PortiaItem
+from ..items import PortiaItem, HoaxlyinboxschemaItem
 
 
 class ClimatefeedbackOrg(BasePortiaSpider):
     name = "climatefeedback.org"
     allowed_domains = ['climatefeedback.org']
-    start_urls = ['https://climatefeedback.org/claim-reviews/']
+    start_urls = ['https://climatefeedback.org/claim-reviews/',
+                  {'type': 'generated',
+                   'url': 'https://climatefeedback.org/claim-reviews/[2-4]',
+                   'fragments': [{'type': 'fixed',
+                                  'value': 'https://climatefeedback.org/claim-reviews/',
+                                  'valid': True},
+                                 {'type': 'range',
+                                  'value': '2-4',
+                                  'valid': True}]}]
     rules = [
         Rule(
             LinkExtractor(

@@ -14,6 +14,22 @@
         {
             "type": "url", 
             "url": "https://climatefeedback.org/claim-reviews/"
+        }, 
+        {
+            "type": "generated", 
+            "url": "https://climatefeedback.org/claim-reviews/[2-4]", 
+            "fragments": [
+                {
+                    "type": "fixed", 
+                    "value": "https://climatefeedback.org/claim-reviews/", 
+                    "valid": true
+                }, 
+                {
+                    "type": "range", 
+                    "value": "2-4", 
+                    "valid": true
+                }
+            ]
         }
     ]
 }

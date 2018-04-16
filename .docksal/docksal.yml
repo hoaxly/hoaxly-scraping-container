@@ -15,7 +15,8 @@ services:
 
   hoaxly-storage-container:
     container_name: storage-container
-    image: registry.acolono.net:444/hoaxly/hoaxly-storage-container:latest
+    hostname: hoaxly-storage-container
+    image: registry.acolono.net:444/hoaxly/hoaxly-storage-container:develop
     mem_limit: 3g
     ulimits:
       memlock:
@@ -91,7 +92,7 @@ services:
   hoaxly-scraping-container:
     container_name: scrapydaemon
 #    hostname: scrapydaemon.hoaxly.docksal
-    image: registry.acolono.net:444/hoaxly/hoaxly-scrapydaemon-container
+    image: registry.acolono.net:444/hoaxly/hoaxly-scrapydaemon-container:develop
     ports:
       - "6800:6800"
     volumes:
@@ -107,7 +108,7 @@ services:
   hoaxly-spiderbreeder-container:
     container_name: hoaxly-spiderbreeder-container
     #hostname: spiderbreeder
-    image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container
+    image: registry.acolono.net:444/hoaxly/hoaxly-scraping-container:develop
     # use this to build image locally for working on the image
     #build: ${PROJECT_ROOT}
     tty: true
