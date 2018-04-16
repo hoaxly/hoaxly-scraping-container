@@ -51,6 +51,18 @@
 
     This repo contains:
 
+#+COLUMNS: %25ITEM
+#+BEGIN: columnview :hlines 1 :id local :maxlevel 4 :indent t
+| ITEM                                                    |
+|---------------------------------------------------------|
+| \_    Hoaxly Crawler Components                         |
+| \_      Visual Spider Builder (Portia):                 |
+| \_      Deploy to Production Crawling service (scrapyd) |
+| \_      Settings                                        |
+| \_      Helpers middleware                              |
+| \_      Distributed as Docker container registry        |
+#+END:
+
 **** Visual Spider Builder (Portia):
      A spider describes what data we want to fetch and which pages to crawl searching for that data.
 ***** Visit the [webinterface of portia](http://hoaxly.docksal:9001/#/projects): use this to build new spiders
@@ -220,7 +232,6 @@ docker exec -ti cli /bin/bash
       http://elastic.hoaxly.docksal:9200/hoaxly/_search
 
 
-
 **** Deploy to Production Crawling service (scrapyd)
 
      Scrapyd is a daemon that can be started to schedule runs
@@ -272,7 +283,6 @@ docker exec -ti cli /bin/bash
      - pipeline for storing in elasticsearch
      - microdata middlware :: extract microdata along with visual data
      - index & type pipelines :: compatibility layer to make bulk uploading to es work
-
 
 
 **** Distributed as Docker container registry
