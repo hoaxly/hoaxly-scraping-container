@@ -76,7 +76,7 @@
                 "name": "itemReviewed", 
                 "required": false, 
                 "type": "url", 
-                "vary": true
+                "vary": false
             }, 
             "3a3d-41b8-8eb2": {
                 "id": "3a3d-41b8-8eb2", 

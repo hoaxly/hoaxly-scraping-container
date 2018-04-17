@@ -202,22 +202,18 @@
                 }, 
                 {
                     "accept_selectors": [
-                        ".entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text"
+                        ".entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(3) > .fa"
                     ], 
                     "container_id": "b9ca-4385-aa09", 
                     "data": {
-                        "7a00-41db-8da4": {
-                            "attribute": "content", 
-                            "extractors": [
-                                "169a-4c55-8703", 
-                                "d820-4db7-b8d0", 
-                                "d907-4a5f-8ec1"
-                            ], 
+                        "ebe9-4b7d-9b96": {
+                            "attribute": "aria-hidden", 
+                            "extractors": {}, 
                             "field": "550d-4023-9596", 
-                            "required": false
+                            "required": true
                         }
                     }, 
-                    "id": "9a73-4c13-a7ee", 
+                    "id": "451e-47aa-9ad8", 
                     "text-content": "content", 
                     "post_text": null, 
                     "pre_text": null, 
@@ -225,9 +221,9 @@
                     "required": [], 
                     "repeated": false, 
                     "selection_mode": "css", 
-                    "selector": ".entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text", 
+                    "selector": ".entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(3) > .fa", 
                     "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" mb2 \")]/p/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" mb2 \")]/p/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]/a[3]/*[contains(concat(\" \", @class, \" \"), \" fa \")]"
                 }
             ]
         }
