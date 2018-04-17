@@ -9,21 +9,21 @@ from scrapy.spiders import Rule
 from ..utils.spiders import BasePortiaSpider
 from ..utils.starturls import FeedGenerator, FragmentGenerator
 from ..utils.processors import Item, Field, Text, Number, Price, Date, Url, Image, Regex
-from ..items import PortiaItem, HoaxlyinboxschemaItem
+from ..items import ItemreviewedItem, HoaxlyinboxschemaItem, PortiaItem
 
 
 class ClimatefeedbackOrg(BasePortiaSpider):
     name = "climatefeedback.org"
     allowed_domains = ['climatefeedback.org']
     start_urls = ['https://climatefeedback.org/claim-reviews/',
-                  {'type': 'generated',
-                   'url': 'https://climatefeedback.org/claim-reviews/[2-4]',
-                   'fragments': [{'type': 'fixed',
-                                  'value': 'https://climatefeedback.org/claim-reviews/',
-                                  'valid': True},
-                                 {'type': 'range',
-                                  'value': '2-4',
-                                  'valid': True}]}]
+                  {'url': 'https://climatefeedback.org/claim-reviews/[2-4]',
+                   'fragments': [{'valid': True,
+                                  'type': 'fixed',
+                                  'value': 'https://climatefeedback.org/claim-reviews/'},
+                                 {'valid': True,
+                                  'type': 'range',
+                                  'value': '2-4'}],
+                   'type': 'generated'}]
     rules = [
         Rule(
             LinkExtractor(
@@ -37,43 +37,35 @@ class ClimatefeedbackOrg(BasePortiaSpider):
     items = [
         [
             Item(
-                HoaxlyinboxschemaItem,
-                None,
-                '.main',
+                ItemreviewedItem,
+                'itemReviewed',
+                'span.fact-check-card__details__text > a:nth-child(3)',
                 [
                     Field(
-                        'factoidHeadline',
+                        '957a-4a8e-9a89',
                         'header > .entry-title *::text',
                         []),
                     Field(
-                        'factoidContent',
+                        '7dd4-41ea-857d',
                         '.entry-content *::text',
                         []),
                     Field(
-                        'factoidSummary',
-                        '.fact-check-card *::text',
+                        '2c4e-415e-a6a5',
+                        '.entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2) > div:nth-child(2) *::text',
                         []),
                     Field(
-                        'factoidClaim',
-                        '.entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(2) *::text',
+                        '1e1b-498a-b66a',
+                        '.entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3) > div:nth-child(2) > .fact-check-card__row__verdict__img::attr(src)',
                         []),
                     Field(
-                        'factoidVerdict',
-                        '.entry-content > .fact-check-card > .fact-check-card__row > div:nth-child(3) *::text',
-                        []),
-                    Field(
-                        'factoidRating',
-                        '.fact-check-card__row__verdict__img::attr(src)',
-                        []),
-                    Field(
-                        'factoidSourceUrls',
-                        '.fact-check-card__details__text > a::attr(href)',
-                        []),
-                    Field(
-                        'factoidTags',
+                        'd4cf-419d-ab88',
                         '.bot-tag > a::attr(href)',
                         []),
                     Field(
-                        'factoidPubdate',
-                        'p:nth-child(3) *::text',
+                        '9316-4a62-a60a',
+                        '.main > p:nth-child(3) *::text',
+                        []),
+                    Field(
+                        '3a3d-41b8-8eb2',
+                        '.expert-widget > .wid-body *::text',
                         [])])]]

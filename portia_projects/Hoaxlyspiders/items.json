@@ -70,8 +70,34 @@
                 "required": false, 
                 "type": "image", 
                 "vary": false
+            }, 
+            "550d-4023-9596": {
+                "id": "550d-4023-9596", 
+                "name": "itemReviewed", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }, 
+            "3a3d-41b8-8eb2": {
+                "id": "3a3d-41b8-8eb2", 
+                "name": "factoidReviewers", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
             }
         }, 
         "name": "HoaxlyInboxSchema"
+    }, 
+    "aabb-4e41-9d16": {
+        "fields": {
+            "8c77-4191-8daf": {
+                "id": "8c77-4191-8daf", 
+                "name": "field1", 
+                "required": false, 
+                "type": "url", 
+                "vary": false
+            }
+        }, 
+        "name": "itemReviewed"
     }
 }
