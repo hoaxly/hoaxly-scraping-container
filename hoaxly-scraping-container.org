@@ -46,6 +46,7 @@
       #+BEGIN_EXAMPLE
         fin init
       #+END_EXAMPLE
+      Open your preferred browser and go to: http://portia.hoaxly.docksal
 
 *** Hoaxly Crawler Components
 

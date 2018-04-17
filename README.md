@@ -50,3 +50,5 @@ In your project's rootfolder, run:
 
     fin init
 
+Open your preferred browser and go to: http://portia.hoaxly.docksal
+
