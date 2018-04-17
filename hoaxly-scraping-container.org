@@ -15,7 +15,7 @@
     Portia is an abstraction layer on top of scrapy that provides a UI in the browser for creating spiders.
     Portia spiders can be exported in two ways (portia and scrapy)
     This is a portia spiders collection for crawling websites and scraping content.
-       
+
     A running spider is called a crawler.
     A spider crawl can be triggered manually to fetch data once or scheduled to crawl on a regular basis to fetch
     data continuously. During a crawl the spider retrieves data and outputs it to a target (stdout, json files etc.)
@@ -186,7 +186,7 @@
       This is useful for testing your spider locally before using it to retrieve data regularly.
 
       For portia spiders: portiacrawl command [fn:1]
-      For spiders created programmatically: scrapy crawl cli command 
+      For spiders created programmatically: scrapy crawl cli command
 
 
       you will get a list of spiders if you run this command
@@ -251,14 +251,14 @@ docker exec -ti cli /bin/bash
 
      #+BEGIN_EXAMPLE
      docker exec -ti cli bash
-     scrapyd-client -t https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/ schedule -p hoaxlyPortia climatefeedback.org
+     scrapyd-client -t https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/ schedule -p Hoaxlyspiders climatefeedback.org
      #+END_EXAMPLE
 
      or from anywhere else.
 
-     curl https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/schedule.json -d project=HoaxlyPortia -d spider=www.theskepticsguide.org
+     curl https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/schedule.json -d project=Hoaxlyspiders -d spider=climatefeedback.org
      curl https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/listprojects.json
-     curl https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/listspiders.json?project=HoaxlyPortia
+     curl https://htaccessusername:htaccesspassword@scrapyd.hoax.ly/listspiders.json?project=Hoaxlyspiders
 
 
      A crawl can be scheduled to run regularly by deploying it to a dedicated server.
@@ -355,13 +355,11 @@ pages:
 *** Hoaxly Container Ports (and adapters)
     to talk to the other hoaxly containers
 **** the spiderbuilder is exposed on 9001
-**** the spiderrunner 
+**** the spiderrunner
 ***** exposes port 6800 to allow scheduling spiders
-      scrapyd, if running, can be interacted with 
+      scrapyd, if running, can be interacted with
 ***** tries to use port 9200 an 9300 to write to Storage Container via
-      Elasticsearch via scrapyelasticsearch python library   
+      Elasticsearch via scrapyelasticsearch python library
 * Footnotes
 
 [fn:1] http://portia.readthedocs.io/en/latest/spiders.html#running-a-spider
-
-

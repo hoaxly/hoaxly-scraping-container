@@ -10,5 +10,13 @@
     "68e7-4ed9-976d": {
         "id": "68e7-4ed9-976d", 
         "type_extractor": "image"
+    }, 
+    "169a-4c55-8703": {
+        "id": "169a-4c55-8703", 
+        "type_extractor": "url"
+    }, 
+    "d907-4a5f-8ec1": {
+        "id": "d907-4a5f-8ec1", 
+        "type_extractor": "date"
     }
 }

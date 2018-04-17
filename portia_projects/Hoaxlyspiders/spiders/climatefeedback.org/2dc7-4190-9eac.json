@@ -98,47 +98,6 @@
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row \")]/div[3]/div[2]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__row__verdict__img \")]"
                 }, 
                 {
-                    "annotations": {
-                        "#portia-content": "#dummy"
-                    }, 
-                    "container_id": "b9ca-4385-aa09", 
-                    "field": "itemReviewed", 
-                    "id": "7d9e-4bd2-a96c", 
-                    "item_container": true, 
-                    "repeated": false, 
-                    "required": [], 
-                    "schema_id": "aabb-4e41-9d16", 
-                    "selector": ".main > .post-8206 > .entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(3)", 
-                    "siblings": 0, 
-                    "tagid": null, 
-                    "text-content": "#portia-content"
-                }, 
-                {
-                    "accept_selectors": [
-                        " .entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(3) > .fa"
-                    ], 
-                    "container_id": "7d9e-4bd2-a96c", 
-                    "data": {
-                        "94f2-47b3-b8e9": {
-                            "attribute": "aria-hidden", 
-                            "extractors": {}, 
-                            "field": "493c-42a2-b8e5", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "21c6-49bb-b0c1", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "css", 
-                    "selector": ".main > .post-8206 > .entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text > a:nth-child(3) > .fa", 
-                    "tagid": null, 
-                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" main \")]/*[contains(concat(\" \", @class, \" \"), \" post-8206 \")]/*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" mb2 \")]/p/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]/a[3]/*[contains(concat(\" \", @class, \" \"), \" fa \")]"
-                }, 
-                {
                     "accept_selectors": [
                         ".content > .sidebar > .widget-last > .textwidget > .row"
                     ], 
@@ -240,6 +199,35 @@
                     "selector": ".entry-content", 
                     "tagid": null, 
                     "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text"
+                    ], 
+                    "container_id": "b9ca-4385-aa09", 
+                    "data": {
+                        "7a00-41db-8da4": {
+                            "attribute": "content", 
+                            "extractors": [
+                                "169a-4c55-8703", 
+                                "d820-4db7-b8d0", 
+                                "d907-4a5f-8ec1"
+                            ], 
+                            "field": "550d-4023-9596", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "9a73-4c13-a7ee", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".entry-content > .fact-check-card > div:nth-child(2) > .mb2 > p > .fact-check-card__details__text", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" entry-content \")]/*[contains(concat(\" \", @class, \" \"), \" fact-check-card \")]/div[2]/*[contains(concat(\" \", @class, \" \"), \" mb2 \")]/p/*[contains(concat(\" \", @class, \" \"), \" fact-check-card__details__text \")]"
                 }
             ]
         }
