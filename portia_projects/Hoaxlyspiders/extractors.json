@@ -1,1 +1,22 @@
-{}
+{
+    "d820-4db7-b8d0": {
+        "id": "d820-4db7-b8d0", 
+        "type_extractor": "text"
+    }, 
+    "d3f4-46f8-ace6": {
+        "id": "d3f4-46f8-ace6", 
+        "type_extractor": "safe html"
+    }, 
+    "68e7-4ed9-976d": {
+        "id": "68e7-4ed9-976d", 
+        "type_extractor": "image"
+    }, 
+    "169a-4c55-8703": {
+        "id": "169a-4c55-8703", 
+        "type_extractor": "url"
+    }, 
+    "d907-4a5f-8ec1": {
+        "id": "d907-4a5f-8ec1", 
+        "type_extractor": "date"
+    }
+}

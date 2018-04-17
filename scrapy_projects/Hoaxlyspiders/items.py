@@ -32,20 +32,16 @@ class PortiaItem(scrapy.Item):
 
 
 class HoaxlyinboxschemaItem(PortiaItem):
-    factoidRating = scrapy.Field(
-        input_processor=Image(),
-        output_processor=Join(),
-    )
     factoidVerdict = scrapy.Field(
         input_processor=Text(),
         output_processor=Join(),
     )
-    factoidClaim = scrapy.Field(
-        input_processor=Text(),
+    factoidRating = scrapy.Field(
+        input_processor=Image(),
         output_processor=Join(),
     )
-    factoidRatingValue = scrapy.Field(
-        input_processor=Image(),
+    factoidHeadline = scrapy.Field(
+        input_processor=Text(),
         output_processor=Join(),
     )
     factoidSourceUrls = scrapy.Field(
@@ -56,19 +52,35 @@ class HoaxlyinboxschemaItem(PortiaItem):
         input_processor=Text(),
         output_processor=Join(),
     )
-    factoidHeadline = scrapy.Field(
+    factoidClaim = scrapy.Field(
         input_processor=Text(),
         output_processor=Join(),
     )
-    factoidContent = scrapy.Field(
-        input_processor=Identity(),
+    factoidPubdate = scrapy.Field(
+        input_processor=Date(),
+        output_processor=Join(),
+    )
+    factoidRatingValue = scrapy.Field(
+        input_processor=Image(),
+        output_processor=Join(),
+    )
+    itemReviewed = scrapy.Field(
+        input_processor=Url(),
+        output_processor=Join(),
+    )
+    claimReviewers = scrapy.Field(
+        input_processor=Text(),
         output_processor=Join(),
     )
     factoidTags = scrapy.Field(
         input_processor=Url(),
         output_processor=Join(),
     )
-    factoidPubdate = scrapy.Field(
-        input_processor=Date(),
+    factoidReviewers = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
+    factoidContent = scrapy.Field(
+        input_processor=Identity(),
         output_processor=Join(),
     )

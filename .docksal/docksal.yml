@@ -17,6 +17,7 @@ services:
     container_name: storage-container
     hostname: hoaxly-storage-container
     image: registry.acolono.net:444/hoaxly/hoaxly-storage-container:develop
+    hostname: storage-container
     mem_limit: 3g
     ulimits:
       memlock:
@@ -26,7 +27,7 @@ services:
         soft: 65536
         hard: 65536
     labels:
-      - io.docksal.virtual-host=elastic.${VIRTUAL_HOST}
+      - io.docksal.virtual-host=storage-container.${VIRTUAL_HOST}
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -125,6 +126,15 @@ services:
       # when testing manual runs to file mount this
       #- ${PROJECT_ROOT}/example-output:/app/data/example-output:rw
 
+# this is a demo of how to use the seperate api container
+  hoaxly-api-container:
+    container_name: hoaxly-api-container
+    hostname: hoaxly-api-container
+    image: registry.acolono.net:444/hoaxly/hoaxly-api-container:latest
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
 
 volumes:
   esdata2:
