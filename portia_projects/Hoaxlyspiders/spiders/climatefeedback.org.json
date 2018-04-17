@@ -12,11 +12,10 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "type": "url", 
-            "url": "https://climatefeedback.org/claim-reviews/"
+            "url": "https://climatefeedback.org/claim-reviews/", 
+            "type": "url"
         }, 
         {
-            "type": "generated", 
             "url": "https://climatefeedback.org/claim-reviews/[2-4]", 
             "fragments": [
                 {
@@ -29,7 +28,8 @@
                     "value": "2-4", 
                     "valid": true
                 }
-            ]
+            ], 
+            "type": "generated"
         }
     ]
 }

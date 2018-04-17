@@ -31,47 +31,8 @@ class PortiaItem(scrapy.Item):
         return string
 
 
-class ItemreviewedItem(PortiaItem):
-    field1 = scrapy.Field(
-        input_processor=Url(),
-        output_processor=Join(),
-    )
-
-
 class HoaxlyinboxschemaItem(PortiaItem):
-    factoidTags = scrapy.Field(
-        input_processor=Url(),
-        output_processor=Join(),
-    )
-    factoidRatingValue = scrapy.Field(
-        input_processor=Image(),
-        output_processor=Join(),
-    )
-    itemReviewed = scrapy.Field(
-        input_processor=Url(),
-        output_processor=Join(),
-    )
-    factoidClaim = scrapy.Field(
-        input_processor=Text(),
-        output_processor=Join(),
-    )
-    factoidReviewers = scrapy.Field(
-        input_processor=Text(),
-        output_processor=Join(),
-    )
-    factoidSourceUrls = scrapy.Field(
-        input_processor=Url(),
-        output_processor=Join(),
-    )
-    factoidSummary = scrapy.Field(
-        input_processor=Text(),
-        output_processor=Join(),
-    )
-    factoidContent = scrapy.Field(
-        input_processor=Identity(),
-        output_processor=Join(),
-    )
-    factoidHeadline = scrapy.Field(
+    factoidVerdict = scrapy.Field(
         input_processor=Text(),
         output_processor=Join(),
     )
@@ -79,11 +40,50 @@ class HoaxlyinboxschemaItem(PortiaItem):
         input_processor=Date(),
         output_processor=Join(),
     )
+    itemReviewed = scrapy.Field(
+        input_processor=Url(),
+        output_processor=Join(),
+    )
+    factoidSourceUrls = scrapy.Field(
+        input_processor=Url(),
+        output_processor=Join(),
+    )
     factoidRating = scrapy.Field(
         input_processor=Image(),
         output_processor=Join(),
     )
-    factoidVerdict = scrapy.Field(
+    factoidRatingValue = scrapy.Field(
+        input_processor=Image(),
+        output_processor=Join(),
+    )
+    factoidClaim = scrapy.Field(
         input_processor=Text(),
+        output_processor=Join(),
+    )
+    factoidHeadline = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
+    factoidSummary = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
+    factoidTags = scrapy.Field(
+        input_processor=Url(),
+        output_processor=Join(),
+    )
+    factoidReviewers = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
+    factoidContent = scrapy.Field(
+        input_processor=Identity(),
+        output_processor=Join(),
+    )
+
+
+class ItemreviewedItem(PortiaItem):
+    field1 = scrapy.Field(
+        input_processor=Url(),
         output_processor=Join(),
     )
