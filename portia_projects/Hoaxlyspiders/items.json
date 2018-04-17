@@ -91,27 +91,15 @@
                 "required": false, 
                 "type": "text", 
                 "vary": false
+            }, 
+            "3df2-4fbb-bb27": {
+                "id": "3df2-4fbb-bb27", 
+                "name": "", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
             }
         }, 
         "name": "HoaxlyInboxSchema"
-    }, 
-    "aabb-4e41-9d16": {
-        "fields": {
-            "8c77-4191-8daf": {
-                "id": "8c77-4191-8daf", 
-                "name": "itemReviewedUrl", 
-                "required": false, 
-                "type": "url", 
-                "vary": false
-            }, 
-            "493c-42a2-b8e5": {
-                "id": "493c-42a2-b8e5", 
-                "name": "claimSourceUrl", 
-                "required": false, 
-                "type": "url", 
-                "vary": false
-            }
-        }, 
-        "name": "itemReviewed"
     }
 }
