@@ -72,6 +72,10 @@ class HoaxlyinboxschemaItem(PortiaItem):
         input_processor=Url(),
         output_processor=Join(),
     )
+    claimReviewers = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
     factoidReviewers = scrapy.Field(
         input_processor=Text(),
         output_processor=Join(),
@@ -83,7 +87,11 @@ class HoaxlyinboxschemaItem(PortiaItem):
 
 
 class ItemreviewedItem(PortiaItem):
-    field1 = scrapy.Field(
+    itemReviewedUrl = scrapy.Field(
+        input_processor=Url(),
+        output_processor=Join(),
+    )
+    claimSourceUrl = scrapy.Field(
         input_processor=Url(),
         output_processor=Join(),
     )

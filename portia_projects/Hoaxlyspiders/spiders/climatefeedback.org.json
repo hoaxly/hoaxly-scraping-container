@@ -12,21 +12,21 @@
     "respect_nofollow": false, 
     "start_urls": [
         {
-            "url": "https://climatefeedback.org/claim-reviews/", 
+            "url": "https://climatefeedback.org/claimreview/rush-limbaugh-falsely-claims-there-is-no-evidence-of-human-caused-global-warming/", 
             "type": "url"
         }, 
         {
             "url": "https://climatefeedback.org/claim-reviews/[2-4]", 
             "fragments": [
                 {
-                    "type": "fixed", 
                     "value": "https://climatefeedback.org/claim-reviews/", 
-                    "valid": true
+                    "valid": true, 
+                    "type": "fixed"
                 }, 
                 {
-                    "type": "range", 
                     "value": "2-4", 
-                    "valid": true
+                    "valid": true, 
+                    "type": "range"
                 }
             ], 
             "type": "generated"
