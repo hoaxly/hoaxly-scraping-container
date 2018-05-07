@@ -74,9 +74,9 @@
             "550d-4023-9596": {
                 "id": "550d-4023-9596", 
                 "name": "itemReviewed", 
-                "required": false, 
+                "required": true, 
                 "type": "url", 
-                "vary": false
+                "vary": true
             }, 
             "3a3d-41b8-8eb2": {
                 "id": "3a3d-41b8-8eb2", 
@@ -98,6 +98,20 @@
                 "required": false, 
                 "type": "text", 
                 "vary": false
+            }, 
+            "0677-4e16-b7d5": {
+                "id": "0677-4e16-b7d5", 
+                "name": "claimSource", 
+                "required": false, 
+                "type": "text", 
+                "vary": false
+            }, 
+            "5150-4456-8f7b": {
+                "id": "5150-4456-8f7b", 
+                "name": "claimOrigin", 
+                "required": false, 
+                "type": "safe html", 
+                "vary": true
             }
         }, 
         "name": "HoaxlyInboxSchema"
