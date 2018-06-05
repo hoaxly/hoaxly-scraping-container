@@ -1,0 +1,182 @@
+{
+    "extractors": {}, 
+    "id": "fe69-45de-9287", 
+    "name": "Fact check Smelling farts may be good for your h", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "f7a4-46fb-8964", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "59e6-4047-b5de", 
+                    "selector": ".article-page", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        "h1 > a"
+                    ], 
+                    "container_id": "f7a4-46fb-8964", 
+                    "data": {
+                        "c901-4eea-afd4": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "957a-4a8e-9a89", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "1b43-457f-a586", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-page > div:nth-child(1) > h1 > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-page \")]/div[1]/h1/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".tag > span"
+                    ], 
+                    "container_id": "f7a4-46fb-8964", 
+                    "data": {
+                        "4070-4f95-8656": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "1e1b-498a-b66a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "236e-4423-8017", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-page > .row > .col-md-8 > .contribution > .content > h3 > .tag > span", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-page \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/*[contains(concat(\" \", @class, \" \"), \" col-md-8 \")]/*[contains(concat(\" \", @class, \" \"), \" contribution \")]/*[contains(concat(\" \", @class, \" \"), \" content \")]/h3/*[contains(concat(\" \", @class, \" \"), \" tag \")]/span"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".text"
+                    ], 
+                    "container_id": "f7a4-46fb-8964", 
+                    "data": {
+                        "9265-493e-910c": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "ccb4-4209-b417", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0846-4f51-b51d", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-page > .row > .col-md-8 > .contribution > .content > .text", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-page \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/*[contains(concat(\" \", @class, \" \"), \" col-md-8 \")]/*[contains(concat(\" \", @class, \" \"), \" contribution \")]/*[contains(concat(\" \", @class, \" \"), \" content \")]/*[contains(concat(\" \", @class, \" \"), \" text \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        "#original-link"
+                    ], 
+                    "container_id": "f7a4-46fb-8964", 
+                    "data": {
+                        "212a-431f-a847": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "550d-4023-9596", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "54d3-4711-b59c", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-page > .row > .col-md-8 > div:nth-child(1) > .summary > a:nth-child(4)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-page \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/*[contains(concat(\" \", @class, \" \"), \" col-md-8 \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" summary \")]/a[4]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".summary > p"
+                    ], 
+                    "container_id": "f7a4-46fb-8964", 
+                    "data": {
+                        "e1e6-4f6a-b7b9": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "2c4e-415e-a6a5", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0bb4-4956-9e2e", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-page > .row > .col-md-8 > div:nth-child(1) > .summary > p", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-page \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/*[contains(concat(\" \", @class, \" \"), \" col-md-8 \")]/div[1]/*[contains(concat(\" \", @class, \" \"), \" summary \")]/p"
+                }, 
+                {
+                    "accept_selectors": [
+                        "ul:nth-child(4) > li > a"
+                    ], 
+                    "container_id": "f7a4-46fb-8964", 
+                    "data": {
+                        "0c71-4478-b1eb": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "4f7e-4800-af1b", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "23ab-450e-ab9a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-page > .row > .col-md-4 > div > ul:nth-child(4) > li > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-page \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/*[contains(concat(\" \", @class, \" \"), \" col-md-4 \")]/div/ul[4]/li/a"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "59e6-4047-b5de", 
+    "spider": "unfake.us", 
+    "url": "https://unfake.us/article/9/smelling-farts-may-be-good-for-your-health/", 
+    "version": "0.13.2"
+}
