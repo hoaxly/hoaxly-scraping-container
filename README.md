@@ -22,7 +22,9 @@ data continuously. During a crawl the spider retrieves data and outputs it to a 
 
 -   docker-2.3.0
 -   docker-compose-1.13.0
--   
+-   docksal
+
+ 
 if you run docker from the terminal it's ok.
 
 <span class="underline">Note:</span> make sure to run this on your host.
