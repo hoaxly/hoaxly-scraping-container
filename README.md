@@ -25,7 +25,7 @@ data continuously. During a crawl the spider retrieves data and outputs it to a 
 -   docksal
 
  
-if you run docker from the terminal it's ok.
+if you can run docker from the terminal it's ok.
 
 <span class="underline">Note:</span> make sure to run this on your host.
 This is needed for elasticsearch to work [4]
