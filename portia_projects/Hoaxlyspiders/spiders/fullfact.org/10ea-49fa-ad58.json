@@ -1,0 +1,229 @@
+{
+    "extractors": {}, 
+    "id": "10ea-49fa-ad58", 
+    "name": "Social care whats the situation - Full Fact", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "5a47-4394-a61d#parent", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "59e6-4047-b5de", 
+                    "selector": "#mainContainer > .row", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": "5a47-4394-a61d#parent", 
+                    "id": "5a47-4394-a61d", 
+                    "item_container": true, 
+                    "repeated": true, 
+                    "required": [], 
+                    "schema_id": "59e6-4047-b5de", 
+                    "selector": ".box-panel > div", 
+                    "siblings": 0, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".header > h1"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "ac6e-449c-9359": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "957a-4a8e-9a89", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2783-4d7d-be24", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".header > h1", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" header \")]/h1"
+                }, 
+                {
+                    "accept_selectors": [
+                        "p.visible-xs", 
+                        "p.hidden-xs"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "9e07-43de-8930": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "9316-4a62-a60a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "b29d-45a2-aedc", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".date", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" date \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".box-panel > .inner-row > .col-left > p", 
+                        ".briefAdditionalRows:nth-child(2) > .inner-row > .col-left > p", 
+                        ".briefAdditionalRows:nth-child(3) > .inner-row > .col-left > p", 
+                        ".briefAdditionalRows:nth-child(4) > .inner-row > .col-left > p"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "d3a6-4d5b-82cd": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "2c4e-415e-a6a5", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2f5c-499d-a0d4", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".box-panel > div > .col-left > p, .box-panel > div > .inner-row > .col-left > p", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" box-panel \")]/div/*[contains(concat(\" \", @class, \" \"), \" col-left \")]/p | //*[contains(concat(\" \", @class, \" \"), \" box-panel \")]/div/*[contains(concat(\" \", @class, \" \"), \" inner-row \")]/*[contains(concat(\" \", @class, \" \"), \" col-left \")]/p"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".box-panel > .inner-row > .col-right > p", 
+                        ".briefAdditionalRows:nth-child(2) > .inner-row > .col-right > p", 
+                        ".briefAdditionalRows:nth-child(3) > .inner-row > .col-right > p"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "28bf-49b4-961c": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "ccb4-4209-b417", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "26df-4e30-90ab", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": ".box-panel > div > .col-right > p, .box-panel > div > .inner-row > .col-right > p", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" box-panel \")]/div/*[contains(concat(\" \", @class, \" \"), \" col-right \")]/p | //*[contains(concat(\" \", @class, \" \"), \" box-panel \")]/div/*[contains(concat(\" \", @class, \" \"), \" inner-row \")]/*[contains(concat(\" \", @class, \" \"), \" col-right \")]/p"
+                }, 
+                {
+                    "accept_selectors": [
+                        "blockquote:nth-child(1)", 
+                        "blockquote:nth-child(2)"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "2fa9-4de7-a4ed": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "0677-4e16-b7d5", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "03f8-4a2c-9ac8", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "auto", 
+                    "selector": "blockquote", 
+                    "tagid": null, 
+                    "xpath": "//blockquote"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".post-content-footer-author"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "0422-4ba2-ae3b": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "4f7e-4800-af1b", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "3e0a-4e2a-92cf", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".post-content-footer-author", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" post-content-footer-author \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-post-content > .row > .col-xs-12"
+                    ], 
+                    "container_id": "5a47-4394-a61d", 
+                    "data": {
+                        "c9ca-4140-8393": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "7dd4-41ea-857d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "f9c6-4f59-b8e1", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "auto", 
+                    "selector": ".article-post-content > .row > .col-xs-12", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-post-content \")]/*[contains(concat(\" \", @class, \" \"), \" row \")]/*[contains(concat(\" \", @class, \" \"), \" col-xs-12 \")]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "59e6-4047-b5de", 
+    "spider": "fullfact.org", 
+    "url": "https://fullfact.org/health/social-care-whats-situation/", 
+    "version": "0.13.2"
+}
