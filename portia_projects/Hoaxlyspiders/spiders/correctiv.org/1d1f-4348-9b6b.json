@@ -18,13 +18,13 @@
                     "required": [], 
                     "schema_id": "59e6-4047-b5de", 
                     "selector": "#entry-2578", 
-                    "siblings": 0, 
+                    "siblings": 1, 
                     "tagid": null, 
                     "text-content": "#portia-content"
                 }, 
                 {
                     "accept_selectors": [
-                        ".article-header__headline"
+                        ".article-header > .article-header__headline-group > .article-header__headline"
                     ], 
                     "container_id": "2f40-4e49-bde2", 
                     "data": {
@@ -42,14 +42,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-header > .article-header__headline-group > .article-header__headline", 
+                    "selection_mode": "css", 
+                    "selector": ".article-header > .article-header__headline-group > .article-header__headline", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-header \")]/*[contains(concat(\" \", @class, \" \"), \" article-header__headline-group \")]/*[contains(concat(\" \", @class, \" \"), \" article-header__headline \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-header \")]/*[contains(concat(\" \", @class, \" \"), \" article-header__headline-group \")]/*[contains(concat(\" \", @class, \" \"), \" article-header__headline \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".article-body__publishing-date"
+                        ".article-body > .article-body__aside > .article-body__publishing-date"
                     ], 
                     "container_id": "2f40-4e49-bde2", 
                     "data": {
@@ -67,14 +67,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-body > .article-body__aside > .article-body__publishing-date", 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__aside > .article-body__publishing-date", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__aside \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__publishing-date \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__aside \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__publishing-date \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".fn"
+                        ".article-body > .article-body__aside > .vcard > .fn"
                     ], 
                     "container_id": "2f40-4e49-bde2", 
                     "data": {
@@ -92,14 +92,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-body > .article-body__aside > .vcard > .fn", 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__aside > .vcard > .fn", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__aside \")]/*[contains(concat(\" \", @class, \" \"), \" vcard \")]/*[contains(concat(\" \", @class, \" \"), \" fn \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__aside \")]/*[contains(concat(\" \", @class, \" \"), \" vcard \")]/*[contains(concat(\" \", @class, \" \"), \" fn \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".claimreview__title"
+                        ".article-body > .article-body__claimreview > .claimreview__title"
                     ], 
                     "container_id": "2f40-4e49-bde2", 
                     "data": {
@@ -117,14 +117,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-body > .article-body__claimreview > .claimreview__title", 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__claimreview > .claimreview__title", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__claimreview \")]/*[contains(concat(\" \", @class, \" \"), \" claimreview__title \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__claimreview \")]/*[contains(concat(\" \", @class, \" \"), \" claimreview__title \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".claimreview__picture"
+                        ".article-body > .article-body__claimreview > .claimreview__picture"
                     ], 
                     "container_id": "2f40-4e49-bde2", 
                     "data": {
@@ -142,39 +142,14 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-body > .article-body__claimreview > .claimreview__picture", 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__claimreview > .claimreview__picture", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__claimreview \")]/*[contains(concat(\" \", @class, \" \"), \" claimreview__picture \")]"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__claimreview \")]/*[contains(concat(\" \", @class, \" \"), \" claimreview__picture \")]"
                 }, 
                 {
                     "accept_selectors": [
-                        ".article-body__lead-in > p"
-                    ], 
-                    "container_id": "2f40-4e49-bde2", 
-                    "data": {
-                        "b949-4b4b-9e90": {
-                            "attribute": "content", 
-                            "extractors": {}, 
-                            "field": "2c4e-415e-a6a5", 
-                            "required": false
-                        }
-                    }, 
-                    "id": "4a19-4868-91ed", 
-                    "text-content": "content", 
-                    "post_text": null, 
-                    "pre_text": null, 
-                    "reject_selectors": [], 
-                    "required": [], 
-                    "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-body > .article-body__lead-in > p", 
-                    "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__lead-in \")]/p"
-                }, 
-                {
-                    "accept_selectors": [
-                        "#docs-internal-guid-cdf3b411-1d59-617c-7347-6f110e20d630 > a"
+                        ".article-body > .article-body__main > p:nth-child(1) > a"
                     ], 
                     "container_id": "2f40-4e49-bde2", 
                     "data": {
@@ -192,10 +167,85 @@
                     "reject_selectors": [], 
                     "required": [], 
                     "repeated": false, 
-                    "selection_mode": "auto", 
-                    "selector": "#entry-2578 > .article-body > .article-body__main > p:nth-child(1) > a", 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__main > p:nth-child(1) > a", 
                     "tagid": null, 
-                    "xpath": "//*[@id=\"entry-2578\"]/*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[1]/a"
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[1]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__main"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "7b62-4a55-ac87": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "7dd4-41ea-857d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2469-486d-91bb", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__main", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body__main > p:nth-child(4) > a"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "b008-400c-b874": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "5b2b-4217-b6a7", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "b4b3-4b44-bcb2", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body__main > p:nth-child(4) > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[4]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body__main > p:nth-child(2)"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "f35d-409c-b505": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "2c4e-415e-a6a5", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0f2e-41f6-af2a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body__main > p:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[2]"
                 }
             ]
         }
