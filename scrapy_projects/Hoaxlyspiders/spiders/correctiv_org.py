@@ -16,7 +16,7 @@ class CorrectivOrg(BasePortiaSpider):
     name = "correctiv.org"
     allowed_domains = ['correctiv.org']
     start_urls = [
-        'https://correctiv.org/echtjetzt/artikel/2018/06/22/nein-papst-befiehlt-europaischen-frauen-keine-zucht-mit-muslimen/']
+        'https://correctiv.org/echtjetzt/']
     rules = [
         Rule(
             LinkExtractor(
