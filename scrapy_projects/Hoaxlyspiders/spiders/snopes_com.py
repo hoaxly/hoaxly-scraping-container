@@ -19,7 +19,7 @@ class Snopes(BasePortiaSpider):
     rules = [
         Rule(
             LinkExtractor(
-                allow=(),
+                allow=('^https\\:\\/\\/snopes\\.com\\/fact\\-check'),
                 deny=()
             ),
             callback='parse_item',
