@@ -38,6 +38,7 @@ This is needed for elasticsearch to work [4]
 ## Step 1: Fetch the images
 
 Login to our registry (using your gitlab credentials) to get at the images that you need in order to locally build and run spiders.
+Attention: Currently you need access to the gitlab registry to fetch the images. We are working on a documentation for an alternative approach.
 
     docker login registry.acolono.net:444
     docker pull registry.acolono.net:444/hoaxly/hoaxly-storage-container
@@ -55,3 +56,8 @@ In your project's rootfolder, run:
 
 Open your preferred browser and go to: http://portia.hoaxly.docksal
 
+## Step 3: Add new spiders
+
+See the documentation here: https://hoaxly.gitbook.io/documentation/developer-documentation/adding-new-sites-to-the-database
+
+## Step 4: Create an issue here and a pull request
