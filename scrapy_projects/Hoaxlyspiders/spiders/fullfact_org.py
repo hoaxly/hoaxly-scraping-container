@@ -19,11 +19,49 @@ class FullfactOrg(BasePortiaSpider):
     rules = [
         Rule(
             LinkExtractor(
-                allow=('.*'),
+                allow=(),
                 deny=()
             ),
             callback='parse_item',
             follow=True
         )
     ]
-    items = [[]]
+    items = [
+        [
+            Item(
+                HoaxlyinboxschemaItem,
+                None,
+                'blockquote > p:nth-child(2)',
+                [
+                    Field(
+                        'factoidHeadline',
+                        '.header > h1 *::text',
+                        []),
+                    Field(
+                        'factoidPubdate',
+                        '.date *::text',
+                        []),
+                    Field(
+                        'factoidContent',
+                        '.article-post-content > .row > .col-xs-12 *::text',
+                        []),
+                    Field(
+                        'factoidClaim',
+                        '.box-panel > div > .col-left > p *::text, .box-panel > div > .inner-row > .col-left > p *::text',
+                        []),
+                    Field(
+                        'factoidVerdict',
+                        '.box-panel > div > div > p *::text, .box-panel > div > div > .col-right > p *::text',
+                        []),
+                    Field(
+                        'claimSource',
+                        '.article-post-content > .row > .col-xs-12 > div:nth-child(2) > blockquote *::text',
+                        []),
+                    Field(
+                        'itemReviewed',
+                        'a::attr(href)',
+                        []),
+                    Field(
+                        'claimReviewers',
+                        '.article-post-content > .row > .col-xs-12 > div:nth-child(2) > .post-content-footer-author *::text',
+                        [])])]]
