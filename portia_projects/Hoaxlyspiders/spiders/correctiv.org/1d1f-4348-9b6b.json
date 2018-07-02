@@ -1,0 +1,257 @@
+{
+    "extractors": {}, 
+    "id": "1d1f-4348-9b6b", 
+    "name": "Nein Papst befiehlt europischen Frauen keine Zu", 
+    "page_id": "", 
+    "page_type": "item", 
+    "plugins": {
+        "annotations-plugin": {
+            "extracts": [
+                {
+                    "annotations": {
+                        "#portia-content": "#dummy"
+                    }, 
+                    "container_id": null, 
+                    "id": "2f40-4e49-bde2", 
+                    "item_container": true, 
+                    "repeated": false, 
+                    "required": [], 
+                    "schema_id": "59e6-4047-b5de", 
+                    "selector": "#entry-2578", 
+                    "siblings": 1, 
+                    "tagid": null, 
+                    "text-content": "#portia-content"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-header > .article-header__headline-group > .article-header__headline"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "f518-4c38-a351": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "957a-4a8e-9a89", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "1d32-4f5f-8854", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-header > .article-header__headline-group > .article-header__headline", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-header \")]/*[contains(concat(\" \", @class, \" \"), \" article-header__headline-group \")]/*[contains(concat(\" \", @class, \" \"), \" article-header__headline \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__aside > .article-body__publishing-date"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "a3d1-4782-b02b": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "9316-4a62-a60a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "e7fd-4840-a24f", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__aside > .article-body__publishing-date", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__aside \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__publishing-date \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__aside > .vcard > .fn"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "2f4c-464c-baf5": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "4f7e-4800-af1b", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "5182-4346-a5b0", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__aside > .vcard > .fn", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__aside \")]/*[contains(concat(\" \", @class, \" \"), \" vcard \")]/*[contains(concat(\" \", @class, \" \"), \" fn \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__claimreview > .claimreview__title"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "2dbb-48b2-b1dc": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "ccb4-4209-b417", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "72db-4347-bfc8", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__claimreview > .claimreview__title", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__claimreview \")]/*[contains(concat(\" \", @class, \" \"), \" claimreview__title \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__claimreview > .claimreview__picture"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "53d8-4e0f-898e": {
+                            "attribute": "src", 
+                            "extractors": {}, 
+                            "field": "1e1b-498a-b66a", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "61d0-46c3-994c", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__claimreview > .claimreview__picture", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__claimreview \")]/*[contains(concat(\" \", @class, \" \"), \" claimreview__picture \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__main > p:nth-child(1) > a"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "e94e-44a9-8a13": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "550d-4023-9596", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "093a-416d-aab3", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__main > p:nth-child(1) > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[1]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body > .article-body__main"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "7b62-4a55-ac87": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "7dd4-41ea-857d", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "2469-486d-91bb", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body > .article-body__main", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body \")]/*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body__main > p:nth-child(4) > a"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "b008-400c-b874": {
+                            "attribute": "href", 
+                            "extractors": {}, 
+                            "field": "5b2b-4217-b6a7", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "b4b3-4b44-bcb2", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": true, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body__main > p:nth-child(4) > a", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[4]/a"
+                }, 
+                {
+                    "accept_selectors": [
+                        ".article-body__main > p:nth-child(2)"
+                    ], 
+                    "container_id": "2f40-4e49-bde2", 
+                    "data": {
+                        "f35d-409c-b505": {
+                            "attribute": "content", 
+                            "extractors": {}, 
+                            "field": "2c4e-415e-a6a5", 
+                            "required": false
+                        }
+                    }, 
+                    "id": "0f2e-41f6-af2a", 
+                    "text-content": "content", 
+                    "post_text": null, 
+                    "pre_text": null, 
+                    "reject_selectors": [], 
+                    "required": [], 
+                    "repeated": false, 
+                    "selection_mode": "css", 
+                    "selector": ".article-body__main > p:nth-child(2)", 
+                    "tagid": null, 
+                    "xpath": "//*[contains(concat(\" \", @class, \" \"), \" article-body__main \")]/p[2]"
+                }
+            ]
+        }
+    }, 
+    "scrapes": "59e6-4047-b5de", 
+    "spider": "correctiv.org", 
+    "url": "https://correctiv.org/echtjetzt/artikel/2018/06/22/nein-papst-befiehlt-europaischen-frauen-keine-zucht-mit-muslimen/", 
+    "version": "0.13.2"
+}
